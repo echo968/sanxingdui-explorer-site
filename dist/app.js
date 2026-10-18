@@ -5,20 +5,20 @@ const records = {
   figure: {
     id:'figure', slug:'qing-tong-da-li-ren-xiang', name:'青铜大立人像', kicker:'BRONZE FIGURE · 01',
     category:'青铜器', period:'商代晚期', material:'青铜', excavation:'三星堆二号祭祀坑', discovery:'1986 年发掘',
-    dimensions:'通高约 2.62 米', collection:'三星堆博物馆',
+    dimensions:'待核实（需补充可核查的尺寸出处）', collection:'三星堆博物馆',
     intro:'青铜大立人像出土于三星堆二号祭祀坑，是三星堆青铜造像中具有代表性的器物。器物身份与手势含义仍属于研究议题。',
-    interpretation:'祭司、王者等身份说法属于研究解释，尚不能作为确定结论。', status:{label:'资料已确认 · 身份解释尚未确定', kind:'partial'},
+    interpretation:'祭司、王者等身份说法属于研究解释，尚不能作为确定结论。', status:{label:'公开考古背景可查 · 尺寸出处待核实 · 身份解释尚未确定', kind:'partial'},
     image:{src:'https://commons.wikimedia.org/wiki/Special:FilePath/%E4%B8%89%E6%98%9F%E5%A0%86%E5%87%BA%E5%9C%9F%E9%9D%92%E9%93%9C%E5%A4%A7%E7%AB%8B%E4%BA%BA%E5%83%8F%2C_2017-09-17.jpg?width=1100',alt:'三星堆青铜大立人像全身展陈照片',author:'Siyuwj',license:'CC BY-SA 4.0',sourceUrl:'https://commons.wikimedia.org/wiki/File:%E4%B8%89%E6%98%9F%E5%A0%86%E5%87%BA%E5%9C%9F%E9%9D%92%E9%93%9C%E5%A4%A7%E7%AB%8B%E4%BA%BA%E5%83%8F,_2017-09-17.jpg',kind:'photo',status:'授权信息见 Wikimedia Commons 文件页'},
-    references:[{label:'四川人大网 · 三星堆遗址史料',url:'https://www.scspc.gov.cn/lfdt/202106/157515.html',type:'公开史料',note:'用于出土与考古背景；具体尺寸信息需以馆方档案核对。'}]
+    references:[{label:'四川人大网 · 三星堆遗址史料',url:'https://www.scspc.gov.cn/lfdt/202106/157515.html',type:'公开史料',note:'用于出土与考古背景；本条目尺寸暂未找到可直接核对的引用，标为待核实。'}]
   },
   tree: {
     id:'tree', slug:'qing-tong-shen-shu', name:'青铜神树', kicker:'BRONZE TREE · 02',
     category:'青铜器', period:'商代晚期', material:'青铜', excavation:'三星堆二号祭祀坑', discovery:'1986 年发掘',
-    dimensions:'现存通高约 3.96 米', collection:'三星堆博物馆',
+    dimensions:'待核实（需补充可核查的尺寸出处）', collection:'三星堆博物馆',
     intro:'青铜神树是三星堆出土的大型青铜树形器。器物名称为通行称谓；其具体文化内涵仍有不同解释。',
-    interpretation:'树形、神鸟与龙等细节可观察，但不能单独据此确定它与某一神话体系的对应关系。', status:{label:'资料已确认 · 文化内涵仍有不同解释', kind:'partial'},
+    interpretation:'树形、神鸟与龙等细节可观察，但不能单独据此确定它与某一神话体系的对应关系。', status:{label:'馆方资料入口可查 · 尺寸与单件信息待逐项核实 · 文化内涵仍有不同解释', kind:'partial'},
     image:{src:'https://commons.wikimedia.org/wiki/Special:FilePath/Bronze_Sacred_Tree.jpg?width=1100',alt:'三星堆大型青铜神树展陈照片',author:'momo（Flickr）',license:'CC BY 2.0',sourceUrl:'https://commons.wikimedia.org/wiki/File:Bronze_Sacred_Tree.jpg',kind:'photo',status:'授权信息见 Wikimedia Commons 文件页'},
-    references:[{label:'三星堆博物馆 · 文物介绍',url:'https://www.sxd.cn/relics/',type:'馆方资料',note:'可作为文物名称与馆藏信息入口；具体解释不在此推定。'}]
+    references:[{label:'三星堆博物馆 · 文物介绍',url:'https://www.sxd.cn/relics/',type:'馆方资料入口',note:'作为文物资料入口；本条目暂未定位能直接核对尺寸与单件出土信息的具体记录。'}]
   },
   mask: {
     id:'mask', slug:'qing-tong-mian-ju', name:'青铜面具', kicker:'BRONZE MASK · 03',
