@@ -30,6 +30,7 @@
   </header>
 
   <main id="main">
+    <div id="home-view">
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-grid"></div><div class="hero-orbit orbit-a"></div><div class="hero-orbit orbit-b"></div>
       <div class="hero-copy">
@@ -163,11 +164,23 @@
     </section>
 
     <section class="evidence-strip"><div class="evidence-mark">证</div><div><span class="eyebrow">TRUSTED KNOWLEDGE · SOURCE FIRST</span><h2>每个结论，都能找到它的来处。</h2><p>我们把事实来源、推测解释与待验证问题分开标注。引用可回到原始页面；图片授权按单件图像说明。</p></div><a href="#sources" class="button button-outline">查看资料与授权 <span>↗</span></a></section>
+    </div>
+
+    <section class="artifact-detail-page" id="artifact-detail-view" aria-labelledby="detail-title" hidden>
+      <div class="section-wrap">
+        <nav class="detail-breadcrumb" aria-label="面包屑"><a href="#collection" data-home-anchor="collection">文物档案</a><span aria-hidden="true">/</span><span id="detail-breadcrumb-name">器物详情</span></nav>
+        <div class="detail-layout" id="detail-layout">
+          <figure class="detail-figure"><div class="detail-visual" id="detail-visual"></div><figcaption><span id="detail-image-caption"></span><a id="detail-image-source" href="#" target="_blank" rel="noreferrer" hidden>查看原始影像与授权 ↗</a></figcaption></figure>
+          <article class="detail-copy"><p class="eyebrow" id="detail-kicker">OBJECT RECORD</p><h1 id="detail-title">器物档案</h1><p class="detail-status" id="detail-status"></p><p class="detail-intro" id="detail-intro"></p><dl class="detail-meta" id="detail-meta"></dl><section class="detail-interpretation"><h2>内容状态与解释边界</h2><p id="detail-interpretation"></p></section><section class="detail-sources"><h2>资料来源</h2><ol id="detail-references"></ol></section><div class="detail-actions"><a class="button button-outline" href="#collection" data-home-anchor="collection">← 返回文物列表</a><button class="button button-gold" type="button" data-copy-url>复制详情链接</button></div><p class="detail-share-status" id="detail-share-status" role="status" aria-live="polite"></p></article>
+        </div>
+        <div class="detail-not-found" id="detail-not-found" hidden><span class="not-found-mark" aria-hidden="true">?</span><p class="eyebrow">RECORD NOT FOUND</p><h1>暂未找到这件文物</h1><p>链接中的文物编号不存在，或对应资料尚未接入。</p><a class="button button-gold" href="#collection" data-home-anchor="collection">返回文物列表 <span>↗</span></a></div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer" id="sources"><div class="footer-main"><div class="footer-brand"><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span class="brand-name">三星堆<small>古蜀文明数字探索平台</small></span></a><p>让文物说话，让证据有迹可循。</p></div><div class="footer-column"><b>探索</b><a href="#discover">文明与发现</a><a href="#collection">文物档案</a><a href="#exhibition">数字展厅</a><a href="#knowledge">知识图谱</a></div><div class="footer-column"><b>参与</b><a href="#fieldwork">互动考古</a><a href="#learning">研学中心</a><button class="footer-link" data-open-guide>AI 文化导览</button></div><div class="footer-column footer-sources"><b>资料与图像来源</b><a href="https://www.sxd.cn/relics/" target="_blank" rel="noreferrer">三星堆博物馆 · 文物介绍 ↗</a><a href="https://archives.scu.edu.cn/info/1015/3023.htm" target="_blank" rel="noreferrer">四川大学档案馆 · 早期考古史料 ↗</a><a href="https://www.scspc.gov.cn/lfdt/202106/157515.html" target="_blank" rel="noreferrer">四川人大网 · 三星堆史料 ↗</a><a href="https://commons.wikimedia.org/wiki/File:%E4%B8%89%E6%98%9F%E5%A0%86%E5%87%BA%E5%9C%9F%E9%9D%92%E9%93%9C%E5%A4%A7%E7%AB%8B%E4%BA%BA%E5%83%8F,_2017-09-17.jpg" target="_blank" rel="noreferrer">Wikimedia · Siyuwj · CC BY-SA 4.0 ↗</a><a href="https://commons.wikimedia.org/wiki/File:Bronze_Sacred_Tree.jpg" target="_blank" rel="noreferrer">Wikimedia · momo · CC BY 2.0 ↗</a><a href="https://commons.wikimedia.org/wiki/File:Sanxingdui_Bronsmask.jpg" target="_blank" rel="noreferrer">Wikimedia · Bairuilong · CC BY-SA 4.0 ↗</a></div></div><div class="footer-bottom"><span>© 2026 三星堆 · 古蜀文明数字探索平台　/　概念原型</span><span>图片按作者及授权协议标注；示意图不代表真实器物或考古记录。</span><a href="#top">回到顶部 ↑</a></div></footer>
 
-  <dialog class="modal artifact-modal" id="artifact-modal" aria-labelledby="artifact-title"><button class="modal-close" data-close-modal aria-label="关闭文物档案">×</button><div class="modal-content"><div class="modal-image" id="modal-image"></div><div class="modal-copy"><p class="eyebrow" id="modal-kicker">OBJECT RECORD</p><h2 id="artifact-title">器物档案</h2><p class="modal-subtitle" id="modal-subtitle"></p><div class="record-table" id="record-table"></div><p class="record-interpretation" id="record-interpretation"></p><div class="modal-citation" id="modal-citation"></div><button class="button button-outline" data-modal-ask>向 AI 导览了解更多 <span>↗</span></button><p class="small-note">AI 服务尚未连接，此操作不会发送问题。</p></div></div></dialog>
+  <dialog class="modal artifact-modal" id="artifact-modal" aria-labelledby="artifact-title"><button class="modal-close" data-close-modal aria-label="关闭文物档案">×</button><div class="modal-content"><div class="modal-image" id="modal-image"></div><div class="modal-copy"><p class="eyebrow" id="modal-kicker">OBJECT RECORD</p><h2 id="artifact-title">器物档案</h2><p class="modal-subtitle" id="modal-subtitle"></p><div class="record-table" id="record-table"></div><p class="record-interpretation" id="record-interpretation"></p><div class="modal-citation" id="modal-citation"></div><a class="button button-outline" id="modal-detail-link" data-modal-detail-link href="/?artifact=">查看完整文物详情 <span>↗</span></a><button class="button button-outline" data-modal-ask>向 AI 导览了解更多 <span>↗</span></button><p class="small-note">AI 服务尚未连接，此操作不会发送问题。</p></div></div></dialog>
 
   <dialog class="modal utility-modal" id="search-modal" aria-labelledby="search-title"><button class="modal-close" data-close-modal aria-label="关闭搜索">×</button><div class="utility-content"><p class="eyebrow">SEARCH THE ARCHIVE</p><h2 id="search-title">从问题开始探索</h2><label class="search-field search-field-large"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg><input type="search" id="global-search" placeholder="试试：青铜、二号祭祀坑、神树" aria-label="站内搜索"></label><p class="search-hint">搜索会筛选本页公开展示的器物条目，不连接外部服务。</p><div class="search-results" id="search-results"></div></div></dialog>
 
