@@ -69,6 +69,25 @@ function filterArtifacts() {
     if (!card.hidden) visibleCount += 1;
   });
   $('#empty-state').hidden = visibleCount !== 0;
+  if (visibleCount === 0 && activeFilter === 'pottery' && !query) {
+    $('#empty-title').textContent = '陶器档案尚未接入';
+    $('#empty-copy').textContent = '当前目录没有可核验的陶器条目，后续接入真实资料后会在此展示。';
+  } else {
+    $('#empty-title').textContent = '没有找到匹配的器物';
+    $('#empty-copy').textContent = '试试更短的关键词，或切换材质筛选。';
+  }
+}
+
+function chooseArtifactFilter(category) {
+  activeFilter = category;
+  $('#artifact-search').value = '';
+  $$('.filter').forEach(item => {
+    const selected = item.dataset.filter === category;
+    item.classList.toggle('active', selected);
+    item.setAttribute('aria-pressed', String(selected));
+  });
+  filterArtifacts();
+  $('#collection').scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
 }
 
 $$('.filter').forEach(button => button.addEventListener('click', () => {
@@ -91,6 +110,17 @@ $('[data-reset-search]').addEventListener('click', () => {
   });
   filterArtifacts();
 });
+$$('[data-entry-filter]').forEach(button => button.addEventListener('click', () => chooseArtifactFilter(button.dataset.entryFilter)));
+$$('[data-theme-link="bronze"]').forEach(link => link.addEventListener('click', () => {
+  activeFilter = 'bronze';
+  $('#artifact-search').value = '';
+  $$('.filter').forEach(item => {
+    const selected = item.dataset.filter === 'bronze';
+    item.classList.toggle('active', selected);
+    item.setAttribute('aria-pressed', String(selected));
+  });
+  filterArtifacts();
+}));
 
 function openDialog(dialog) {
   if (!dialog.open) dialog.showModal();
@@ -234,7 +264,11 @@ function closeGuide() {
   $('.panel-scrim').classList.remove('open');
   if (!$('dialog[open]')) document.body.classList.remove('no-scroll');
 }
-$$('[data-open-guide]').forEach(button => button.addEventListener('click', openGuide));
+$$('[data-open-guide]').forEach(button => button.addEventListener('click', () => {
+  const prompt = button.dataset.initialPrompt;
+  if (prompt) $('#guide-input').value = prompt;
+  openGuide();
+}));
 $$('[data-close-guide]').forEach(button => button.addEventListener('click', closeGuide));
 $$('[data-prompt]').forEach(button => button.addEventListener('click', () => {
   $('#guide-input').value = button.dataset.prompt;
@@ -244,6 +278,40 @@ $('#guide-form').addEventListener('submit', event => {
   event.preventDefault();
   const status = $('#form-status');
   status.textContent = $('#guide-input').value.trim() ? '尚未连接知识服务；问题未发送、未保存。' : '请先输入或选择一个问题。';
+});
+
+$$('[data-home-example]').forEach(button => button.addEventListener('click', () => {
+  $('#home-question').value = button.dataset.homeExample;
+  $('#home-question').focus();
+}));
+$('[data-home-ask]').addEventListener('click', () => {
+  const question = $('#home-question').value.trim();
+  if (!question) {
+    showToast('先输入问题，或选择一条示例问题。');
+    $('#home-question').focus();
+    return;
+  }
+  $('#guide-input').value = question;
+  openGuide();
+});
+$('[data-login]').addEventListener('click', () => showToast('账户功能尚未开放；当前可公开浏览文物与学习内容。'));
+
+const quizFeedback = $('#quiz-feedback');
+$$('[data-quiz-answer]').forEach(button => button.addEventListener('click', () => {
+  const correct = button.dataset.quizAnswer === 'open';
+  quizFeedback.textContent = correct
+    ? '正确。名称是便于指称的线索；具体文化内涵仍需结合器物、出土背景与研究资料讨论。'
+    : '再想想。通行名称不等于已经确认唯一象征含义；请结合器物与考古资料判断。';
+  quizFeedback.classList.toggle('is-correct', correct);
+  quizFeedback.classList.toggle('is-retry', !correct);
+  $$('[data-quiz-answer]').forEach(option => { option.disabled = true; });
+  $('[data-quiz-reset]').hidden = false;
+}));
+$('[data-quiz-reset]').addEventListener('click', () => {
+  quizFeedback.textContent = '选择一个答案，查看说明。';
+  quizFeedback.classList.remove('is-correct', 'is-retry');
+  $$('[data-quiz-answer]').forEach(option => { option.disabled = false; });
+  $('[data-quiz-reset]').hidden = true;
 });
 
 const searchModal = $('#search-modal');

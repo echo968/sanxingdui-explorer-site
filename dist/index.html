@@ -19,11 +19,12 @@
       <span class="brand-name">三星堆<small>古蜀文明数字探索平台</small></span>
     </a>
     <nav class="primary-nav" aria-label="主导航">
-      <a href="#discover">探索文明</a><a href="#collection">文物档案</a><a href="#exhibition">数字展厅</a><a href="#knowledge">知识图谱</a><a href="#fieldwork">互动考古</a><a href="#learning">研学中心</a>
+      <a href="#discover">探索文明</a><a href="#collection">文物档案</a><a href="#exhibition">数字展厅</a><a href="#knowledge">知识图谱</a><a href="#fieldwork">互动考古</a><a href="#learning">研学中心</a><button class="login-menu-link" type="button" data-login>登录（尚未开放）</button>
     </nav>
     <div class="header-actions">
       <button class="icon-button" data-open-search aria-label="打开站内搜索" title="站内搜索"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg></button>
       <button class="button button-ai" data-open-guide><span class="spark" aria-hidden="true">✳</span> AI 导览 <span class="status-dot" aria-label="尚未连接"></span></button>
+      <button class="login-link" type="button" data-login aria-label="登录功能尚未开放">登录</button>
       <button class="menu-toggle icon-button" aria-label="打开导航菜单" aria-expanded="false"><span></span><span></span></button>
     </div>
   </header>
@@ -33,9 +34,9 @@
       <div class="hero-grid"></div><div class="hero-orbit orbit-a"></div><div class="hero-orbit orbit-b"></div>
       <div class="hero-copy">
         <p class="eyebrow"><span class="eyebrow-line"></span> ANCIENT SHU · DIGITAL ARCHAEOLOGY</p>
-        <h1 id="hero-title">来自三千年前<br><em>的凝视</em></h1>
-        <p class="hero-lede">一座城、一群青铜，以及仍在被追问的古蜀文明。<br>从出土文物出发，循着证据，走近三星堆。</p>
-        <div class="hero-actions"><a class="button button-gold" href="#discover">开始探索 <span aria-hidden="true">↗</span></a><button class="text-button" data-open-story><span class="play-icon" aria-hidden="true">▶</span> 听一段考古故事</button></div>
+        <h1 id="hero-title">沉睡千年的文明，<br><em>等待再次被发现</em></h1>
+        <p class="hero-lede">从真实器物出发，走近古蜀文明。<br>沿着考古记录与资料出处，探索已知与待解。</p>
+        <div class="hero-actions"><a class="button button-gold" href="#civilization-entries">开始探索 <span aria-hidden="true">↗</span></a><button class="text-button" data-open-guide data-initial-prompt="青铜神树有哪些已知信息？">问 AI 讲解员 <span aria-hidden="true">↗</span></button></div>
         <div class="hero-footnote"><span class="mini-seal" aria-hidden="true">堆</span><span>四川 · 广汉<br><b>31°00′N　104°13′E</b></span></div>
       </div>
       <figure class="hero-artifact">
@@ -47,24 +48,28 @@
       <div class="hero-side-note" aria-hidden="true">BRONZE · JADE · GOLD <b>古蜀</b></div>
     </section>
 
+    <section class="civilization-entries section-wrap" id="civilization-entries" aria-labelledby="entry-title">
+      <div class="section-kicker"><span>01</span><span id="entry-title">文明探索入口</span><span class="rule"></span><span>EXPLORE BY MATERIAL</span></div>
+      <div class="entry-grid" role="group" aria-label="按器物主题探索">
+        <button class="entry-tile" type="button" data-entry-filter="bronze"><span class="entry-index">01 / BRONZE</span><b>青铜器</b><small>凝视造像与器形</small><span class="entry-arrow" aria-hidden="true">↗</span></button>
+        <button class="entry-tile" type="button" data-entry-filter="gold"><span class="entry-index">02 / GOLD</span><b>金器</b><small>了解金器与图像记录</small><span class="entry-arrow" aria-hidden="true">↗</span></button>
+        <button class="entry-tile" type="button" data-entry-filter="jade"><span class="entry-index">03 / JADE</span><b>玉石器</b><small>从材质与形制开始</small><span class="entry-arrow" aria-hidden="true">↗</span></button>
+        <button class="entry-tile entry-tile-pending" type="button" data-entry-filter="pottery"><span class="entry-index">04 / POTTERY</span><b>陶器</b><small>当前目录暂无条目</small><span class="entry-arrow" aria-hidden="true">↗</span></button>
+      </div>
+    </section>
+
     <section class="intro section-wrap" id="discover">
-      <div class="section-kicker"><span>01</span><span>一场持续中的发现</span><span class="rule"></span><span>DISCOVER</span></div>
+      <div class="section-kicker"><span>02</span><span>一场持续中的发现</span><span class="rule"></span><span>DISCOVER</span></div>
       <div class="intro-layout">
         <h2>沉睡于大地，<br><em>苏醒于证据。</em></h2>
         <div class="intro-text"><p>三星堆遗址位于四川省广汉市。1929 年，燕道诚在当地发现玉石器；此后数十年间，考古工作不断推进。1986 年一、二号祭祀坑的发现，让一批造型独特的青铜、金器与玉器进入公众视野。</p><p>新的发现仍在继续。这里不提供神秘传说的定论，而是邀请你从器物、出土背景与研究线索出发，分辨哪些已知，哪些仍待讨论。</p><a class="underlined-link" href="#timeline">沿时间线查看发现 <span>→</span></a></div>
       </div>
-      <div class="timeline" id="timeline" aria-label="三星堆考古发现时间线">
-        <article class="timeline-stop"><span class="timeline-year">1929</span><span class="timeline-dot"></span><h3>玉石器初现</h3><p>燕道诚在广汉燕家院子发现玉石器，三星堆遗址由此进入考古视野。</p><a href="https://www.scspc.gov.cn/lfdt/202106/157515.html" target="_blank" rel="noreferrer">四川人大网 · 史料 ↗</a></article>
-        <article class="timeline-stop"><span class="timeline-year">1934</span><span class="timeline-dot"></span><h3>首次科学发掘</h3><p>华西协合大学博物馆葛维汉、林名均等开展月亮湾发掘。</p><a href="https://archives.scu.edu.cn/info/1015/3023.htm" target="_blank" rel="noreferrer">四川大学档案馆 · 史料 ↗</a></article>
-        <article class="timeline-stop"><span class="timeline-year">1986</span><span class="timeline-dot"></span><h3>一、二号祭祀坑</h3><p>青铜大立人像、青铜神树等重要器物出土，相关研究持续展开。</p><a href="https://www.scspc.gov.cn/lfdt/202106/157515.html" target="_blank" rel="noreferrer">四川人大网 · 史料 ↗</a></article>
-        <article class="timeline-stop"><span class="timeline-year">2021 →</span><span class="timeline-dot"></span><h3>考古工作持续</h3><p>公布新发现六座祭祀坑及阶段性成果，发掘、保护与研究并行。</p><a href="https://www.scspc.gov.cn/lfdt/202106/157515.html" target="_blank" rel="noreferrer">四川人大网 · 史料 ↗</a></article>
-      </div>
     </section>
 
     <section class="collection section-wrap" id="collection">
-      <div class="section-kicker"><span>02</span><span>文物档案</span><span class="rule"></span><span>OBJECT INDEX</span></div>
+      <div class="section-kicker"><span>03</span><span>文物档案</span><span class="rule"></span><span>OBJECT INDEX</span></div>
       <div class="section-heading"><div><h2>从一件器物，<em>读懂一条线索</em></h2><p>以馆藏名称与考古信息为索引；图像授权与解释状态一并呈现。</p></div><a class="underlined-link" href="#collection-grid">浏览全部档案 <span>→</span></a></div>
-      <div class="collection-tools"><label class="search-field"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg><input type="search" id="artifact-search" placeholder="搜索器物名称或关键词" aria-label="搜索器物名称或关键词"><kbd>⌕</kbd></label><div class="filter-tabs" role="group" aria-label="按材质筛选"><button class="filter active" data-filter="all" aria-pressed="true">全部 <span>05</span></button><button class="filter" data-filter="bronze" aria-pressed="false">青铜</button><button class="filter" data-filter="gold" aria-pressed="false">黄金</button><button class="filter" data-filter="jade" aria-pressed="false">玉石</button></div></div>
+      <div class="collection-tools"><label class="search-field"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg><input type="search" id="artifact-search" placeholder="搜索器物名称或关键词" aria-label="搜索器物名称或关键词"><kbd>⌕</kbd></label><div class="filter-tabs" role="group" aria-label="按材质筛选"><button class="filter active" data-filter="all" aria-pressed="true">全部 <span>05</span></button><button class="filter" data-filter="bronze" aria-pressed="false">青铜</button><button class="filter" data-filter="gold" aria-pressed="false">黄金</button><button class="filter" data-filter="jade" aria-pressed="false">玉石</button><button class="filter" data-filter="pottery" aria-pressed="false">陶器</button></div></div>
       <div class="artifact-grid" id="collection-grid">
         <button class="artifact-card artifact-card-feature" data-artifact="figure" data-category="bronze" data-search="青铜大立人像 二号祭祀坑 1986 商代晚期 人像" aria-label="查看青铜大立人像档案">
           <span class="artifact-photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/%E4%B8%89%E6%98%9F%E5%A0%86%E5%87%BA%E5%9C%9F%E9%9D%92%E9%93%9C%E5%A4%A7%E7%AB%8B%E4%BA%BA%E5%83%8F%2C_2017-09-17.jpg?width=1000" alt="青铜大立人像全身照片"><span class="photo-credit">Siyuwj · CC BY-SA 4.0</span><span class="card-open">↗</span></span><span class="artifact-meta"><span class="object-no">BRONZE FIGURE <i>·</i> 01</span><b>青铜大立人像</b><small>商代晚期　/　二号祭祀坑　/　青铜</small></span>
@@ -81,22 +86,51 @@
         <button class="artifact-card artifact-text-card" data-artifact="jade" data-category="jade" data-search="玉璋 玉石 礼器 祭祀坑 玉器" aria-label="查看玉璋档案">
           <span class="text-card-visual jade-visual" aria-hidden="true"><span class="jade-form"></span><span class="visual-label">器形示意<br>非文物照片</span></span><span class="artifact-meta"><span class="object-no">JADE ZHANG <i>·</i> 05</span><b>玉璋</b><small>玉石　/　器形与使用情境需结合出土背景研究</small></span>
         </button>
-        <div class="empty-state" id="empty-state" hidden><span>⌕</span><b>没有找到匹配的器物</b><p>试试更短的关键词，或切换材质筛选。</p><button class="text-button" data-reset-search>清除筛选</button></div>
+        <div class="empty-state" id="empty-state" hidden><span>⌕</span><b id="empty-title">没有找到匹配的器物</b><p id="empty-copy">试试更短的关键词，或切换材质筛选。</p><button class="text-button" data-reset-search>清除筛选</button></div>
       </div>
       <p class="collection-note"><span class="note-mark">i</span> 青铜神树的名称已为学界共识，其具体文化内涵仍存在不同解释。此处将已知信息与推测分开呈现。 <a href="https://www.sxd.cn/relics/" target="_blank" rel="noreferrer">参考：三星堆博物馆文物介绍 ↗</a></p>
     </section>
 
+    <section class="home-guide section-wrap" aria-labelledby="home-guide-title">
+      <div class="section-kicker"><span>04</span><span>AI 问答入口</span><span class="rule"></span><span>ASK WITH CONTEXT</span></div>
+      <div class="home-guide-layout"><div><p class="eyebrow">A QUESTION IS A WAY IN</p><h2 id="home-guide-title">你想了解<br><em>三星堆的什么？</em></h2><p>选择示例或输入问题。当前导览服务未连接，问题不会发送或保存。</p></div>
+        <div class="home-guide-form"><label for="home-question">你的问题</label><textarea id="home-question" rows="2" placeholder="例如：青铜神树的用途有哪些不同解释？"></textarea><div class="home-guide-examples"><button type="button" data-home-example="青铜神树有哪些已知信息？">青铜神树有哪些已知信息？</button><button type="button" data-home-example="大立人像的身份有哪些不同解释？">大立人像有哪些解释？</button></div><div class="home-guide-actions"><span class="home-guide-status"><i aria-hidden="true"></i> 尚未连接知识服务</span><button class="button button-gold" type="button" data-home-ask>带着问题进入导览 <span>↗</span></button></div></div>
+      </div>
+    </section>
+
+    <section class="timeline-section section-wrap" id="timeline" aria-labelledby="timeline-title">
+      <div class="section-kicker"><span>05</span><span>古蜀文明时间线</span><span class="rule"></span><span>ARCHAEOLOGICAL TIMELINE</span></div>
+      <div class="section-heading"><div><h2 id="timeline-title">让发现回到<br><em>它发生的时间</em></h2><p>按考古发现与研究进展浏览；器物年代与现代发现时间分别标明。</p></div><span class="timeline-note">发现史 · 公开资料索引</span></div>
+      <div class="timeline" aria-label="三星堆考古发现时间线">
+        <article class="timeline-stop"><span class="timeline-year">1929</span><span class="timeline-dot"></span><h3>玉石器初现</h3><p>燕道诚在广汉燕家院子发现玉石器，三星堆遗址由此进入考古视野。</p><a href="https://www.scspc.gov.cn/lfdt/202106/157515.html" target="_blank" rel="noreferrer">四川人大网 · 史料 ↗</a></article>
+        <article class="timeline-stop"><span class="timeline-year">1934</span><span class="timeline-dot"></span><h3>首次科学发掘</h3><p>华西协合大学博物馆葛维汉、林名均等开展月亮湾发掘。</p><a href="https://archives.scu.edu.cn/info/1015/3023.htm" target="_blank" rel="noreferrer">四川大学档案馆 · 史料 ↗</a></article>
+        <article class="timeline-stop"><span class="timeline-year">1986</span><span class="timeline-dot"></span><h3>一、二号祭祀坑</h3><p>青铜大立人像、青铜神树等重要器物出土，相关研究持续展开。</p><a href="https://www.scspc.gov.cn/lfdt/202106/157515.html" target="_blank" rel="noreferrer">四川人大网 · 史料 ↗</a></article>
+        <article class="timeline-stop"><span class="timeline-year">2021 →</span><span class="timeline-dot"></span><h3>考古工作持续</h3><p>公布新发现六座祭祀坑及阶段性成果，发掘、保护与研究并行。</p><a href="https://www.scspc.gov.cn/lfdt/202106/157515.html" target="_blank" rel="noreferrer">四川人大网 · 史料 ↗</a></article>
+      </div>
+      <p class="timeline-source-note">时间线展示的是现代考古发现与发掘事件，不等同于器物制作年代。</p>
+    </section>
+
     <section class="exhibition" id="exhibition">
       <div class="exhibition-inner section-wrap">
-        <div class="section-kicker"><span>03</span><span>数字展厅</span><span class="rule"></span><span>GALLERY</span></div>
+        <div class="section-kicker"><span>06</span><span>数字展厅</span><span class="rule"></span><span>GALLERY</span></div>
         <div class="exhibition-layout"><div class="exhibition-copy"><p class="eyebrow">THE BRONZE ROOM · 01</p><h2>当目光越过<br><em>青铜的边界</em></h2><p>以图像、尺度與器形观察青铜造像。展厅体验在此为交互原型；馆藏照片均注明来源，展陈空间为数字化界面示意。</p><div class="gallery-controls"><button class="gallery-arrow" data-gallery-step="-1" aria-label="上一件文物">←</button><span class="gallery-count"><b id="gallery-current">01</b> / 03</span><button class="gallery-arrow" data-gallery-step="1" aria-label="下一件文物">→</button><span class="gallery-instruction">使用方向键切换</span></div></div>
           <div class="gallery-stage" aria-live="polite"><div class="gallery-number" id="gallery-number">01</div><img id="gallery-image" src="https://commons.wikimedia.org/wiki/Special:FilePath/%E4%B8%89%E6%98%9F%E5%A0%86%E5%87%BA%E5%9C%9F%E9%9D%92%E9%93%9C%E5%A4%A7%E7%AB%8B%E4%BA%BA%E5%83%8F%2C_2017-09-17.jpg?width=1200" alt="青铜大立人像，图像来源 Wikimedia Commons"><div class="gallery-caption"><span id="gallery-title">青铜大立人像</span><small id="gallery-subtitle">商代晚期 · 二号祭祀坑</small></div><div class="gallery-info"><span id="gallery-credit">Siyuwj · CC BY-SA 4.0</span><a id="gallery-source" href="https://commons.wikimedia.org/wiki/File:%E4%B8%89%E6%98%9F%E5%A0%86%E5%87%BA%E5%9C%9F%E9%9D%92%E9%93%9C%E5%A4%A7%E7%AB%8B%E4%BA%BA%E5%83%8F,_2017-09-17.jpg" target="_blank" rel="noreferrer">查看影像授权 ↗</a></div></div></div>
         <div class="gallery-foot"><span>展陈界面 · 数字原型</span><span>图像由各作者提供　/　授权状态见单件来源页</span><span>左右滑动或点击箭头浏览</span></div>
       </div>
     </section>
 
+    <section class="thematic-exhibitions section-wrap" id="thematic-exhibitions" aria-labelledby="thematic-title">
+      <div class="section-kicker"><span>07</span><span>专题展览</span><span class="rule"></span><span>CURATED STORIES</span></div>
+      <div class="section-heading"><div><h2 id="thematic-title">从一件器物，<em>展开一个问题</em></h2><p>专题入口连接已有的器物、时间线与考古内容；专题详情页将在后续页面迭代中展开。</p></div><span class="exhibition-note">叙事专题 · 内容原型</span></div>
+      <div class="theme-grid">
+        <a class="theme-card theme-bronze" href="#collection" data-theme-link="bronze"><span class="theme-no">STORY 01</span><b>青铜造像</b><small>从大立人像与面具出发，观察形态和资料记录。</small><span class="theme-link">查看相关器物　↗</span></a>
+        <a class="theme-card theme-ritual" href="#knowledge"><span class="theme-no">STORY 02</span><b>器物与祭祀坑</b><small>把器物放回出土背景，区分地点信息与解释推测。</small><span class="theme-link">查看关系线索　↗</span></a>
+        <a class="theme-card theme-discovery" href="#timeline"><span class="theme-no">STORY 03</span><b>考古发现历程</b><small>沿公开资料记录，回看三星堆考古的重要节点。</small><span class="theme-link">浏览发现时间线　↗</span></a>
+      </div>
+    </section>
+
     <section class="knowledge section-wrap" id="knowledge">
-      <div class="section-kicker"><span>04</span><span>文明知识图谱</span><span class="rule"></span><span>KNOWLEDGE GRAPH</span></div>
+      <div class="section-kicker"><span>08</span><span>文明知识图谱</span><span class="rule"></span><span>KNOWLEDGE GRAPH</span></div>
       <div class="section-heading"><div><h2>把器物放回<br><em>它的关系之中</em></h2><p>点击节点查看关联说明。当前关系图为基于公开资料整理的界面原型，不代表完整学术数据库。</p></div><span class="graph-legend"><i></i> 有来源的事实关联　 <i class="legend-dashed"></i> 尚待研究的解释</span></div>
       <div class="graph-board"><svg class="graph-lines" viewBox="0 0 900 420" preserveAspectRatio="none" aria-hidden="true"><line x1="450" y1="205" x2="225" y2="105"/><line x1="450" y1="205" x2="690" y2="96"/><line x1="450" y1="205" x2="235" y2="315"/><line class="interpretive-line" x1="450" y1="205" x2="690" y2="318"/></svg>
         <button class="graph-node central" data-node="青铜大立人像" data-detail="青铜大立人像出土于三星堆二号祭祀坑，现藏三星堆博物馆。其身份与手势的具体含义仍是研究议题。"><span class="node-symbol">人</span><b>青铜大立人像</b><small>器物 · 青铜</small></button>
@@ -109,16 +143,23 @@
     </section>
 
     <section class="fieldwork" id="fieldwork"><div class="section-wrap fieldwork-inner">
-      <div class="section-kicker"><span>05</span><span>互动考古</span><span class="rule"></span><span>FIELD NOTES</span></div>
+      <div class="section-kicker"><span>09</span><span>互动考古</span><span class="rule"></span><span>FIELD NOTES</span></div>
       <div class="fieldwork-layout"><div><p class="eyebrow">A CAREFUL LOOK BELOW THE SURFACE</p><h2>考古不是寻宝，<br><em>而是读懂情境。</em></h2><p class="fieldwork-lede">试着在示意探方中观察不同层位，记录你发现的线索。这里的网格与遗物标记均为交互示意，没有对应真实遗址坐标或发掘数据。</p><div class="layer-controls" role="group" aria-label="选择示意层位"><button class="layer-button active" data-layer="1" aria-pressed="true">表层 <small>01</small></button><button class="layer-button" data-layer="2" aria-pressed="false">扰土层 <small>02</small></button><button class="layer-button" data-layer="3" aria-pressed="false">堆积层 <small>03</small></button></div><div class="field-state" aria-live="polite"><span class="state-icon">⌖</span><span><b id="field-state-title">选择一个格点开始观察</b><small id="field-state-copy">模拟练习 · 所有位置均为虚构示意</small></span></div></div>
         <div class="excavation-wrap"><div class="excavation-top"><span>探方示意 · 非真实坐标</span><span id="layer-label">层位 01 / 03</span></div><div class="excavation-grid" id="excavation-grid" role="group" aria-label="示意探方网格"></div><div class="excavation-bottom"><span><i class="legend-square found"></i>示意线索</span><span><i class="legend-square unmarked"></i>待观察</span><span>标尺与定位未按真实发掘比例</span></div></div></div>
       <div class="ethics-note"><span>考古伦理</span><p>真实考古资料需要出土层位、编号、测绘与记录共同支持；此原型不模拟未公开的发掘信息，也不把游戏结果作为考古结论。</p></div>
     </div></section>
 
     <section class="learning section-wrap" id="learning">
-      <div class="section-kicker"><span>06</span><span>研学中心</span><span class="rule"></span><span>LEARNING PATHS</span></div>
+      <div class="section-kicker"><span>学习路径</span><span class="rule"></span><span>LEARNING PATHS</span></div>
       <div class="section-heading"><div><h2>从好奇开始，<em>循证而学</em></h2><p>短路径连接观察、提问与可靠资料，适用于个人探索与课堂讨论。</p></div><span class="learning-note">学习路径 · 内容原型</span></div>
       <div class="learning-paths"><article class="learning-path"><span class="path-no">PATH 01　/　20 MIN</span><span class="path-icon icon-eye" aria-hidden="true">◎</span><h3>学会观察一件文物</h3><p>从材质、形状、细节和尺度提出观察问题，再回到出土信息核对。</p><button data-learning="观察记录单">打开观察记录单 <span>↗</span></button></article><article class="learning-path"><span class="path-no">PATH 02　/　30 MIN</span><span class="path-icon icon-link" aria-hidden="true">⌘</span><h3>读一张证据关系图</h3><p>识别出土地点、器物、年代与解释之间的不同关系，标出不确定性。</p><button data-learning="关系图练习">进入关系图练习 <span>↗</span></button></article><article class="learning-path"><span class="path-no">PATH 03　/　45 MIN</span><span class="path-icon icon-note" aria-hidden="true">▤</span><h3>写一张小型展签</h3><p>用准确的事实、谨慎的描述和清楚的出处，介绍一件你感兴趣的器物。</p><button data-learning="展签写作工作纸">获取写作工作纸 <span>↗</span></button></article></div>
+    </section>
+
+    <section class="daily-knowledge section-wrap" id="daily-knowledge" aria-labelledby="daily-title">
+      <div class="section-kicker"><span>10</span><span>今日知识</span><span class="rule"></span><span>DAILY FIELD NOTE</span></div>
+      <div class="daily-layout"><div class="daily-copy"><p class="eyebrow">ONE OBJECT · ONE QUESTION</p><h2 id="daily-title">名称是一条线索，<br><em>不等于唯一解释。</em></h2><p>“青铜神树”是通行的器物名称；它具体表达什么，仍有不同研究解释。观察器物时，可以先把可见形态、出土背景与文化阐释分开。</p><a href="https://www.sxd.cn/relics/" target="_blank" rel="noreferrer">三星堆博物馆 · 文物介绍 ↗</a></div>
+        <div class="daily-quiz" role="group" aria-labelledby="quiz-question"><span class="quiz-label">快速判断 · 01</span><h3 id="quiz-question">器物名称能否直接证明它的唯一象征含义？</h3><div class="quiz-options"><button type="button" data-quiz-answer="certain">可以，名称已经确认</button><button type="button" data-quiz-answer="open">不能，仍需结合证据讨论</button></div><p class="quiz-feedback" id="quiz-feedback" aria-live="polite">选择一个答案，查看说明。</p><button class="quiz-reset" type="button" data-quiz-reset hidden>再想一次</button></div>
+      </div>
     </section>
 
     <section class="evidence-strip"><div class="evidence-mark">证</div><div><span class="eyebrow">TRUSTED KNOWLEDGE · SOURCE FIRST</span><h2>每个结论，都能找到它的来处。</h2><p>我们把事实来源、推测解释与待验证问题分开标注。引用可回到原始页面；图片授权按单件图像说明。</p></div><a href="#sources" class="button button-outline">查看资料与授权 <span>↗</span></a></section>
