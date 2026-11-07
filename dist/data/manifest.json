@@ -1,0 +1,2236 @@
+{
+  "title": "三星堆数字探索平台公开数据目录",
+  "version": 1,
+  "generated_at": "2026-10-28",
+  "description": "网站静态数据镜像。保留研究数据目录的相对路径；JSONL按行读取，JSON按整体读取。采集原始记录与待复核资料不等同于已核实或可直接公开的单件档案。",
+  "access": {
+    "base_url": "/data/",
+    "jsonl_encoding": "UTF-8",
+    "jsonl_record_separator": "newline",
+    "suggested_fetch": "fetch('/data/manifest.json').then(r => r.json())"
+  },
+  "collections": [
+    {
+      "path": "artifacts/",
+      "label": "三星堆出土文物全记录精选300条结构化档案",
+      "review_state": "needs_review; OCR-derived from 2009 catalog"
+    },
+    {
+      "path": "artifacts/pit-report-finds.jsonl",
+      "label": "K3、K4、K5、K7、K8考古简报出土器物专项档案",
+      "review_state": "needs_review; report-page images require rights review"
+    },
+    {
+      "path": "acquisition/",
+      "label": "公开网页采集记录与页面快照",
+      "review_state": "mixed; inspect each record"
+    },
+    {
+      "path": "archaeology/",
+      "label": "遗址、祭祀坑、考古事件与发掘报告"
+    },
+    {
+      "path": "graph/",
+      "label": "知识图谱节点、关系与展览"
+    },
+    {
+      "path": "media/",
+      "label": "媒体来源、许可和使用状态台账"
+    },
+    {
+      "path": "pottery/",
+      "label": "陶器器型档案"
+    },
+    {
+      "path": "stories/",
+      "label": "编辑策划的专题叙事及结构规范"
+    },
+    {
+      "path": "learning/",
+      "label": "研学主题与互动资料配置"
+    },
+    {
+      "path": "qa/",
+      "label": "可追溯研究问答知识条目"
+    },
+    {
+      "path": "sources.json",
+      "label": "来源清单与使用边界"
+    },
+    {
+      "path": "artifact.schema.json",
+      "label": "器物档案结构规范"
+    }
+  ],
+  "files": [
+    {
+      "path": "acquisition/crawl_manifest.jsonl",
+      "url": "/data/acquisition/crawl_manifest.jsonl",
+      "format": "jsonl",
+      "bytes": 4208,
+      "records": 6
+    },
+    {
+      "path": "acquisition/digicol-sanxingdui-artifacts.jsonl",
+      "url": "/data/acquisition/digicol-sanxingdui-artifacts.jsonl",
+      "format": "jsonl",
+      "bytes": 17696,
+      "records": 13
+    },
+    {
+      "path": "acquisition/exhibition-catalog-artifacts-2024-part2.jsonl",
+      "url": "/data/acquisition/exhibition-catalog-artifacts-2024-part2.jsonl",
+      "format": "jsonl",
+      "bytes": 5314,
+      "records": 4
+    },
+    {
+      "path": "acquisition/exhibition-catalog-artifacts-2024-part3.jsonl",
+      "url": "/data/acquisition/exhibition-catalog-artifacts-2024-part3.jsonl",
+      "format": "jsonl",
+      "bytes": 2836,
+      "records": 2
+    },
+    {
+      "path": "acquisition/exhibition-catalog-artifacts-2024.jsonl",
+      "url": "/data/acquisition/exhibition-catalog-artifacts-2024.jsonl",
+      "format": "jsonl",
+      "bytes": 19885,
+      "records": 11
+    },
+    {
+      "path": "acquisition/government-featured-artifacts.jsonl",
+      "url": "/data/acquisition/government-featured-artifacts.jsonl",
+      "format": "jsonl",
+      "bytes": 1515,
+      "records": 1
+    },
+    {
+      "path": "acquisition/hkpm-gazing-sanxingdui-artifacts.jsonl",
+      "url": "/data/acquisition/hkpm-gazing-sanxingdui-artifacts.jsonl",
+      "format": "jsonl",
+      "bytes": 3281,
+      "records": 2
+    },
+    {
+      "path": "acquisition/hkpm-object-labels-artifacts.jsonl",
+      "url": "/data/acquisition/hkpm-object-labels-artifacts.jsonl",
+      "format": "jsonl",
+      "bytes": 14504,
+      "records": 11
+    },
+    {
+      "path": "acquisition/named-find-artifact-profiles.jsonl",
+      "url": "/data/acquisition/named-find-artifact-profiles.jsonl",
+      "format": "jsonl",
+      "bytes": 80772,
+      "records": 55
+    },
+    {
+      "path": "acquisition/sckg-wenku-catalog.jsonl",
+      "url": "/data/acquisition/sckg-wenku-catalog.jsonl",
+      "format": "jsonl",
+      "bytes": 110439,
+      "records": 286
+    },
+    {
+      "path": "acquisition/scwwj-museum-artifacts.jsonl",
+      "url": "/data/acquisition/scwwj-museum-artifacts.jsonl",
+      "format": "jsonl",
+      "bytes": 1772,
+      "records": 1
+    },
+    {
+      "path": "acquisition/sxd-collection-index-a9985c1e2e8f.html",
+      "url": "/data/acquisition/sxd-collection-index-a9985c1e2e8f.html",
+      "format": "html",
+      "bytes": 1942
+    },
+    {
+      "path": "acquisition/sxd-jade-zhang-16880327704588314-a9985c1e2e8f.html",
+      "url": "/data/acquisition/sxd-jade-zhang-16880327704588314-a9985c1e2e8f.html",
+      "format": "html",
+      "bytes": 1942
+    },
+    {
+      "path": "acquisition/sxd-keyword-candidates.jsonl",
+      "url": "/data/acquisition/sxd-keyword-candidates.jsonl",
+      "format": "jsonl",
+      "bytes": 18781,
+      "records": 8
+    },
+    {
+      "path": "acquisition/sxd-museum-overview-a9985c1e2e8f.html",
+      "url": "/data/acquisition/sxd-museum-overview-a9985c1e2e8f.html",
+      "format": "html",
+      "bytes": 1942
+    },
+    {
+      "path": "archaeology/contexts.jsonl",
+      "url": "/data/archaeology/contexts.jsonl",
+      "format": "jsonl",
+      "bytes": 19366,
+      "records": 8
+    },
+    {
+      "path": "archaeology/events.jsonl",
+      "url": "/data/archaeology/events.jsonl",
+      "format": "jsonl",
+      "bytes": 16331,
+      "records": 15
+    },
+    {
+      "path": "archaeology/reports.jsonl",
+      "url": "/data/archaeology/reports.jsonl",
+      "format": "jsonl",
+      "bytes": 9874,
+      "records": 8
+    },
+    {
+      "path": "archaeology/schema.json",
+      "url": "/data/archaeology/schema.json",
+      "format": "json",
+      "bytes": 6119
+    },
+    {
+      "path": "archaeology/sites.jsonl",
+      "url": "/data/archaeology/sites.jsonl",
+      "format": "jsonl",
+      "bytes": 3242,
+      "records": 1
+    },
+    {
+      "path": "archaeology/spatial-evidence.jsonl",
+      "url": "/data/archaeology/spatial-evidence.jsonl",
+      "format": "jsonl",
+      "bytes": 8734,
+      "records": 1
+    },
+    {
+      "path": "archaeology/spatial-evidence.schema.json",
+      "url": "/data/archaeology/spatial-evidence.schema.json",
+      "format": "json",
+      "bytes": 3066
+    },
+    {
+      "path": "artifact.schema.json",
+      "url": "/data/artifact.schema.json",
+      "format": "json",
+      "bytes": 6000
+    },
+    {
+      "path": "artifacts/image-index.csv",
+      "url": "/data/artifacts/image-index.csv",
+      "format": "csv",
+      "bytes": 41708
+    },
+    {
+      "path": "artifacts/images/book-2009-001.jpg",
+      "url": "/data/artifacts/images/book-2009-001.jpg",
+      "format": "jpg",
+      "bytes": 453153
+    },
+    {
+      "path": "artifacts/images/book-2009-002.jpg",
+      "url": "/data/artifacts/images/book-2009-002.jpg",
+      "format": "jpg",
+      "bytes": 467277
+    },
+    {
+      "path": "artifacts/images/book-2009-003.jpg",
+      "url": "/data/artifacts/images/book-2009-003.jpg",
+      "format": "jpg",
+      "bytes": 552158
+    },
+    {
+      "path": "artifacts/images/book-2009-004.jpg",
+      "url": "/data/artifacts/images/book-2009-004.jpg",
+      "format": "jpg",
+      "bytes": 604574
+    },
+    {
+      "path": "artifacts/images/book-2009-005.jpg",
+      "url": "/data/artifacts/images/book-2009-005.jpg",
+      "format": "jpg",
+      "bytes": 346820
+    },
+    {
+      "path": "artifacts/images/book-2009-006.jpg",
+      "url": "/data/artifacts/images/book-2009-006.jpg",
+      "format": "jpg",
+      "bytes": 279701
+    },
+    {
+      "path": "artifacts/images/book-2009-007.jpg",
+      "url": "/data/artifacts/images/book-2009-007.jpg",
+      "format": "jpg",
+      "bytes": 628656
+    },
+    {
+      "path": "artifacts/images/book-2009-008.jpg",
+      "url": "/data/artifacts/images/book-2009-008.jpg",
+      "format": "jpg",
+      "bytes": 389423
+    },
+    {
+      "path": "artifacts/images/book-2009-009.jpg",
+      "url": "/data/artifacts/images/book-2009-009.jpg",
+      "format": "jpg",
+      "bytes": 390245
+    },
+    {
+      "path": "artifacts/images/book-2009-010.jpg",
+      "url": "/data/artifacts/images/book-2009-010.jpg",
+      "format": "jpg",
+      "bytes": 329884
+    },
+    {
+      "path": "artifacts/images/book-2009-011.jpg",
+      "url": "/data/artifacts/images/book-2009-011.jpg",
+      "format": "jpg",
+      "bytes": 363063
+    },
+    {
+      "path": "artifacts/images/book-2009-012.jpg",
+      "url": "/data/artifacts/images/book-2009-012.jpg",
+      "format": "jpg",
+      "bytes": 176936
+    },
+    {
+      "path": "artifacts/images/book-2009-013.jpg",
+      "url": "/data/artifacts/images/book-2009-013.jpg",
+      "format": "jpg",
+      "bytes": 315114
+    },
+    {
+      "path": "artifacts/images/book-2009-014.jpg",
+      "url": "/data/artifacts/images/book-2009-014.jpg",
+      "format": "jpg",
+      "bytes": 283375
+    },
+    {
+      "path": "artifacts/images/book-2009-015.jpg",
+      "url": "/data/artifacts/images/book-2009-015.jpg",
+      "format": "jpg",
+      "bytes": 380214
+    },
+    {
+      "path": "artifacts/images/book-2009-016.jpg",
+      "url": "/data/artifacts/images/book-2009-016.jpg",
+      "format": "jpg",
+      "bytes": 377491
+    },
+    {
+      "path": "artifacts/images/book-2009-017.jpg",
+      "url": "/data/artifacts/images/book-2009-017.jpg",
+      "format": "jpg",
+      "bytes": 190348
+    },
+    {
+      "path": "artifacts/images/book-2009-018.jpg",
+      "url": "/data/artifacts/images/book-2009-018.jpg",
+      "format": "jpg",
+      "bytes": 167243
+    },
+    {
+      "path": "artifacts/images/book-2009-019.jpg",
+      "url": "/data/artifacts/images/book-2009-019.jpg",
+      "format": "jpg",
+      "bytes": 469238
+    },
+    {
+      "path": "artifacts/images/book-2009-020.jpg",
+      "url": "/data/artifacts/images/book-2009-020.jpg",
+      "format": "jpg",
+      "bytes": 343897
+    },
+    {
+      "path": "artifacts/images/book-2009-021.jpg",
+      "url": "/data/artifacts/images/book-2009-021.jpg",
+      "format": "jpg",
+      "bytes": 256694
+    },
+    {
+      "path": "artifacts/images/book-2009-022.jpg",
+      "url": "/data/artifacts/images/book-2009-022.jpg",
+      "format": "jpg",
+      "bytes": 365710
+    },
+    {
+      "path": "artifacts/images/book-2009-023.jpg",
+      "url": "/data/artifacts/images/book-2009-023.jpg",
+      "format": "jpg",
+      "bytes": 501360
+    },
+    {
+      "path": "artifacts/images/book-2009-024.jpg",
+      "url": "/data/artifacts/images/book-2009-024.jpg",
+      "format": "jpg",
+      "bytes": 453392
+    },
+    {
+      "path": "artifacts/images/book-2009-025.jpg",
+      "url": "/data/artifacts/images/book-2009-025.jpg",
+      "format": "jpg",
+      "bytes": 462750
+    },
+    {
+      "path": "artifacts/images/book-2009-026.jpg",
+      "url": "/data/artifacts/images/book-2009-026.jpg",
+      "format": "jpg",
+      "bytes": 315790
+    },
+    {
+      "path": "artifacts/images/book-2009-027.jpg",
+      "url": "/data/artifacts/images/book-2009-027.jpg",
+      "format": "jpg",
+      "bytes": 641364
+    },
+    {
+      "path": "artifacts/images/book-2009-028.jpg",
+      "url": "/data/artifacts/images/book-2009-028.jpg",
+      "format": "jpg",
+      "bytes": 618730
+    },
+    {
+      "path": "artifacts/images/book-2009-029.jpg",
+      "url": "/data/artifacts/images/book-2009-029.jpg",
+      "format": "jpg",
+      "bytes": 225323
+    },
+    {
+      "path": "artifacts/images/book-2009-030.jpg",
+      "url": "/data/artifacts/images/book-2009-030.jpg",
+      "format": "jpg",
+      "bytes": 469717
+    },
+    {
+      "path": "artifacts/images/book-2009-031.jpg",
+      "url": "/data/artifacts/images/book-2009-031.jpg",
+      "format": "jpg",
+      "bytes": 180390
+    },
+    {
+      "path": "artifacts/images/book-2009-032.jpg",
+      "url": "/data/artifacts/images/book-2009-032.jpg",
+      "format": "jpg",
+      "bytes": 454442
+    },
+    {
+      "path": "artifacts/images/book-2009-033.jpg",
+      "url": "/data/artifacts/images/book-2009-033.jpg",
+      "format": "jpg",
+      "bytes": 259931
+    },
+    {
+      "path": "artifacts/images/book-2009-034.jpg",
+      "url": "/data/artifacts/images/book-2009-034.jpg",
+      "format": "jpg",
+      "bytes": 482857
+    },
+    {
+      "path": "artifacts/images/book-2009-035.jpg",
+      "url": "/data/artifacts/images/book-2009-035.jpg",
+      "format": "jpg",
+      "bytes": 465128
+    },
+    {
+      "path": "artifacts/images/book-2009-036.jpg",
+      "url": "/data/artifacts/images/book-2009-036.jpg",
+      "format": "jpg",
+      "bytes": 145480
+    },
+    {
+      "path": "artifacts/images/book-2009-037.jpg",
+      "url": "/data/artifacts/images/book-2009-037.jpg",
+      "format": "jpg",
+      "bytes": 397167
+    },
+    {
+      "path": "artifacts/images/book-2009-038.jpg",
+      "url": "/data/artifacts/images/book-2009-038.jpg",
+      "format": "jpg",
+      "bytes": 169948
+    },
+    {
+      "path": "artifacts/images/book-2009-039.jpg",
+      "url": "/data/artifacts/images/book-2009-039.jpg",
+      "format": "jpg",
+      "bytes": 382731
+    },
+    {
+      "path": "artifacts/images/book-2009-040.jpg",
+      "url": "/data/artifacts/images/book-2009-040.jpg",
+      "format": "jpg",
+      "bytes": 427235
+    },
+    {
+      "path": "artifacts/images/book-2009-041.jpg",
+      "url": "/data/artifacts/images/book-2009-041.jpg",
+      "format": "jpg",
+      "bytes": 314990
+    },
+    {
+      "path": "artifacts/images/book-2009-042.jpg",
+      "url": "/data/artifacts/images/book-2009-042.jpg",
+      "format": "jpg",
+      "bytes": 394259
+    },
+    {
+      "path": "artifacts/images/book-2009-043.jpg",
+      "url": "/data/artifacts/images/book-2009-043.jpg",
+      "format": "jpg",
+      "bytes": 431543
+    },
+    {
+      "path": "artifacts/images/book-2009-044.jpg",
+      "url": "/data/artifacts/images/book-2009-044.jpg",
+      "format": "jpg",
+      "bytes": 293609
+    },
+    {
+      "path": "artifacts/images/book-2009-045.jpg",
+      "url": "/data/artifacts/images/book-2009-045.jpg",
+      "format": "jpg",
+      "bytes": 548288
+    },
+    {
+      "path": "artifacts/images/book-2009-046.jpg",
+      "url": "/data/artifacts/images/book-2009-046.jpg",
+      "format": "jpg",
+      "bytes": 349826
+    },
+    {
+      "path": "artifacts/images/book-2009-047.jpg",
+      "url": "/data/artifacts/images/book-2009-047.jpg",
+      "format": "jpg",
+      "bytes": 307679
+    },
+    {
+      "path": "artifacts/images/book-2009-048.jpg",
+      "url": "/data/artifacts/images/book-2009-048.jpg",
+      "format": "jpg",
+      "bytes": 460574
+    },
+    {
+      "path": "artifacts/images/book-2009-049.jpg",
+      "url": "/data/artifacts/images/book-2009-049.jpg",
+      "format": "jpg",
+      "bytes": 553556
+    },
+    {
+      "path": "artifacts/images/book-2009-050.jpg",
+      "url": "/data/artifacts/images/book-2009-050.jpg",
+      "format": "jpg",
+      "bytes": 550110
+    },
+    {
+      "path": "artifacts/images/book-2009-051.jpg",
+      "url": "/data/artifacts/images/book-2009-051.jpg",
+      "format": "jpg",
+      "bytes": 215938
+    },
+    {
+      "path": "artifacts/images/book-2009-052.jpg",
+      "url": "/data/artifacts/images/book-2009-052.jpg",
+      "format": "jpg",
+      "bytes": 626686
+    },
+    {
+      "path": "artifacts/images/book-2009-053.jpg",
+      "url": "/data/artifacts/images/book-2009-053.jpg",
+      "format": "jpg",
+      "bytes": 434879
+    },
+    {
+      "path": "artifacts/images/book-2009-054.jpg",
+      "url": "/data/artifacts/images/book-2009-054.jpg",
+      "format": "jpg",
+      "bytes": 488082
+    },
+    {
+      "path": "artifacts/images/book-2009-055.jpg",
+      "url": "/data/artifacts/images/book-2009-055.jpg",
+      "format": "jpg",
+      "bytes": 336920
+    },
+    {
+      "path": "artifacts/images/book-2009-056.jpg",
+      "url": "/data/artifacts/images/book-2009-056.jpg",
+      "format": "jpg",
+      "bytes": 539924
+    },
+    {
+      "path": "artifacts/images/book-2009-057.jpg",
+      "url": "/data/artifacts/images/book-2009-057.jpg",
+      "format": "jpg",
+      "bytes": 452014
+    },
+    {
+      "path": "artifacts/images/book-2009-058.jpg",
+      "url": "/data/artifacts/images/book-2009-058.jpg",
+      "format": "jpg",
+      "bytes": 353631
+    },
+    {
+      "path": "artifacts/images/book-2009-059.jpg",
+      "url": "/data/artifacts/images/book-2009-059.jpg",
+      "format": "jpg",
+      "bytes": 350059
+    },
+    {
+      "path": "artifacts/images/book-2009-060.jpg",
+      "url": "/data/artifacts/images/book-2009-060.jpg",
+      "format": "jpg",
+      "bytes": 293061
+    },
+    {
+      "path": "artifacts/images/book-2009-061.jpg",
+      "url": "/data/artifacts/images/book-2009-061.jpg",
+      "format": "jpg",
+      "bytes": 522307
+    },
+    {
+      "path": "artifacts/images/book-2009-062.jpg",
+      "url": "/data/artifacts/images/book-2009-062.jpg",
+      "format": "jpg",
+      "bytes": 582052
+    },
+    {
+      "path": "artifacts/images/book-2009-063.jpg",
+      "url": "/data/artifacts/images/book-2009-063.jpg",
+      "format": "jpg",
+      "bytes": 574211
+    },
+    {
+      "path": "artifacts/images/book-2009-064.jpg",
+      "url": "/data/artifacts/images/book-2009-064.jpg",
+      "format": "jpg",
+      "bytes": 256184
+    },
+    {
+      "path": "artifacts/images/book-2009-065.jpg",
+      "url": "/data/artifacts/images/book-2009-065.jpg",
+      "format": "jpg",
+      "bytes": 264173
+    },
+    {
+      "path": "artifacts/images/book-2009-066.jpg",
+      "url": "/data/artifacts/images/book-2009-066.jpg",
+      "format": "jpg",
+      "bytes": 301998
+    },
+    {
+      "path": "artifacts/images/book-2009-067.jpg",
+      "url": "/data/artifacts/images/book-2009-067.jpg",
+      "format": "jpg",
+      "bytes": 271686
+    },
+    {
+      "path": "artifacts/images/book-2009-068.jpg",
+      "url": "/data/artifacts/images/book-2009-068.jpg",
+      "format": "jpg",
+      "bytes": 290936
+    },
+    {
+      "path": "artifacts/images/book-2009-069.jpg",
+      "url": "/data/artifacts/images/book-2009-069.jpg",
+      "format": "jpg",
+      "bytes": 282833
+    },
+    {
+      "path": "artifacts/images/book-2009-070.jpg",
+      "url": "/data/artifacts/images/book-2009-070.jpg",
+      "format": "jpg",
+      "bytes": 316816
+    },
+    {
+      "path": "artifacts/images/book-2009-071.jpg",
+      "url": "/data/artifacts/images/book-2009-071.jpg",
+      "format": "jpg",
+      "bytes": 483622
+    },
+    {
+      "path": "artifacts/images/book-2009-072.jpg",
+      "url": "/data/artifacts/images/book-2009-072.jpg",
+      "format": "jpg",
+      "bytes": 159177
+    },
+    {
+      "path": "artifacts/images/book-2009-073.jpg",
+      "url": "/data/artifacts/images/book-2009-073.jpg",
+      "format": "jpg",
+      "bytes": 261986
+    },
+    {
+      "path": "artifacts/images/book-2009-074.jpg",
+      "url": "/data/artifacts/images/book-2009-074.jpg",
+      "format": "jpg",
+      "bytes": 202177
+    },
+    {
+      "path": "artifacts/images/book-2009-075.jpg",
+      "url": "/data/artifacts/images/book-2009-075.jpg",
+      "format": "jpg",
+      "bytes": 529525
+    },
+    {
+      "path": "artifacts/images/book-2009-076.jpg",
+      "url": "/data/artifacts/images/book-2009-076.jpg",
+      "format": "jpg",
+      "bytes": 341980
+    },
+    {
+      "path": "artifacts/images/book-2009-077.jpg",
+      "url": "/data/artifacts/images/book-2009-077.jpg",
+      "format": "jpg",
+      "bytes": 557370
+    },
+    {
+      "path": "artifacts/images/book-2009-078.jpg",
+      "url": "/data/artifacts/images/book-2009-078.jpg",
+      "format": "jpg",
+      "bytes": 269005
+    },
+    {
+      "path": "artifacts/images/book-2009-079.jpg",
+      "url": "/data/artifacts/images/book-2009-079.jpg",
+      "format": "jpg",
+      "bytes": 327888
+    },
+    {
+      "path": "artifacts/images/book-2009-080.jpg",
+      "url": "/data/artifacts/images/book-2009-080.jpg",
+      "format": "jpg",
+      "bytes": 286740
+    },
+    {
+      "path": "artifacts/images/book-2009-081.jpg",
+      "url": "/data/artifacts/images/book-2009-081.jpg",
+      "format": "jpg",
+      "bytes": 314081
+    },
+    {
+      "path": "artifacts/images/book-2009-082.jpg",
+      "url": "/data/artifacts/images/book-2009-082.jpg",
+      "format": "jpg",
+      "bytes": 549942
+    },
+    {
+      "path": "artifacts/images/book-2009-083.jpg",
+      "url": "/data/artifacts/images/book-2009-083.jpg",
+      "format": "jpg",
+      "bytes": 490116
+    },
+    {
+      "path": "artifacts/images/book-2009-084.jpg",
+      "url": "/data/artifacts/images/book-2009-084.jpg",
+      "format": "jpg",
+      "bytes": 629138
+    },
+    {
+      "path": "artifacts/images/book-2009-085.jpg",
+      "url": "/data/artifacts/images/book-2009-085.jpg",
+      "format": "jpg",
+      "bytes": 311193
+    },
+    {
+      "path": "artifacts/images/book-2009-086.jpg",
+      "url": "/data/artifacts/images/book-2009-086.jpg",
+      "format": "jpg",
+      "bytes": 579147
+    },
+    {
+      "path": "artifacts/images/book-2009-087.jpg",
+      "url": "/data/artifacts/images/book-2009-087.jpg",
+      "format": "jpg",
+      "bytes": 327099
+    },
+    {
+      "path": "artifacts/images/book-2009-088.jpg",
+      "url": "/data/artifacts/images/book-2009-088.jpg",
+      "format": "jpg",
+      "bytes": 368165
+    },
+    {
+      "path": "artifacts/images/book-2009-089.jpg",
+      "url": "/data/artifacts/images/book-2009-089.jpg",
+      "format": "jpg",
+      "bytes": 517508
+    },
+    {
+      "path": "artifacts/images/book-2009-090.jpg",
+      "url": "/data/artifacts/images/book-2009-090.jpg",
+      "format": "jpg",
+      "bytes": 456438
+    },
+    {
+      "path": "artifacts/images/book-2009-091.jpg",
+      "url": "/data/artifacts/images/book-2009-091.jpg",
+      "format": "jpg",
+      "bytes": 342720
+    },
+    {
+      "path": "artifacts/images/book-2009-092.jpg",
+      "url": "/data/artifacts/images/book-2009-092.jpg",
+      "format": "jpg",
+      "bytes": 294776
+    },
+    {
+      "path": "artifacts/images/book-2009-093.jpg",
+      "url": "/data/artifacts/images/book-2009-093.jpg",
+      "format": "jpg",
+      "bytes": 159743
+    },
+    {
+      "path": "artifacts/images/book-2009-094.jpg",
+      "url": "/data/artifacts/images/book-2009-094.jpg",
+      "format": "jpg",
+      "bytes": 283854
+    },
+    {
+      "path": "artifacts/images/book-2009-095.jpg",
+      "url": "/data/artifacts/images/book-2009-095.jpg",
+      "format": "jpg",
+      "bytes": 655273
+    },
+    {
+      "path": "artifacts/images/book-2009-096.jpg",
+      "url": "/data/artifacts/images/book-2009-096.jpg",
+      "format": "jpg",
+      "bytes": 242287
+    },
+    {
+      "path": "artifacts/images/book-2009-097.jpg",
+      "url": "/data/artifacts/images/book-2009-097.jpg",
+      "format": "jpg",
+      "bytes": 218554
+    },
+    {
+      "path": "artifacts/images/book-2009-098.jpg",
+      "url": "/data/artifacts/images/book-2009-098.jpg",
+      "format": "jpg",
+      "bytes": 442163
+    },
+    {
+      "path": "artifacts/images/book-2009-099.jpg",
+      "url": "/data/artifacts/images/book-2009-099.jpg",
+      "format": "jpg",
+      "bytes": 629376
+    },
+    {
+      "path": "artifacts/images/book-2009-100.jpg",
+      "url": "/data/artifacts/images/book-2009-100.jpg",
+      "format": "jpg",
+      "bytes": 286815
+    },
+    {
+      "path": "artifacts/images/book-2009-101.jpg",
+      "url": "/data/artifacts/images/book-2009-101.jpg",
+      "format": "jpg",
+      "bytes": 307059
+    },
+    {
+      "path": "artifacts/images/book-2009-102.jpg",
+      "url": "/data/artifacts/images/book-2009-102.jpg",
+      "format": "jpg",
+      "bytes": 269020
+    },
+    {
+      "path": "artifacts/images/book-2009-103.jpg",
+      "url": "/data/artifacts/images/book-2009-103.jpg",
+      "format": "jpg",
+      "bytes": 287996
+    },
+    {
+      "path": "artifacts/images/book-2009-104.jpg",
+      "url": "/data/artifacts/images/book-2009-104.jpg",
+      "format": "jpg",
+      "bytes": 284135
+    },
+    {
+      "path": "artifacts/images/book-2009-105.jpg",
+      "url": "/data/artifacts/images/book-2009-105.jpg",
+      "format": "jpg",
+      "bytes": 284509
+    },
+    {
+      "path": "artifacts/images/book-2009-106.jpg",
+      "url": "/data/artifacts/images/book-2009-106.jpg",
+      "format": "jpg",
+      "bytes": 292480
+    },
+    {
+      "path": "artifacts/images/book-2009-107.jpg",
+      "url": "/data/artifacts/images/book-2009-107.jpg",
+      "format": "jpg",
+      "bytes": 89509
+    },
+    {
+      "path": "artifacts/images/book-2009-108.jpg",
+      "url": "/data/artifacts/images/book-2009-108.jpg",
+      "format": "jpg",
+      "bytes": 132658
+    },
+    {
+      "path": "artifacts/images/book-2009-109.jpg",
+      "url": "/data/artifacts/images/book-2009-109.jpg",
+      "format": "jpg",
+      "bytes": 306264
+    },
+    {
+      "path": "artifacts/images/book-2009-110.jpg",
+      "url": "/data/artifacts/images/book-2009-110.jpg",
+      "format": "jpg",
+      "bytes": 90770
+    },
+    {
+      "path": "artifacts/images/book-2009-111.jpg",
+      "url": "/data/artifacts/images/book-2009-111.jpg",
+      "format": "jpg",
+      "bytes": 523118
+    },
+    {
+      "path": "artifacts/images/book-2009-112.jpg",
+      "url": "/data/artifacts/images/book-2009-112.jpg",
+      "format": "jpg",
+      "bytes": 112046
+    },
+    {
+      "path": "artifacts/images/book-2009-113.jpg",
+      "url": "/data/artifacts/images/book-2009-113.jpg",
+      "format": "jpg",
+      "bytes": 276882
+    },
+    {
+      "path": "artifacts/images/book-2009-114.jpg",
+      "url": "/data/artifacts/images/book-2009-114.jpg",
+      "format": "jpg",
+      "bytes": 342394
+    },
+    {
+      "path": "artifacts/images/book-2009-115.jpg",
+      "url": "/data/artifacts/images/book-2009-115.jpg",
+      "format": "jpg",
+      "bytes": 278188
+    },
+    {
+      "path": "artifacts/images/book-2009-116.jpg",
+      "url": "/data/artifacts/images/book-2009-116.jpg",
+      "format": "jpg",
+      "bytes": 193696
+    },
+    {
+      "path": "artifacts/images/book-2009-117.jpg",
+      "url": "/data/artifacts/images/book-2009-117.jpg",
+      "format": "jpg",
+      "bytes": 397445
+    },
+    {
+      "path": "artifacts/images/book-2009-118.jpg",
+      "url": "/data/artifacts/images/book-2009-118.jpg",
+      "format": "jpg",
+      "bytes": 370462
+    },
+    {
+      "path": "artifacts/images/book-2009-119.jpg",
+      "url": "/data/artifacts/images/book-2009-119.jpg",
+      "format": "jpg",
+      "bytes": 292952
+    },
+    {
+      "path": "artifacts/images/book-2009-120.jpg",
+      "url": "/data/artifacts/images/book-2009-120.jpg",
+      "format": "jpg",
+      "bytes": 280318
+    },
+    {
+      "path": "artifacts/images/book-2009-121.jpg",
+      "url": "/data/artifacts/images/book-2009-121.jpg",
+      "format": "jpg",
+      "bytes": 576035
+    },
+    {
+      "path": "artifacts/images/book-2009-122.jpg",
+      "url": "/data/artifacts/images/book-2009-122.jpg",
+      "format": "jpg",
+      "bytes": 608902
+    },
+    {
+      "path": "artifacts/images/book-2009-123.jpg",
+      "url": "/data/artifacts/images/book-2009-123.jpg",
+      "format": "jpg",
+      "bytes": 611860
+    },
+    {
+      "path": "artifacts/images/book-2009-124.jpg",
+      "url": "/data/artifacts/images/book-2009-124.jpg",
+      "format": "jpg",
+      "bytes": 478483
+    },
+    {
+      "path": "artifacts/images/book-2009-125.jpg",
+      "url": "/data/artifacts/images/book-2009-125.jpg",
+      "format": "jpg",
+      "bytes": 591088
+    },
+    {
+      "path": "artifacts/images/book-2009-126.jpg",
+      "url": "/data/artifacts/images/book-2009-126.jpg",
+      "format": "jpg",
+      "bytes": 538647
+    },
+    {
+      "path": "artifacts/images/book-2009-127.jpg",
+      "url": "/data/artifacts/images/book-2009-127.jpg",
+      "format": "jpg",
+      "bytes": 367328
+    },
+    {
+      "path": "artifacts/images/book-2009-128.jpg",
+      "url": "/data/artifacts/images/book-2009-128.jpg",
+      "format": "jpg",
+      "bytes": 434970
+    },
+    {
+      "path": "artifacts/images/book-2009-129.jpg",
+      "url": "/data/artifacts/images/book-2009-129.jpg",
+      "format": "jpg",
+      "bytes": 476453
+    },
+    {
+      "path": "artifacts/images/book-2009-130.jpg",
+      "url": "/data/artifacts/images/book-2009-130.jpg",
+      "format": "jpg",
+      "bytes": 443046
+    },
+    {
+      "path": "artifacts/images/book-2009-131.jpg",
+      "url": "/data/artifacts/images/book-2009-131.jpg",
+      "format": "jpg",
+      "bytes": 265806
+    },
+    {
+      "path": "artifacts/images/book-2009-132.jpg",
+      "url": "/data/artifacts/images/book-2009-132.jpg",
+      "format": "jpg",
+      "bytes": 641259
+    },
+    {
+      "path": "artifacts/images/book-2009-133.jpg",
+      "url": "/data/artifacts/images/book-2009-133.jpg",
+      "format": "jpg",
+      "bytes": 319314
+    },
+    {
+      "path": "artifacts/images/book-2009-134.jpg",
+      "url": "/data/artifacts/images/book-2009-134.jpg",
+      "format": "jpg",
+      "bytes": 301347
+    },
+    {
+      "path": "artifacts/images/book-2009-135.jpg",
+      "url": "/data/artifacts/images/book-2009-135.jpg",
+      "format": "jpg",
+      "bytes": 232802
+    },
+    {
+      "path": "artifacts/images/book-2009-136.jpg",
+      "url": "/data/artifacts/images/book-2009-136.jpg",
+      "format": "jpg",
+      "bytes": 233797
+    },
+    {
+      "path": "artifacts/images/book-2009-137.jpg",
+      "url": "/data/artifacts/images/book-2009-137.jpg",
+      "format": "jpg",
+      "bytes": 248734
+    },
+    {
+      "path": "artifacts/images/book-2009-138.jpg",
+      "url": "/data/artifacts/images/book-2009-138.jpg",
+      "format": "jpg",
+      "bytes": 556198
+    },
+    {
+      "path": "artifacts/images/book-2009-139.jpg",
+      "url": "/data/artifacts/images/book-2009-139.jpg",
+      "format": "jpg",
+      "bytes": 249003
+    },
+    {
+      "path": "artifacts/images/book-2009-140.jpg",
+      "url": "/data/artifacts/images/book-2009-140.jpg",
+      "format": "jpg",
+      "bytes": 144888
+    },
+    {
+      "path": "artifacts/images/book-2009-141.jpg",
+      "url": "/data/artifacts/images/book-2009-141.jpg",
+      "format": "jpg",
+      "bytes": 325835
+    },
+    {
+      "path": "artifacts/images/book-2009-142.jpg",
+      "url": "/data/artifacts/images/book-2009-142.jpg",
+      "format": "jpg",
+      "bytes": 311206
+    },
+    {
+      "path": "artifacts/images/book-2009-143.jpg",
+      "url": "/data/artifacts/images/book-2009-143.jpg",
+      "format": "jpg",
+      "bytes": 361238
+    },
+    {
+      "path": "artifacts/images/book-2009-144.jpg",
+      "url": "/data/artifacts/images/book-2009-144.jpg",
+      "format": "jpg",
+      "bytes": 437189
+    },
+    {
+      "path": "artifacts/images/book-2009-145.jpg",
+      "url": "/data/artifacts/images/book-2009-145.jpg",
+      "format": "jpg",
+      "bytes": 388380
+    },
+    {
+      "path": "artifacts/images/book-2009-146.jpg",
+      "url": "/data/artifacts/images/book-2009-146.jpg",
+      "format": "jpg",
+      "bytes": 319912
+    },
+    {
+      "path": "artifacts/images/book-2009-147.jpg",
+      "url": "/data/artifacts/images/book-2009-147.jpg",
+      "format": "jpg",
+      "bytes": 229295
+    },
+    {
+      "path": "artifacts/images/book-2009-148.jpg",
+      "url": "/data/artifacts/images/book-2009-148.jpg",
+      "format": "jpg",
+      "bytes": 911505
+    },
+    {
+      "path": "artifacts/images/book-2009-149.jpg",
+      "url": "/data/artifacts/images/book-2009-149.jpg",
+      "format": "jpg",
+      "bytes": 418814
+    },
+    {
+      "path": "artifacts/images/book-2009-150.jpg",
+      "url": "/data/artifacts/images/book-2009-150.jpg",
+      "format": "jpg",
+      "bytes": 187178
+    },
+    {
+      "path": "artifacts/images/book-2009-151.jpg",
+      "url": "/data/artifacts/images/book-2009-151.jpg",
+      "format": "jpg",
+      "bytes": 301388
+    },
+    {
+      "path": "artifacts/images/book-2009-152.jpg",
+      "url": "/data/artifacts/images/book-2009-152.jpg",
+      "format": "jpg",
+      "bytes": 328536
+    },
+    {
+      "path": "artifacts/images/book-2009-153.jpg",
+      "url": "/data/artifacts/images/book-2009-153.jpg",
+      "format": "jpg",
+      "bytes": 467379
+    },
+    {
+      "path": "artifacts/images/book-2009-154.jpg",
+      "url": "/data/artifacts/images/book-2009-154.jpg",
+      "format": "jpg",
+      "bytes": 373808
+    },
+    {
+      "path": "artifacts/images/book-2009-155.jpg",
+      "url": "/data/artifacts/images/book-2009-155.jpg",
+      "format": "jpg",
+      "bytes": 258575
+    },
+    {
+      "path": "artifacts/images/book-2009-156.jpg",
+      "url": "/data/artifacts/images/book-2009-156.jpg",
+      "format": "jpg",
+      "bytes": 153022
+    },
+    {
+      "path": "artifacts/images/book-2009-157.jpg",
+      "url": "/data/artifacts/images/book-2009-157.jpg",
+      "format": "jpg",
+      "bytes": 356558
+    },
+    {
+      "path": "artifacts/images/book-2009-158.jpg",
+      "url": "/data/artifacts/images/book-2009-158.jpg",
+      "format": "jpg",
+      "bytes": 240104
+    },
+    {
+      "path": "artifacts/images/book-2009-159.jpg",
+      "url": "/data/artifacts/images/book-2009-159.jpg",
+      "format": "jpg",
+      "bytes": 246067
+    },
+    {
+      "path": "artifacts/images/book-2009-160.jpg",
+      "url": "/data/artifacts/images/book-2009-160.jpg",
+      "format": "jpg",
+      "bytes": 169755
+    },
+    {
+      "path": "artifacts/images/book-2009-161.jpg",
+      "url": "/data/artifacts/images/book-2009-161.jpg",
+      "format": "jpg",
+      "bytes": 175964
+    },
+    {
+      "path": "artifacts/images/book-2009-162.jpg",
+      "url": "/data/artifacts/images/book-2009-162.jpg",
+      "format": "jpg",
+      "bytes": 164573
+    },
+    {
+      "path": "artifacts/images/book-2009-163.jpg",
+      "url": "/data/artifacts/images/book-2009-163.jpg",
+      "format": "jpg",
+      "bytes": 245547
+    },
+    {
+      "path": "artifacts/images/book-2009-164.jpg",
+      "url": "/data/artifacts/images/book-2009-164.jpg",
+      "format": "jpg",
+      "bytes": 257552
+    },
+    {
+      "path": "artifacts/images/book-2009-165.jpg",
+      "url": "/data/artifacts/images/book-2009-165.jpg",
+      "format": "jpg",
+      "bytes": 312220
+    },
+    {
+      "path": "artifacts/images/book-2009-166.jpg",
+      "url": "/data/artifacts/images/book-2009-166.jpg",
+      "format": "jpg",
+      "bytes": 239701
+    },
+    {
+      "path": "artifacts/images/book-2009-167.jpg",
+      "url": "/data/artifacts/images/book-2009-167.jpg",
+      "format": "jpg",
+      "bytes": 144114
+    },
+    {
+      "path": "artifacts/images/book-2009-168.jpg",
+      "url": "/data/artifacts/images/book-2009-168.jpg",
+      "format": "jpg",
+      "bytes": 383202
+    },
+    {
+      "path": "artifacts/images/book-2009-169.jpg",
+      "url": "/data/artifacts/images/book-2009-169.jpg",
+      "format": "jpg",
+      "bytes": 143477
+    },
+    {
+      "path": "artifacts/images/book-2009-170.jpg",
+      "url": "/data/artifacts/images/book-2009-170.jpg",
+      "format": "jpg",
+      "bytes": 601027
+    },
+    {
+      "path": "artifacts/images/book-2009-171.jpg",
+      "url": "/data/artifacts/images/book-2009-171.jpg",
+      "format": "jpg",
+      "bytes": 606309
+    },
+    {
+      "path": "artifacts/images/book-2009-172.jpg",
+      "url": "/data/artifacts/images/book-2009-172.jpg",
+      "format": "jpg",
+      "bytes": 231353
+    },
+    {
+      "path": "artifacts/images/book-2009-173.jpg",
+      "url": "/data/artifacts/images/book-2009-173.jpg",
+      "format": "jpg",
+      "bytes": 227856
+    },
+    {
+      "path": "artifacts/images/book-2009-174.jpg",
+      "url": "/data/artifacts/images/book-2009-174.jpg",
+      "format": "jpg",
+      "bytes": 239363
+    },
+    {
+      "path": "artifacts/images/book-2009-175.jpg",
+      "url": "/data/artifacts/images/book-2009-175.jpg",
+      "format": "jpg",
+      "bytes": 575203
+    },
+    {
+      "path": "artifacts/images/book-2009-176.jpg",
+      "url": "/data/artifacts/images/book-2009-176.jpg",
+      "format": "jpg",
+      "bytes": 253745
+    },
+    {
+      "path": "artifacts/images/book-2009-177.jpg",
+      "url": "/data/artifacts/images/book-2009-177.jpg",
+      "format": "jpg",
+      "bytes": 578842
+    },
+    {
+      "path": "artifacts/images/book-2009-178.jpg",
+      "url": "/data/artifacts/images/book-2009-178.jpg",
+      "format": "jpg",
+      "bytes": 395275
+    },
+    {
+      "path": "artifacts/images/book-2009-179.jpg",
+      "url": "/data/artifacts/images/book-2009-179.jpg",
+      "format": "jpg",
+      "bytes": 167330
+    },
+    {
+      "path": "artifacts/images/book-2009-180.jpg",
+      "url": "/data/artifacts/images/book-2009-180.jpg",
+      "format": "jpg",
+      "bytes": 546671
+    },
+    {
+      "path": "artifacts/images/book-2009-181.jpg",
+      "url": "/data/artifacts/images/book-2009-181.jpg",
+      "format": "jpg",
+      "bytes": 377936
+    },
+    {
+      "path": "artifacts/images/book-2009-182.jpg",
+      "url": "/data/artifacts/images/book-2009-182.jpg",
+      "format": "jpg",
+      "bytes": 151354
+    },
+    {
+      "path": "artifacts/images/book-2009-183.jpg",
+      "url": "/data/artifacts/images/book-2009-183.jpg",
+      "format": "jpg",
+      "bytes": 141694
+    },
+    {
+      "path": "artifacts/images/book-2009-184.jpg",
+      "url": "/data/artifacts/images/book-2009-184.jpg",
+      "format": "jpg",
+      "bytes": 595393
+    },
+    {
+      "path": "artifacts/images/book-2009-185.jpg",
+      "url": "/data/artifacts/images/book-2009-185.jpg",
+      "format": "jpg",
+      "bytes": 142087
+    },
+    {
+      "path": "artifacts/images/book-2009-186.jpg",
+      "url": "/data/artifacts/images/book-2009-186.jpg",
+      "format": "jpg",
+      "bytes": 251784
+    },
+    {
+      "path": "artifacts/images/book-2009-187.jpg",
+      "url": "/data/artifacts/images/book-2009-187.jpg",
+      "format": "jpg",
+      "bytes": 441912
+    },
+    {
+      "path": "artifacts/images/book-2009-188.jpg",
+      "url": "/data/artifacts/images/book-2009-188.jpg",
+      "format": "jpg",
+      "bytes": 438771
+    },
+    {
+      "path": "artifacts/images/book-2009-189.jpg",
+      "url": "/data/artifacts/images/book-2009-189.jpg",
+      "format": "jpg",
+      "bytes": 323763
+    },
+    {
+      "path": "artifacts/images/book-2009-190.jpg",
+      "url": "/data/artifacts/images/book-2009-190.jpg",
+      "format": "jpg",
+      "bytes": 528880
+    },
+    {
+      "path": "artifacts/images/book-2009-191.jpg",
+      "url": "/data/artifacts/images/book-2009-191.jpg",
+      "format": "jpg",
+      "bytes": 224083
+    },
+    {
+      "path": "artifacts/images/book-2009-192.jpg",
+      "url": "/data/artifacts/images/book-2009-192.jpg",
+      "format": "jpg",
+      "bytes": 626453
+    },
+    {
+      "path": "artifacts/images/book-2009-193.jpg",
+      "url": "/data/artifacts/images/book-2009-193.jpg",
+      "format": "jpg",
+      "bytes": 439237
+    },
+    {
+      "path": "artifacts/images/book-2009-194.jpg",
+      "url": "/data/artifacts/images/book-2009-194.jpg",
+      "format": "jpg",
+      "bytes": 231323
+    },
+    {
+      "path": "artifacts/images/book-2009-195.jpg",
+      "url": "/data/artifacts/images/book-2009-195.jpg",
+      "format": "jpg",
+      "bytes": 674358
+    },
+    {
+      "path": "artifacts/images/book-2009-196.jpg",
+      "url": "/data/artifacts/images/book-2009-196.jpg",
+      "format": "jpg",
+      "bytes": 494091
+    },
+    {
+      "path": "artifacts/images/book-2009-197.jpg",
+      "url": "/data/artifacts/images/book-2009-197.jpg",
+      "format": "jpg",
+      "bytes": 409062
+    },
+    {
+      "path": "artifacts/images/book-2009-198.jpg",
+      "url": "/data/artifacts/images/book-2009-198.jpg",
+      "format": "jpg",
+      "bytes": 393048
+    },
+    {
+      "path": "artifacts/images/book-2009-199.jpg",
+      "url": "/data/artifacts/images/book-2009-199.jpg",
+      "format": "jpg",
+      "bytes": 224726
+    },
+    {
+      "path": "artifacts/images/book-2009-200.jpg",
+      "url": "/data/artifacts/images/book-2009-200.jpg",
+      "format": "jpg",
+      "bytes": 224628
+    },
+    {
+      "path": "artifacts/images/book-2009-201.jpg",
+      "url": "/data/artifacts/images/book-2009-201.jpg",
+      "format": "jpg",
+      "bytes": 572501
+    },
+    {
+      "path": "artifacts/images/book-2009-202.jpg",
+      "url": "/data/artifacts/images/book-2009-202.jpg",
+      "format": "jpg",
+      "bytes": 46376
+    },
+    {
+      "path": "artifacts/images/book-2009-203.jpg",
+      "url": "/data/artifacts/images/book-2009-203.jpg",
+      "format": "jpg",
+      "bytes": 503054
+    },
+    {
+      "path": "artifacts/images/book-2009-204.jpg",
+      "url": "/data/artifacts/images/book-2009-204.jpg",
+      "format": "jpg",
+      "bytes": 143775
+    },
+    {
+      "path": "artifacts/images/book-2009-205.jpg",
+      "url": "/data/artifacts/images/book-2009-205.jpg",
+      "format": "jpg",
+      "bytes": 521185
+    },
+    {
+      "path": "artifacts/images/book-2009-206.jpg",
+      "url": "/data/artifacts/images/book-2009-206.jpg",
+      "format": "jpg",
+      "bytes": 601414
+    },
+    {
+      "path": "artifacts/images/book-2009-207.jpg",
+      "url": "/data/artifacts/images/book-2009-207.jpg",
+      "format": "jpg",
+      "bytes": 358273
+    },
+    {
+      "path": "artifacts/images/book-2009-208.jpg",
+      "url": "/data/artifacts/images/book-2009-208.jpg",
+      "format": "jpg",
+      "bytes": 343540
+    },
+    {
+      "path": "artifacts/images/book-2009-209.jpg",
+      "url": "/data/artifacts/images/book-2009-209.jpg",
+      "format": "jpg",
+      "bytes": 373925
+    },
+    {
+      "path": "artifacts/images/book-2009-210.jpg",
+      "url": "/data/artifacts/images/book-2009-210.jpg",
+      "format": "jpg",
+      "bytes": 556816
+    },
+    {
+      "path": "artifacts/images/book-2009-211.jpg",
+      "url": "/data/artifacts/images/book-2009-211.jpg",
+      "format": "jpg",
+      "bytes": 611328
+    },
+    {
+      "path": "artifacts/images/book-2009-212.jpg",
+      "url": "/data/artifacts/images/book-2009-212.jpg",
+      "format": "jpg",
+      "bytes": 495556
+    },
+    {
+      "path": "artifacts/images/book-2009-213.jpg",
+      "url": "/data/artifacts/images/book-2009-213.jpg",
+      "format": "jpg",
+      "bytes": 538775
+    },
+    {
+      "path": "artifacts/images/book-2009-214.jpg",
+      "url": "/data/artifacts/images/book-2009-214.jpg",
+      "format": "jpg",
+      "bytes": 572758
+    },
+    {
+      "path": "artifacts/images/book-2009-215.jpg",
+      "url": "/data/artifacts/images/book-2009-215.jpg",
+      "format": "jpg",
+      "bytes": 559983
+    },
+    {
+      "path": "artifacts/images/book-2009-216.jpg",
+      "url": "/data/artifacts/images/book-2009-216.jpg",
+      "format": "jpg",
+      "bytes": 584029
+    },
+    {
+      "path": "artifacts/images/book-2009-217.jpg",
+      "url": "/data/artifacts/images/book-2009-217.jpg",
+      "format": "jpg",
+      "bytes": 313967
+    },
+    {
+      "path": "artifacts/images/book-2009-218.jpg",
+      "url": "/data/artifacts/images/book-2009-218.jpg",
+      "format": "jpg",
+      "bytes": 620441
+    },
+    {
+      "path": "artifacts/images/book-2009-219.jpg",
+      "url": "/data/artifacts/images/book-2009-219.jpg",
+      "format": "jpg",
+      "bytes": 561008
+    },
+    {
+      "path": "artifacts/images/book-2009-220.jpg",
+      "url": "/data/artifacts/images/book-2009-220.jpg",
+      "format": "jpg",
+      "bytes": 258949
+    },
+    {
+      "path": "artifacts/images/book-2009-221.jpg",
+      "url": "/data/artifacts/images/book-2009-221.jpg",
+      "format": "jpg",
+      "bytes": 465038
+    },
+    {
+      "path": "artifacts/images/book-2009-222.jpg",
+      "url": "/data/artifacts/images/book-2009-222.jpg",
+      "format": "jpg",
+      "bytes": 233523
+    },
+    {
+      "path": "artifacts/images/book-2009-223.jpg",
+      "url": "/data/artifacts/images/book-2009-223.jpg",
+      "format": "jpg",
+      "bytes": 562764
+    },
+    {
+      "path": "artifacts/images/book-2009-224.jpg",
+      "url": "/data/artifacts/images/book-2009-224.jpg",
+      "format": "jpg",
+      "bytes": 562764
+    },
+    {
+      "path": "artifacts/images/book-2009-225.jpg",
+      "url": "/data/artifacts/images/book-2009-225.jpg",
+      "format": "jpg",
+      "bytes": 562764
+    },
+    {
+      "path": "artifacts/images/book-2009-226.jpg",
+      "url": "/data/artifacts/images/book-2009-226.jpg",
+      "format": "jpg",
+      "bytes": 562764
+    },
+    {
+      "path": "artifacts/images/book-2009-227.jpg",
+      "url": "/data/artifacts/images/book-2009-227.jpg",
+      "format": "jpg",
+      "bytes": 541235
+    },
+    {
+      "path": "artifacts/images/book-2009-228.jpg",
+      "url": "/data/artifacts/images/book-2009-228.jpg",
+      "format": "jpg",
+      "bytes": 541235
+    },
+    {
+      "path": "artifacts/images/book-2009-229.jpg",
+      "url": "/data/artifacts/images/book-2009-229.jpg",
+      "format": "jpg",
+      "bytes": 541235
+    },
+    {
+      "path": "artifacts/images/book-2009-230.jpg",
+      "url": "/data/artifacts/images/book-2009-230.jpg",
+      "format": "jpg",
+      "bytes": 544915
+    },
+    {
+      "path": "artifacts/images/book-2009-231.jpg",
+      "url": "/data/artifacts/images/book-2009-231.jpg",
+      "format": "jpg",
+      "bytes": 544915
+    },
+    {
+      "path": "artifacts/images/book-2009-232.jpg",
+      "url": "/data/artifacts/images/book-2009-232.jpg",
+      "format": "jpg",
+      "bytes": 544915
+    },
+    {
+      "path": "artifacts/images/book-2009-233.jpg",
+      "url": "/data/artifacts/images/book-2009-233.jpg",
+      "format": "jpg",
+      "bytes": 544915
+    },
+    {
+      "path": "artifacts/images/book-2009-234.jpg",
+      "url": "/data/artifacts/images/book-2009-234.jpg",
+      "format": "jpg",
+      "bytes": 514315
+    },
+    {
+      "path": "artifacts/images/book-2009-235.jpg",
+      "url": "/data/artifacts/images/book-2009-235.jpg",
+      "format": "jpg",
+      "bytes": 568975
+    },
+    {
+      "path": "artifacts/images/book-2009-236.jpg",
+      "url": "/data/artifacts/images/book-2009-236.jpg",
+      "format": "jpg",
+      "bytes": 247332
+    },
+    {
+      "path": "artifacts/images/book-2009-237.jpg",
+      "url": "/data/artifacts/images/book-2009-237.jpg",
+      "format": "jpg",
+      "bytes": 495556
+    },
+    {
+      "path": "artifacts/images/book-2009-238.jpg",
+      "url": "/data/artifacts/images/book-2009-238.jpg",
+      "format": "jpg",
+      "bytes": 256990
+    },
+    {
+      "path": "artifacts/images/book-2009-239.jpg",
+      "url": "/data/artifacts/images/book-2009-239.jpg",
+      "format": "jpg",
+      "bytes": 578836
+    },
+    {
+      "path": "artifacts/images/book-2009-240.jpg",
+      "url": "/data/artifacts/images/book-2009-240.jpg",
+      "format": "jpg",
+      "bytes": 567331
+    },
+    {
+      "path": "artifacts/images/book-2009-241.jpg",
+      "url": "/data/artifacts/images/book-2009-241.jpg",
+      "format": "jpg",
+      "bytes": 498603
+    },
+    {
+      "path": "artifacts/images/book-2009-242.jpg",
+      "url": "/data/artifacts/images/book-2009-242.jpg",
+      "format": "jpg",
+      "bytes": 310840
+    },
+    {
+      "path": "artifacts/images/book-2009-243.jpg",
+      "url": "/data/artifacts/images/book-2009-243.jpg",
+      "format": "jpg",
+      "bytes": 444666
+    },
+    {
+      "path": "artifacts/images/book-2009-244.jpg",
+      "url": "/data/artifacts/images/book-2009-244.jpg",
+      "format": "jpg",
+      "bytes": 325626
+    },
+    {
+      "path": "artifacts/images/book-2009-245.jpg",
+      "url": "/data/artifacts/images/book-2009-245.jpg",
+      "format": "jpg",
+      "bytes": 468465
+    },
+    {
+      "path": "artifacts/images/book-2009-246.jpg",
+      "url": "/data/artifacts/images/book-2009-246.jpg",
+      "format": "jpg",
+      "bytes": 462536
+    },
+    {
+      "path": "artifacts/images/book-2009-247.jpg",
+      "url": "/data/artifacts/images/book-2009-247.jpg",
+      "format": "jpg",
+      "bytes": 189111
+    },
+    {
+      "path": "artifacts/images/book-2009-248.jpg",
+      "url": "/data/artifacts/images/book-2009-248.jpg",
+      "format": "jpg",
+      "bytes": 577237
+    },
+    {
+      "path": "artifacts/images/book-2009-249.jpg",
+      "url": "/data/artifacts/images/book-2009-249.jpg",
+      "format": "jpg",
+      "bytes": 311907
+    },
+    {
+      "path": "artifacts/images/book-2009-250.jpg",
+      "url": "/data/artifacts/images/book-2009-250.jpg",
+      "format": "jpg",
+      "bytes": 251033
+    },
+    {
+      "path": "artifacts/images/book-2009-251.jpg",
+      "url": "/data/artifacts/images/book-2009-251.jpg",
+      "format": "jpg",
+      "bytes": 330233
+    },
+    {
+      "path": "artifacts/images/book-2009-252.jpg",
+      "url": "/data/artifacts/images/book-2009-252.jpg",
+      "format": "jpg",
+      "bytes": 411618
+    },
+    {
+      "path": "artifacts/images/book-2009-253.jpg",
+      "url": "/data/artifacts/images/book-2009-253.jpg",
+      "format": "jpg",
+      "bytes": 315299
+    },
+    {
+      "path": "artifacts/images/book-2009-254.jpg",
+      "url": "/data/artifacts/images/book-2009-254.jpg",
+      "format": "jpg",
+      "bytes": 514315
+    },
+    {
+      "path": "artifacts/images/book-2009-255.jpg",
+      "url": "/data/artifacts/images/book-2009-255.jpg",
+      "format": "jpg",
+      "bytes": 495556
+    },
+    {
+      "path": "artifacts/images/book-2009-256.jpg",
+      "url": "/data/artifacts/images/book-2009-256.jpg",
+      "format": "jpg",
+      "bytes": 495556
+    },
+    {
+      "path": "artifacts/images/book-2009-257.jpg",
+      "url": "/data/artifacts/images/book-2009-257.jpg",
+      "format": "jpg",
+      "bytes": 564169
+    },
+    {
+      "path": "artifacts/images/book-2009-258.jpg",
+      "url": "/data/artifacts/images/book-2009-258.jpg",
+      "format": "jpg",
+      "bytes": 495556
+    },
+    {
+      "path": "artifacts/images/book-2009-259.jpg",
+      "url": "/data/artifacts/images/book-2009-259.jpg",
+      "format": "jpg",
+      "bytes": 581505
+    },
+    {
+      "path": "artifacts/images/book-2009-260.jpg",
+      "url": "/data/artifacts/images/book-2009-260.jpg",
+      "format": "jpg",
+      "bytes": 495556
+    },
+    {
+      "path": "artifacts/images/book-2009-261.jpg",
+      "url": "/data/artifacts/images/book-2009-261.jpg",
+      "format": "jpg",
+      "bytes": 544915
+    },
+    {
+      "path": "artifacts/images/book-2009-262.jpg",
+      "url": "/data/artifacts/images/book-2009-262.jpg",
+      "format": "jpg",
+      "bytes": 544915
+    },
+    {
+      "path": "artifacts/images/book-2009-263.jpg",
+      "url": "/data/artifacts/images/book-2009-263.jpg",
+      "format": "jpg",
+      "bytes": 514315
+    },
+    {
+      "path": "artifacts/images/book-2009-264.jpg",
+      "url": "/data/artifacts/images/book-2009-264.jpg",
+      "format": "jpg",
+      "bytes": 514315
+    },
+    {
+      "path": "artifacts/images/book-2009-265.jpg",
+      "url": "/data/artifacts/images/book-2009-265.jpg",
+      "format": "jpg",
+      "bytes": 514315
+    },
+    {
+      "path": "artifacts/images/book-2009-266.jpg",
+      "url": "/data/artifacts/images/book-2009-266.jpg",
+      "format": "jpg",
+      "bytes": 449977
+    },
+    {
+      "path": "artifacts/images/book-2009-267.jpg",
+      "url": "/data/artifacts/images/book-2009-267.jpg",
+      "format": "jpg",
+      "bytes": 526848
+    },
+    {
+      "path": "artifacts/images/book-2009-268.jpg",
+      "url": "/data/artifacts/images/book-2009-268.jpg",
+      "format": "jpg",
+      "bytes": 526656
+    },
+    {
+      "path": "artifacts/images/book-2009-269.jpg",
+      "url": "/data/artifacts/images/book-2009-269.jpg",
+      "format": "jpg",
+      "bytes": 562764
+    },
+    {
+      "path": "artifacts/images/book-2009-270.jpg",
+      "url": "/data/artifacts/images/book-2009-270.jpg",
+      "format": "jpg",
+      "bytes": 449977
+    },
+    {
+      "path": "artifacts/images/book-2009-271.jpg",
+      "url": "/data/artifacts/images/book-2009-271.jpg",
+      "format": "jpg",
+      "bytes": 278828
+    },
+    {
+      "path": "artifacts/images/book-2009-272.jpg",
+      "url": "/data/artifacts/images/book-2009-272.jpg",
+      "format": "jpg",
+      "bytes": 579622
+    },
+    {
+      "path": "artifacts/images/book-2009-273.jpg",
+      "url": "/data/artifacts/images/book-2009-273.jpg",
+      "format": "jpg",
+      "bytes": 451023
+    },
+    {
+      "path": "artifacts/images/book-2009-274.jpg",
+      "url": "/data/artifacts/images/book-2009-274.jpg",
+      "format": "jpg",
+      "bytes": 495556
+    },
+    {
+      "path": "artifacts/images/book-2009-275.jpg",
+      "url": "/data/artifacts/images/book-2009-275.jpg",
+      "format": "jpg",
+      "bytes": 495556
+    },
+    {
+      "path": "artifacts/images/book-2009-276.jpg",
+      "url": "/data/artifacts/images/book-2009-276.jpg",
+      "format": "jpg",
+      "bytes": 541828
+    },
+    {
+      "path": "artifacts/images/book-2009-277.jpg",
+      "url": "/data/artifacts/images/book-2009-277.jpg",
+      "format": "jpg",
+      "bytes": 541828
+    },
+    {
+      "path": "artifacts/images/book-2009-278.jpg",
+      "url": "/data/artifacts/images/book-2009-278.jpg",
+      "format": "jpg",
+      "bytes": 541828
+    },
+    {
+      "path": "artifacts/images/book-2009-279.jpg",
+      "url": "/data/artifacts/images/book-2009-279.jpg",
+      "format": "jpg",
+      "bytes": 541828
+    },
+    {
+      "path": "artifacts/images/book-2009-280.jpg",
+      "url": "/data/artifacts/images/book-2009-280.jpg",
+      "format": "jpg",
+      "bytes": 541828
+    },
+    {
+      "path": "artifacts/images/book-2009-281.jpg",
+      "url": "/data/artifacts/images/book-2009-281.jpg",
+      "format": "jpg",
+      "bytes": 498419
+    },
+    {
+      "path": "artifacts/images/book-2009-282.jpg",
+      "url": "/data/artifacts/images/book-2009-282.jpg",
+      "format": "jpg",
+      "bytes": 498419
+    },
+    {
+      "path": "artifacts/images/book-2009-283.jpg",
+      "url": "/data/artifacts/images/book-2009-283.jpg",
+      "format": "jpg",
+      "bytes": 498419
+    },
+    {
+      "path": "artifacts/images/book-2009-284.jpg",
+      "url": "/data/artifacts/images/book-2009-284.jpg",
+      "format": "jpg",
+      "bytes": 462536
+    },
+    {
+      "path": "artifacts/images/book-2009-285.jpg",
+      "url": "/data/artifacts/images/book-2009-285.jpg",
+      "format": "jpg",
+      "bytes": 566873
+    },
+    {
+      "path": "artifacts/images/book-2009-286.jpg",
+      "url": "/data/artifacts/images/book-2009-286.jpg",
+      "format": "jpg",
+      "bytes": 562764
+    },
+    {
+      "path": "artifacts/images/book-2009-287.jpg",
+      "url": "/data/artifacts/images/book-2009-287.jpg",
+      "format": "jpg",
+      "bytes": 329902
+    },
+    {
+      "path": "artifacts/images/book-2009-288.jpg",
+      "url": "/data/artifacts/images/book-2009-288.jpg",
+      "format": "jpg",
+      "bytes": 542170
+    },
+    {
+      "path": "artifacts/images/book-2009-289.jpg",
+      "url": "/data/artifacts/images/book-2009-289.jpg",
+      "format": "jpg",
+      "bytes": 443447
+    },
+    {
+      "path": "artifacts/images/book-2009-290.jpg",
+      "url": "/data/artifacts/images/book-2009-290.jpg",
+      "format": "jpg",
+      "bytes": 435828
+    },
+    {
+      "path": "artifacts/images/book-2009-291.jpg",
+      "url": "/data/artifacts/images/book-2009-291.jpg",
+      "format": "jpg",
+      "bytes": 270208
+    },
+    {
+      "path": "artifacts/images/book-2009-292.jpg",
+      "url": "/data/artifacts/images/book-2009-292.jpg",
+      "format": "jpg",
+      "bytes": 514315
+    },
+    {
+      "path": "artifacts/images/book-2009-293.jpg",
+      "url": "/data/artifacts/images/book-2009-293.jpg",
+      "format": "jpg",
+      "bytes": 334739
+    },
+    {
+      "path": "artifacts/images/book-2009-294.jpg",
+      "url": "/data/artifacts/images/book-2009-294.jpg",
+      "format": "jpg",
+      "bytes": 498419
+    },
+    {
+      "path": "artifacts/images/book-2009-295.jpg",
+      "url": "/data/artifacts/images/book-2009-295.jpg",
+      "format": "jpg",
+      "bytes": 210187
+    },
+    {
+      "path": "artifacts/images/book-2009-296.jpg",
+      "url": "/data/artifacts/images/book-2009-296.jpg",
+      "format": "jpg",
+      "bytes": 451023
+    },
+    {
+      "path": "artifacts/images/book-2009-297.jpg",
+      "url": "/data/artifacts/images/book-2009-297.jpg",
+      "format": "jpg",
+      "bytes": 238116
+    },
+    {
+      "path": "artifacts/images/book-2009-298.jpg",
+      "url": "/data/artifacts/images/book-2009-298.jpg",
+      "format": "jpg",
+      "bytes": 236834
+    },
+    {
+      "path": "artifacts/images/book-2009-299.jpg",
+      "url": "/data/artifacts/images/book-2009-299.jpg",
+      "format": "jpg",
+      "bytes": 264263
+    },
+    {
+      "path": "artifacts/images/book-2009-300.jpg",
+      "url": "/data/artifacts/images/book-2009-300.jpg",
+      "format": "jpg",
+      "bytes": 598144
+    },
+    {
+      "path": "artifacts/images/pit-report-finds/pit-report-k3-k3qw-1-p06.png",
+      "url": "/data/artifacts/images/pit-report-finds/pit-report-k3-k3qw-1-p06.png",
+      "format": "png",
+      "bytes": 258114
+    },
+    {
+      "path": "artifacts/images/pit-report-finds/pit-report-k3-k3qw-13-p09.png",
+      "url": "/data/artifacts/images/pit-report-finds/pit-report-k3-k3qw-13-p09.png",
+      "format": "png",
+      "bytes": 99054
+    },
+    {
+      "path": "artifacts/images/pit-report-finds/pit-report-k3-k3qw-26-p08.png",
+      "url": "/data/artifacts/images/pit-report-finds/pit-report-k3-k3qw-26-p08.png",
+      "format": "png",
+      "bytes": 104242
+    },
+    {
+      "path": "artifacts/images/pit-report-finds/pit-report-k4-k4yw-244-p12.png",
+      "url": "/data/artifacts/images/pit-report-finds/pit-report-k4-k4yw-244-p12.png",
+      "format": "png",
+      "bytes": 253242
+    },
+    {
+      "path": "artifacts/images/pit-report-finds/pit-report-k4-k4yw-523-p12.png",
+      "url": "/data/artifacts/images/pit-report-finds/pit-report-k4-k4yw-523-p12.png",
+      "format": "png",
+      "bytes": 253242
+    },
+    {
+      "path": "artifacts/images/pit-report-finds/pit-report-k4-k4yw-897-p14.png",
+      "url": "/data/artifacts/images/pit-report-finds/pit-report-k4-k4yw-897-p14.png",
+      "format": "png",
+      "bytes": 120790
+    },
+    {
+      "path": "artifacts/images/pit-report-finds/pit-report-k5-k5-3-p07.png",
+      "url": "/data/artifacts/images/pit-report-finds/pit-report-k5-k5-3-p07.png",
+      "format": "png",
+      "bytes": 81208
+    },
+    {
+      "path": "artifacts/images/pit-report-finds/pit-report-k7-k7qw-t-236-p08.png",
+      "url": "/data/artifacts/images/pit-report-finds/pit-report-k7-k7qw-t-236-p08.png",
+      "format": "png",
+      "bytes": 315385
+    },
+    {
+      "path": "artifacts/images/pit-report-finds/pit-report-k7-k7qw-t-250-p07.png",
+      "url": "/data/artifacts/images/pit-report-finds/pit-report-k7-k7qw-t-250-p07.png",
+      "format": "png",
+      "bytes": 262423
+    },
+    {
+      "path": "artifacts/images/pit-report-finds/pit-report-k8-k8-9tq-123-p12.png",
+      "url": "/data/artifacts/images/pit-report-finds/pit-report-k8-k8-9tq-123-p12.png",
+      "format": "png",
+      "bytes": 289790
+    },
+    {
+      "path": "artifacts/images/pit-report-finds/pit-report-k8-k8-9tq-129-p11.png",
+      "url": "/data/artifacts/images/pit-report-finds/pit-report-k8-k8-9tq-129-p11.png",
+      "format": "png",
+      "bytes": 171115
+    },
+    {
+      "path": "artifacts/pit-report-finds.jsonl",
+      "url": "/data/artifacts/pit-report-finds.jsonl",
+      "format": "jsonl",
+      "bytes": 24373,
+      "records": 11
+    },
+    {
+      "path": "artifacts/selected-book-300.jsonl",
+      "url": "/data/artifacts/selected-book-300.jsonl",
+      "format": "jsonl",
+      "bytes": 659619,
+      "records": 300
+    },
+    {
+      "path": "graph/edges.jsonl",
+      "url": "/data/graph/edges.jsonl",
+      "format": "jsonl",
+      "bytes": 722031,
+      "records": 811
+    },
+    {
+      "path": "graph/exhibitions.jsonl",
+      "url": "/data/graph/exhibitions.jsonl",
+      "format": "jsonl",
+      "bytes": 2046,
+      "records": 2
+    },
+    {
+      "path": "graph/nodes.jsonl",
+      "url": "/data/graph/nodes.jsonl",
+      "format": "jsonl",
+      "bytes": 52366,
+      "records": 331
+    },
+    {
+      "path": "graph/schema.json",
+      "url": "/data/graph/schema.json",
+      "format": "json",
+      "bytes": 2346
+    },
+    {
+      "path": "learning/connections.json",
+      "url": "/data/learning/connections.json",
+      "format": "json",
+      "bytes": 14973
+    },
+    {
+      "path": "learning/framework.json",
+      "url": "/data/learning/framework.json",
+      "format": "json",
+      "bytes": 20705
+    },
+    {
+      "path": "learning/origins.json",
+      "url": "/data/learning/origins.json",
+      "format": "json",
+      "bytes": 38221
+    },
+    {
+      "path": "learning/pits.json",
+      "url": "/data/learning/pits.json",
+      "format": "json",
+      "bytes": 22652
+    },
+    {
+      "path": "media/artifact-photo-coverage.jsonl",
+      "url": "/data/media/artifact-photo-coverage.jsonl",
+      "format": "jsonl",
+      "bytes": 34745,
+      "records": 100
+    },
+    {
+      "path": "media/assets.jsonl",
+      "url": "/data/media/assets.jsonl",
+      "format": "jsonl",
+      "bytes": 160213,
+      "records": 105
+    },
+    {
+      "path": "media/coverage.json",
+      "url": "/data/media/coverage.json",
+      "format": "json",
+      "bytes": 1470
+    },
+    {
+      "path": "media/schema.json",
+      "url": "/data/media/schema.json",
+      "format": "json",
+      "bytes": 2763
+    },
+    {
+      "path": "pottery/type-index.jsonl",
+      "url": "/data/pottery/type-index.jsonl",
+      "format": "jsonl",
+      "bytes": 7369,
+      "records": 4
+    },
+    {
+      "path": "qa/knowledge.jsonl",
+      "url": "/data/qa/knowledge.jsonl",
+      "format": "jsonl",
+      "bytes": 21578,
+      "records": 17
+    },
+    {
+      "path": "qa/schema.json",
+      "url": "/data/qa/schema.json",
+      "format": "json",
+      "bytes": 1881
+    },
+    {
+      "path": "README.md",
+      "url": "/data/README.md",
+      "format": "md",
+      "bytes": 18176
+    },
+    {
+      "path": "sources.json",
+      "url": "/data/sources.json",
+      "format": "json",
+      "bytes": 19103
+    },
+    {
+      "path": "stories/editorial-review-notes.md",
+      "url": "/data/stories/editorial-review-notes.md",
+      "format": "md",
+      "bytes": 7051
+    },
+    {
+      "path": "stories/schema.json",
+      "url": "/data/stories/schema.json",
+      "format": "json",
+      "bytes": 2643
+    },
+    {
+      "path": "stories/themes.jsonl",
+      "url": "/data/stories/themes.jsonl",
+      "format": "jsonl",
+      "bytes": 60822,
+      "records": 3
+    }
+  ]
+}

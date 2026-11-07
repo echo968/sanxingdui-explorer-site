@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sanxingdui.example/schemas/artifact.schema.json",
+  "title": "Sanxingdui artifact record",
+  "description": "A provenance-first artifact record. Unknown values must remain null/unknown; interpretations and evidence are separate.",
+  "type": "object",
+  "required": ["id", "name", "record_status", "sources", "media"],
+  "properties": {
+    "id": {"type": "string", "minLength": 1},
+    "slug": {"type": ["string", "null"]},
+    "name": {"type": "string", "minLength": 1},
+    "alternate_names": {"type": "array", "items": {"type": "string"}},
+    "museum_inventory_number": {"type": ["string", "null"]},
+    "collection_institution": {"type": ["string", "null"], "description": "Institution identified as the current collection holder by the cited source."},
+    "field_conflicts": {
+      "type": "array",
+      "description": "Conflicting values found in credible sources; preserve both until reviewed.",
+      "items": {
+        "type": "object",
+        "required": ["field", "values"],
+        "properties": {
+          "field": {"type": "string"},
+          "values": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["value", "source_id"],
+              "properties": {
+                "value": {"type": "string"},
+                "source_id": {"type": "string"},
+                "locator": {"type": ["string", "null"], "description": "Precise page or table location for this conflicting value."}
+              },
+              "additionalProperties": false
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "category": {"type": ["string", "null"]},
+    "period": {
+      "type": "object",
+      "properties": {
+        "label": {"type": ["string", "null"]},
+        "start_year": {"type": ["integer", "null"]},
+        "end_year": {"type": ["integer", "null"]},
+        "dating_basis": {"type": ["string", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "materials_and_techniques": {"type": "array", "items": {"type": "string"}},
+    "dimensions": {
+      "type": "object",
+      "properties": {
+        "value": {"type": ["string", "null"]},
+        "unit": {"type": ["string", "null"]},
+        "measurement_note": {"type": ["string", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "discovery": {
+      "type": "object",
+      "properties": {
+        "site_id": {"type": ["string", "null"]},
+        "context": {"type": ["string", "null"]},
+        "date_or_period": {"type": ["string", "null"]},
+        "excavation_unit": {"type": ["string", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "description": {"type": ["string", "null"]},
+    "interpretations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["claim", "status", "evidence_source_ids"],
+        "properties": {
+          "claim": {"type": "string"},
+          "status": {"enum": ["consensus", "supported", "debated", "hypothesis", "unknown"]},
+          "attribution": {"type": ["string", "null"]},
+          "evidence_source_ids": {"type": "array", "items": {"type": "string"}}
+        },
+        "additionalProperties": false
+      }
+    },
+    "catalog_motifs": {"type": "array", "items": {"type": "string"}, "description": "Catalog keywords copied from the linked source; not interpretive conclusions."},
+    "record_scope": {"enum": ["individual", "group"], "description": "Whether this record describes one artifact or a source-described group."},
+    "quantity": {"type": ["integer", "null"], "minimum": 1, "description": "Count when the source describes multiple items as one group."},
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["source_id", "url", "supports"],
+        "properties": {
+          "source_id": {"type": "string"},
+          "url": {"type": "string", "format": "uri"},
+          "title": {"type": ["string", "null"]},
+          "publisher": {"type": ["string", "null"]},
+          "published_at": {"type": ["string", "null"]},
+          "accessed_at": {"type": ["string", "null"]},
+          "locator": {"type": ["string", "null"], "description": "Page, section, paragraph, or catalog field"},
+          "supports": {"type": "array", "items": {"type": "string"}},
+          "source_type": {"enum": ["museum_catalog", "excavation_report", "academic_publication", "government", "museum_exhibition", "other"]}
+        },
+        "additionalProperties": false
+      }
+    },
+    "media": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["media_type", "rights_status"],
+        "properties": {
+          "media_type": {"enum": ["image", "audio", "video", "model", "document"]},
+          "url": {"type": ["string", "null"], "format": "uri-reference"},
+          "creator": {"type": ["string", "null"]},
+          "rights_holder": {"type": ["string", "null"]},
+          "license": {"type": ["string", "null"]},
+          "rights_status": {"enum": ["licensed", "permission_required", "unknown", "not_applicable"]},
+          "attribution": {"type": ["string", "null"]},
+          "alt": {"type": ["string", "null"], "description": "Accessible description of the image and its document context."},
+          "image_kind": {"type": ["string", "null"], "description": "Descriptive image classification such as report plate or excavation-state photograph."},
+          "source_url": {"type": ["string", "null"], "format": "uri", "description": "Original image/report source URL."}
+        },
+        "additionalProperties": false
+      }
+    },
+    "record_status": {"enum": ["draft", "needs_review", "verified", "published", "withdrawn"]},
+    "extraction_scope": {"enum": ["detail_page", "search_result_listing"]},
+    "last_verified_at": {"type": ["string", "null"], "format": "date-time"}
+  },
+  "additionalProperties": false
+}

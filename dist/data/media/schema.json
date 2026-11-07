@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sanxingdui.example/data/media/schema.json",
+  "title": "Sanxingdui media rights register",
+  "description": "One record per media file. Copyright/license status and the identity match to an artifact are independent review dimensions.",
+  "type": "object",
+  "required": ["id", "media_type", "title", "page_url", "creator", "license", "rights_status", "identity_match_status", "use_status", "accessed_at"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9._-]+$"},
+    "media_type": {"enum": ["image", "video", "audio", "model_3d"]},
+    "subtype": {"type": ["string", "null"]},
+    "title": {"type": "string"},
+    "page_url": {"type": "string", "format": "uri"},
+    "file_url": {"type": ["string", "null"], "format": "uri"},
+    "creator": {"type": ["string", "null"]},
+    "uploader": {"type": ["string", "null"]},
+    "original_source": {"type": ["string", "null"]},
+    "rights_holder": {"type": ["string", "null"]},
+    "license": {
+      "type": "object",
+      "required": ["name", "url", "version"],
+      "properties": {
+        "name": {"type": ["string", "null"]},
+        "url": {"type": ["string", "null"], "format": "uri"},
+        "version": {"type": ["string", "null"]},
+        "attribution_required": {"type": "boolean"},
+        "share_alike": {"type": "boolean"},
+        "commercial_use_allowed": {"type": ["boolean", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "attribution": {"type": ["string", "null"]},
+    "technical": {
+      "type": "object",
+      "properties": {
+        "mime_type": {"type": ["string", "null"]},
+        "width_px": {"type": ["integer", "null"]},
+        "height_px": {"type": ["integer", "null"]},
+        "duration_seconds": {"type": ["number", "null"]},
+        "file_size_bytes": {"type": ["integer", "null"]},
+        "sha256": {"type": ["string", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "artifact_ids": {"type": "array", "items": {"type": "string"}},
+    "identity_match_status": {"enum": ["exact", "probable", "class_level", "unmatched", "needs_review"]},
+    "identity_match_note": {"type": ["string", "null"]},
+    "rights_status": {"enum": ["open_license_claimed", "permission_documented", "permission_pending", "unknown", "restricted"]},
+    "use_status": {"enum": ["approved_with_attribution", "approved_class_illustration_only", "needs_review", "do_not_publish", "not_applicable"]},
+    "display_override": {"enum": ["user_requested_display", null]},
+    "source_locator": {"type": ["string", "null"]},
+    "review_note": {"type": ["string", "null"]},
+    "accessed_at": {"type": "string", "format": "date"}
+  },
+  "additionalProperties": false
+}

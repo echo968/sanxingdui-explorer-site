@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sanxingdui.example/schemas/relationship-graph.schema.json",
+  "title": "Sanxingdui provenance-first relationship graph records",
+  "description": "Nodes and evidence-backed edges derived from collected artifact, archaeology, and exhibition records.",
+  "$defs": {
+    "evidence": {
+      "type": "object",
+      "required": ["source_id", "url", "supports"],
+      "properties": {
+        "source_id": {"type": "string"},
+        "url": {"type": "string", "format": "uri"},
+        "title": {"type": ["string", "null"]},
+        "locator": {"type": ["string", "null"]},
+        "supports": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": false
+    },
+    "node": {
+      "type": "object",
+      "required": ["id", "entity_type", "label"],
+      "properties": {
+        "id": {"type": "string"},
+        "entity_type": {"enum": ["artifact", "site", "context", "event", "motif", "material_or_technique", "technique", "exhibition", "unresolved_context", "described_artifact", "described_fragment_group", "reconstructed_complex"]},
+        "label": {"type": "string"},
+        "record_path": {"type": "string"},
+        "resolution_status": {"type": "string"},
+        "context_id": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "edge": {
+      "type": "object",
+      "required": ["id", "subject", "predicate", "object", "assertion_basis", "qualifiers", "evidence", "record_status"],
+      "properties": {
+        "id": {"type": "string"},
+        "subject": {"$ref": "#/$defs/endpoint"},
+        "predicate": {"type": "string"},
+        "object": {"$ref": "#/$defs/endpoint"},
+        "assertion_basis": {"enum": ["source_explicit", "normalized_from_source_label"]},
+        "qualifiers": {"type": "object"},
+        "evidence": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/evidence"}},
+        "record_status": {"enum": ["needs_review", "verified", "published"]}
+      },
+      "additionalProperties": false
+    },
+    "endpoint": {
+      "type": "object",
+      "required": ["type", "id", "label"],
+      "properties": {
+        "type": {"type": "string"},
+        "id": {"type": "string"},
+        "label": {"type": "string"}
+      },
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,43 @@
+/storage/*.sqlite
+/storage/*.sqlite-wal
+/storage/*.sqlite-shm
+/storage/user-files/
+.env
+.env.*
+!.env.example
+
+# Local dependencies, generated runtime files, and logs
+node_modules/
+tmp/
+*.log
+npm-debug.log*
+__pycache__/
+*.py[cod]
+
+# Local model and generated retrieval index files
+/models/
+rag/index/
+
+# 3D model payloads and model-specific textures
+/dist/assets/archaeology/models/
+/dist/assets/ai-exhibition/tree-model/
+/dist/assets/**/*.fbx
+/dist/assets/**/*.glb
+/dist/assets/**/*.gltf
+/dist/assets/**/*.obj
+/dist/assets/**/*.obj.gz
+/dist/assets/**/*.mtl
+
+# PDFs and OCR/retrieval output derived from local PDFs
+*.pdf
+/pdf/
+/rag/chunks.jsonl
+/rag/documents.jsonl
+/rag/ocr_pages.jsonl
+/rag/pdf_chunks.jsonl
+/rag/pdf_pages.jsonl
+/rag/pdf_vector_index.jsonl
+
+# Local editor and hosting metadata
+.openai/
+/资料汇总/

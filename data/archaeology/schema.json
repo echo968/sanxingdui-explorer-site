@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sanxingdui.example/schemas/archaeology.schema.json",
+  "title": "Sanxingdui archaeology records",
+  "description": "Provenance-first records for the site, archaeological contexts, field events, and excavation reports.",
+  "oneOf": [
+    {"$ref": "#/$defs/site"},
+    {"$ref": "#/$defs/context"},
+    {"$ref": "#/$defs/event"},
+    {"$ref": "#/$defs/report"}
+  ],
+  "$defs": {
+    "source": {
+      "type": "object",
+      "required": ["source_id", "url", "supports"],
+      "properties": {
+        "source_id": {"type": "string"},
+        "url": {"type": "string", "format": "uri"},
+        "title": {"type": ["string", "null"]},
+        "publisher": {"type": ["string", "null"]},
+        "published_at": {"type": ["string", "null"]},
+        "accessed_at": {"type": ["string", "null"]},
+        "locator": {"type": ["string", "null"]},
+        "supports": {"type": "array", "items": {"type": "string"}},
+        "source_type": {"enum": ["excavation_report", "museum_or_institute_page", "academic_institution", "government", "other"]}
+      },
+      "additionalProperties": false
+    },
+    "base": {
+      "type": "object",
+      "required": ["id", "record_type", "name", "sources", "record_status"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "record_type": {"type": "string"},
+        "name": {"type": "string", "minLength": 1},
+        "alternate_names": {"type": "array", "items": {"type": "string"}},
+        "sources": {"type": "array", "items": {"$ref": "#/$defs/source"}},
+        "record_status": {"enum": ["draft", "needs_review", "verified", "published", "withdrawn"]},
+        "last_verified_at": {"type": ["string", "null"], "format": "date-time"}
+      }
+    },
+    "site": {
+      "allOf": [
+        {"$ref": "#/$defs/base"},
+        {"properties": {
+          "record_type": {"const": "site"},
+          "location": {"type": "object", "properties": {"administrative_area": {"type": ["string", "null"]}, "description": {"type": ["string", "null"]}, "coordinates": {"type": ["object", "null"]}}, "additionalProperties": false},
+          "extent": {"type": ["string", "null"]},
+          "cultural_date_range": {"type": ["string", "null"]},
+          "description": {"type": ["string", "null"]},
+          "context_ids": {"type": "array", "items": {"type": "string"}},
+          "event_ids": {"type": "array", "items": {"type": "string"}},
+          "report_ids": {"type": "array", "items": {"type": "string"}}
+        }}
+      ],
+      "unevaluatedProperties": false
+    },
+    "context": {
+      "allOf": [
+        {"$ref": "#/$defs/base"},
+        {"properties": {
+          "record_type": {"const": "context"},
+          "site_id": {"type": "string"},
+          "context_type": {"type": "string"},
+          "code": {"type": ["string", "null"]},
+          "discovery": {"type": "object", "properties": {"date": {"type": ["string", "null"]}, "date_precision": {"type": ["string", "null"]}, "method_or_event": {"type": ["string", "null"]}}, "additionalProperties": false},
+          "excavation": {"type": "object", "properties": {"start_date": {"type": ["string", "null"]}, "end_date": {"type": ["string", "null"]}, "date_precision": {"type": ["string", "null"]}, "date_scope": {"type": ["string", "null"]}, "team": {"type": "array", "items": {"type": "string"}}, "notes": {"type": ["string", "null"]}}, "additionalProperties": false},
+          "position_in_site": {"type": ["string", "null"]},
+          "coordinates": {"type": ["object", "null"]},
+          "dimensions": {"type": ["string", "null"]},
+          "stratigraphy_and_relationships": {"type": "array", "items": {"type": "object", "required": ["relation", "target_context_id"], "properties": {"relation": {"type": "string"}, "target_context_id": {"type": "string"}, "notes": {"type": ["string", "null"]}, "source_ids": {"type": "array", "items": {"type": "string"}}}, "additionalProperties": false}},
+          "burial_date_or_period": {"type": ["string", "null"]},
+          "burial_date_basis": {"type": ["string", "null"]},
+          "summary": {"type": ["string", "null"]},
+          "artifact_counts": {"type": ["string", "null"]},
+          "event_ids": {"type": "array", "items": {"type": "string"}},
+          "report_ids": {"type": "array", "items": {"type": "string"}}
+        }}
+      ],
+      "unevaluatedProperties": false
+    },
+    "event": {
+      "allOf": [
+        {"$ref": "#/$defs/base"},
+        {"properties": {
+          "record_type": {"const": "event"},
+          "event_type": {"type": "string"},
+          "date_start": {"type": ["string", "null"]},
+          "date_end": {"type": ["string", "null"]},
+          "date_precision": {"type": ["string", "null"]},
+          "site_id": {"type": "string"},
+          "context_ids": {"type": "array", "items": {"type": "string"}},
+          "description": {"type": ["string", "null"]},
+          "report_ids": {"type": "array", "items": {"type": "string"}}
+        }}
+      ],
+      "unevaluatedProperties": false
+    },
+    "report": {
+      "allOf": [
+        {"$ref": "#/$defs/base"},
+        {"properties": {
+          "record_type": {"const": "report"},
+          "report_type": {"type": "string"},
+          "authors_or_team": {"type": "array", "items": {"type": "string"}},
+          "publication": {"type": "object", "properties": {"container": {"type": ["string", "null"]}, "year": {"type": ["integer", "null"]}, "issue": {"type": ["string", "null"]}, "pages": {"type": ["string", "null"]}, "doi": {"type": ["string", "null"]}}, "additionalProperties": false},
+          "contexts_covered": {"type": "array", "items": {"type": "string"}},
+          "abstract_summary": {"type": ["string", "null"]},
+          "full_text_status": {"enum": ["public_pdf", "landing_page_only", "subscription_or_access_limited", "unknown"]},
+          "full_text_url": {"type": ["string", "null"], "format": "uri"},
+          "landing_page_url": {"type": ["string", "null"], "format": "uri"}
+        }}
+      ],
+      "unevaluatedProperties": false
+    }
+  }
+}

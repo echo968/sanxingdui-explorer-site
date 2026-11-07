@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sanxingdui.example/schemas/story-theme.schema.json",
+  "title": "三星堆专题叙事",
+  "description": "围绕问题编辑的专题内容。关联通过精选图录、考古事件及坑位的稳定 ID 建立；专题叙事与实体展览记录分开保存。",
+  "type": "object",
+  "required": ["id", "slug", "title", "subtitle", "central_question", "intro", "cover", "order", "record_status", "sections", "sources"],
+  "properties": {
+    "id": {"type": "string", "minLength": 1},
+    "slug": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+    "title": {"type": "string", "minLength": 1},
+    "subtitle": {"type": "string"},
+    "central_question": {"type": "string", "minLength": 1},
+    "intro": {"type": "string"},
+    "cover": {
+      "type": "object",
+      "required": ["artifact_id", "alt", "caption"],
+      "properties": {
+        "artifact_id": {"type": "string", "description": "必须能在 artifacts/selected-book-300.jsonl 中通过 id 找到"},
+        "alt": {"type": "string"},
+        "caption": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "order": {"type": "integer"},
+    "record_status": {"enum": ["draft", "needs_review", "verified", "published", "withdrawn"]},
+    "sources": {"type": "array", "items": {"$ref": "#/$defs/source"}},
+    "sections": {"type": "array", "items": {"$ref": "#/$defs/section"}}
+  },
+  "$defs": {
+    "source": {
+      "type": "object",
+      "required": ["source_id", "title", "url", "locator", "supports"],
+      "properties": {
+        "source_id": {"type": "string"},
+        "title": {"type": "string"},
+        "url": {"type": "string", "format": "uri"},
+        "locator": {"type": "string"},
+        "supports": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": false
+    },
+    "section": {
+      "type": "object",
+      "required": ["id", "title", "body", "order", "artifact_ids", "event_ids", "context_ids", "sources"],
+      "properties": {
+        "id": {"type": "string"},
+        "title": {"type": "string"},
+        "body": {"type": "string"},
+        "order": {"type": "integer"},
+        "artifact_ids": {"type": "array", "items": {"type": "string"}},
+        "event_ids": {"type": "array", "items": {"type": "string"}},
+        "context_ids": {"type": "array", "items": {"type": "string"}},
+        "edge_ids": {"type": "array", "items": {"type": "string"}},
+        "sources": {"type": "array", "items": {"$ref": "#/$defs/source"}}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

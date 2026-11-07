@@ -1,0 +1,337 @@
+{
+  "version": 1,
+  "description": "Seed URLs for public Sanxingdui museum, archaeology institute, and digital collection pages. This is a source manifest, not an artifact catalog.",
+  "allowed_hosts": [
+    "www.sxd.cn",
+    "www.sckg.com",
+    "sckg.com",
+    "digicol.sckg.com",
+    "pckgs.sxd.cn",
+    "www.shanghaimuseum.net",
+    "m.ccdi.gov.cn",
+    "www.hkpm.org.hk",
+    "wwj.sc.gov.cn",
+    "archaeology.pku.edu.cn",
+    "sum.scu.edu.cn",
+    "www.guanghan.gov.cn",
+    "commons.wikimedia.org",
+    "csca.pku.edu.cn",
+    "www.cssn.cn",
+    "www.scu.edu.cn",
+    "chiculture.org.hk",
+    "wwj.baoji.gov.cn",
+    "zhwl.cbpt.cnki.net",
+    "cbgc.scol.com.cn",
+    "www.chinanews.com"
+  ],
+  "sources": [
+    {
+      "id": "sxd-museum-overview",
+      "url": "https://www.sxd.cn/Guide?type=3",
+      "kind": "museum_overview",
+      "title": "三星堆博物馆简介",
+      "rights_note": "Facts may be summarized with attribution. Do not republish page text or images without permission."
+    },
+    {
+      "id": "sxd-collection-index",
+      "url": "https://www.sxd.cn/relics/",
+      "kind": "collection_index",
+      "title": "三星堆博物馆藏品陈列",
+      "rights_note": "The page is a JavaScript application. Public list data is signed by the museum service; use an authorized export/API for bulk records."
+    },
+    {
+      "id": "sxd-jade-zhang-16880327704588314",
+      "url": "https://www.sxd.cn/relics/detail?id=16880327704588314",
+      "kind": "artifact_detail",
+      "title": "商玉璋（馆藏记录）",
+      "rights_note": "The page is a JavaScript application. Keep record facts linked to this source and do not copy images without permission."
+    },
+    {
+      "id": "sckg-wenku-index",
+      "url": "https://www.sckg.com/wenku/",
+      "kind": "bibliography_index",
+      "title": "四川省文物考古研究院文库",
+      "rights_note": "Collect bibliographic metadata and source links. The institute's site states that it holds copyright; do not republish article full text without permission."
+    },
+    {
+      "id": "sckg-digital-collection-search-sdx",
+      "url": "https://digicol.sckg.com/?a=lists&c=Search&keywords=%E4%B8%89%E6%98%9F%E5%A0%86&m=home&method=1&type=sonself",
+      "kind": "artifact_search_results",
+      "title": "四川省文物考古研究院数字文物库：三星堆搜索结果",
+      "rights_note": "Record public catalog facts and detail-page links. Image rights require separate confirmation."
+    },
+    {
+      "id": "sxd-knowledge-service",
+      "url": "https://pckgs.sxd.cn/",
+      "kind": "knowledge_service",
+      "title": "三星堆主题知识服务",
+      "rights_note": "Use as a bibliography and topic discovery source; do not bulk-copy protected text."
+    },
+    {
+      "id": "shm-star-china-sanxingdui-jinsha-2024",
+      "url": "https://www.shanghaimuseum.net/mu/frontend/pg/m/article/id/E00004170",
+      "kind": "museum_exhibition_catalog",
+      "title": "星耀中国：三星堆·金沙古蜀文明展",
+      "rights_note": "Use the cited exhibition object facts with attribution. This joint exhibition includes Sanxingdui and Jinsha artifacts; preserve the stated findspot and collection institution for every object. Do not republish images or full page text without permission."
+    },
+    {
+      "id": "ccdi-sanxingdui-museum-profile",
+      "url": "https://m.ccdi.gov.cn/content/d0/4d/3539.html",
+      "kind": "government_museum_profile",
+      "title": "走进博物馆：三星堆博物馆",
+      "rights_note": "Use factual object details with attribution and retain the stated findspot and scope. Images and full page text are not included in this dataset."
+    },
+    {
+      "id": "scwwj-sanxingdui-museum-artifact-bronze-head-2",
+      "url": "https://wwj.sc.gov.cn/scwwj/sdai/2020/10/30/d3e376d89f384e418e62cbc06a3b2bb4.shtml",
+      "kind": "museum_catalog",
+      "title": "三星堆博物馆藏青铜人头像（2）",
+      "rights_note": "四川省文物局页面注明内容来源为三星堆博物馆。仅记录页面明示的文物事实；不复制图片或整段页面文本。"
+    },
+    {
+      "id": "sckg-sanxingdui-site-overview",
+      "url": "https://www.sckg.com/shangzhou/1575.html",
+      "kind": "archaeological_site_overview",
+      "title": "广汉三星堆遗址",
+      "rights_note": "四川省文物考古研究院的遗址介绍。记录可核查的地点、范围和考古工作事实；地图与图片不在本数据集复用。"
+    },
+    {
+      "id": "pku-sanxingdui-excavation-history",
+      "url": "https://archaeology.pku.edu.cn/info/1030/3484.htm",
+      "kind": "archaeological_history",
+      "title": "北大考古与“百年百大考古发现”——四川广汉三星堆遗址",
+      "rights_note": "北京大学考古文博学院发布的考古史概述。只摘录有明确归属的年代与发掘历程事实。"
+    },
+    {
+      "id": "sckg-k1-report-1987",
+      "url": "https://www.sckg.com/uploads/soft/20230509/2-230509160911338.pdf",
+      "kind": "excavation_report",
+      "title": "广汉三星堆遗址一号祭祀坑发掘简报",
+      "rights_note": "《文物》1987年第10期考古简报，四川省文物考古研究院文库提供全文 PDF。保留正式引文和页面定位，不将全文复制进数据集。"
+    },
+    {
+      "id": "sckg-k2-report-1989",
+      "url": "https://www.sckg.com/wenku/1599.html",
+      "kind": "excavation_report_record",
+      "title": "广汉三星堆遗址二号祭祀坑发掘简报",
+      "rights_note": "四川省文物考古研究院文库提供报告目录页；原文发表于《文物》1989年第5期。本目录页未提供可访问的全文 PDF。"
+    },
+    {
+      "id": "sckg-k3-k8-overview-2022",
+      "url": "https://sckg.com/uploads/soft/20230509/2-230509155R4T3.pdf",
+      "kind": "excavation_report",
+      "title": "四川广汉市三星堆遗址祭祀区",
+      "rights_note": "《考古》2022年第7期，介绍K3—K8发掘成果。记录报告题录和明确事实；不复制全文。"
+    },
+    {
+      "id": "sckg-cross-pit-assemblage-2023-06",
+      "url": "https://www.sckg.com/dynamics/2752.html",
+      "kind": "archaeological_research_news",
+      "title": "三星堆两件大型青铜器跨坑拼对成功",
+      "rights_note": "四川省文物考古研究院公开的研究进展报道。记录报道明确的器物组成、坑位与制作人员；身份解释按报道观点归属，不视为唯一结论。图片不在本数据集复制。"
+    },
+    {
+      "id": "sckg-cross-pit-assemblage-2023-07",
+      "url": "https://www.sckg.com/dynamics/2890.html",
+      "kind": "archaeological_research_news",
+      "title": "三星堆又一件大型青铜器跨坑拼对成功",
+      "rights_note": "四川省文物考古研究院公开的研究进展报道。保留青铜神坛各部件的坑位来源及尚待修复的状态；研究解释按报道观点归属。图片不在本数据集复制。"
+    },
+    {
+      "id": "sckg-k3-report-2024",
+      "url": "https://www.sckg.com/uploads/soft/20240924/2-240924145943M8.pdf",
+      "kind": "excavation_report",
+      "title": "四川广汉市三星堆遗址祭祀区三号坑发掘简报",
+      "rights_note": "《四川文物》2024年第4期公开 PDF。仅记录报告明确的发掘日期、位置、尺寸、层位与统计数据。"
+    },
+    {
+      "id": "sckg-k4-report-2024",
+      "url": "https://www.sckg.com/uploads/soft/20240514/2-240514103U5564.pdf",
+      "kind": "excavation_report",
+      "title": "四川广汉市三星堆遗址祭祀区四号坑发掘简报",
+      "rights_note": "《四川文物》2024年第1期公开 PDF。仅记录报告明确的发现、发掘和坑位信息。"
+    },
+    {
+      "id": "sckg-k7-report-2025",
+      "url": "https://www.sckg.com/uploads/soft/20250612/2-250612153P91T.pdf",
+      "kind": "excavation_report",
+      "title": "四川广汉市三星堆遗址祭祀区七号坑发掘简报",
+      "rights_note": "《四川文物》2025年第1期公开 PDF。报告标注部分统计为阶段性结果；数据保留其阶段性性质。"
+    },
+    {
+      "id": "sckg-k8-report-2024",
+      "url": "https://www.sckg.com/uploads/soft/20240924/2-240924150035413.pdf",
+      "kind": "excavation_report",
+      "title": "四川广汉市三星堆遗址祭祀区八号坑发掘简报",
+      "rights_note": "《四川文物》2024年第4期公开 PDF。仅记录报告明确的发现、发掘、坑位和统计数据。"
+    },
+    {
+      "id": "sckg-excavation-campaign-review-2022",
+      "url": "https://www.sckg.com/dynamics/3432.html",
+      "kind": "archaeological_campaign_review",
+      "title": "三星堆遗址新出土文物保护修复工作取得长足进展",
+      "rights_note": "四川省文物考古研究院对2019—2022年祭祀区考古与保护工作的回顾。用于项目整体时间范围和团队概况，不替代逐坑发掘报告。"
+    },
+    {
+      "id": "scu-sanxingdui-k5-k7-team",
+      "url": "https://sum.scu.edu.cn/info/1073/1435.htm",
+      "kind": "excavation_team_record",
+      "title": "我校考古文博学院全面参与三星堆考古发掘",
+      "rights_note": "四川大学博物馆发布的参与情况介绍；仅用于核实K5、K6、K7的联合发掘团队。"
+    },
+    {
+      "id": "guanghan-sanxingdui-dating-update-2025",
+      "url": "https://www.guanghan.gov.cn/gk/mbjj/gjjmb/1685358.htm",
+      "kind": "research_update",
+      "title": "三星堆遗址‘祭祀坑’精确年代在四川德阳发布",
+      "rights_note": "广汉市政府对2025年三星堆论坛研究发布的报道。用于记录报道明确转述的测年区间与坑间拼接关系，正式学术论文或数据集发布后应补充原始研究出处。"
+    },
+    {
+      "id": "hkpm-gazing-sanxingdui-2023",
+      "url": "https://www.hkpm.org.hk/sc/exhibition/gazing-at-sanxingdui-new-archaeological-discoveries-in-sichuan",
+      "kind": "museum_exhibition_catalog",
+      "title": "凝视三星堆——四川考古新发现",
+      "rights_note": "The exhibition page identifies Sanxingdui findspots, dates, dimensions, materials, and lenders. Preserve exact attribution and do not republish images; displayed image credit belongs to Sanxingdui Museum."
+    },
+    {
+      "id": "hkpm-gazing-sanxingdui-object-labels-2023",
+      "url": "https://www.hkpm.org.hk/sc/g8-gazing-at-sanxingdui-label-12",
+      "kind": "museum_object_label",
+      "title": "香港故宫：凝视三星堆展品标签（示例：璋）",
+      "rights_note": "Individual label pages carry object captions and some collection catalogue codes. Record only fields explicitly stated and do not reuse images without permission."
+    },
+    {
+      "id": "hkpm-gazing-sanxingdui-audio-guide-2023",
+      "url": "https://www.hkpm.org.hk/sc/visit/audio-guide/g8-gazing-at-sanxingdui",
+      "kind": "museum_audio_guide_transcript",
+      "title": "香港故宫：凝视三星堆语音导赏文本",
+      "rights_note": "Use object facts with attribution. Interpretive statements are museum narration and should be attributed as interpretations, not treated as established facts. Do not copy audio media."
+    },
+    {
+      "id": "sckg-sanxingdui-typology-chronology",
+      "url": "https://www.sckg.com/uploads/soft/20230509/2-230509155253N7.pdf",
+      "kind": "excavation_report",
+      "title": "广汉三星堆遗址发掘概况、初步分期",
+      "rights_note": "用于核对三星堆遗址陶器类别名称。器型记录不等于单件馆藏档案；不得据类别名录推定具体坑位、尺寸或收藏单位。"
+    },
+    {
+      "id": "sckg-qingguanshan-h105-report",
+      "url": "https://www.sckg.com/uploads/soft/20230509/2-230509155A2544.pdf",
+      "kind": "excavation_report",
+      "title": "四川广汉市三星堆遗址青关山H105的发掘",
+      "rights_note": "用于核对H105报告提及的小平底罐、高柄豆、盉等器型及报告样本形态描述。不得将H105样本属性外推到全遗址或无来源的单件。"
+    },
+    {
+      "id": "wikimedia-commons-sanxingdui-media-index",
+      "url": "https://commons.wikimedia.org/wiki/Category:Sanxingdui",
+      "kind": "media_catalog",
+      "title": "Wikimedia Commons：Sanxingdui媒体分类",
+      "rights_note": "分类页仅用于发现文件。每个图像、视频或音频须单独核验文件页的作者、许可、来源及器物对应关系；Commons标记不代替本项目的逐项审核。"
+    },
+    {
+      "id": "named-find-pku",
+      "url": "https://csca.pku.edu.cn/info/1008/1289.htm",
+      "kind": "archaeological_results_summary",
+      "title": "三星堆遗址祭祀区三、四号坑阶段性重大考古成果发布",
+      "rights_note": "用于记录北大考古中心阶段性成果页明确列举的器物名称、坑位及组数。摘要档案不得替代正式发掘报告，也不得推定馆藏编号、尺寸或收藏单位。"
+    },
+    {
+      "id": "named-find-cssn",
+      "url": "https://www.cssn.cn/kgxc/kgxc_kgxl/202209/t20220930_5545311.shtml",
+      "kind": "archaeological_results_summary",
+      "title": "三星堆遗址祭祀区考古发掘阶段性工作进展及主要成果",
+      "rights_note": "该文转述阶段性考古成果中列出的典型文物与坑位；仅用于发现和建立待核名称索引，不代表单件馆藏目录。"
+    },
+    {
+      "id": "named-find-sckg",
+      "url": "https://www.sckg.com/uploads/soft/20230509/2-230509160203361.pdf",
+      "kind": "excavation_report",
+      "title": "三星堆遗址的发现与研究",
+      "rights_note": "用于记录报告/研究资料明确列出的器物名称、坑位及描述；具体字段应回到原报告页码复核。"
+    },
+    {
+      "id": "named-find-scu",
+      "url": "https://www.scu.edu.cn/info/1892/35133.htm",
+      "kind": "academic_publication",
+      "title": "川大人与三星堆考古",
+      "rights_note": "用于核对页面所述的一号祭祀坑器类与考古背景；记录仍需正式报告复核。"
+    },
+    {
+      "id": "named-find-chiculture",
+      "url": "https://chiculture.org.hk/en/node/601",
+      "kind": "research_reference",
+      "title": "一号祭祀坑有何宝物？",
+      "rights_note": "用于建立一号祭祀坑文物发现索引；学术解释应归属原作者，事实字段需和考古报告交叉核对。"
+    },
+    {
+      "id": "named-find-baoji",
+      "url": "https://wwj.baoji.gov.cn/zzzb/wbyw/202307/t20230728_857179.html",
+      "kind": "government_exhibition_summary",
+      "title": "三星堆博物馆新馆：新设计新展览新技术",
+      "rights_note": "用于记录跨坑拼合展陈所列部件名称和出处坑位；复原组合与原始出土器物须分别建档。"
+    },
+    {
+      "id": "sckg-bronze-statues-masks-study-2006",
+      "url": "https://www.sckg.com/uploads/soft/20230509/2-23050916064D27.pdf",
+      "kind": "scholarly_article",
+      "title": "三星堆出土青铜雕像与面具研究",
+      "rights_note": "仅使用可核查的书目信息和经审慎转述的研究观点；不复制全文或图片。来源定位与研究状态需按条目说明复核。"
+    },
+    {
+      "id": "zhwl-duan-ivory-ritual-2007",
+      "url": "https://zhwl.cbpt.cnki.net/portal/journal/portal/client/paper/fd3993d16e87b5cf289723034452767f",
+      "kind": "scholarly_article",
+      "title": "古蜀象牙祭祀考",
+      "rights_note": "仅使用可核查的书目信息和经审慎转述的研究观点；不复制全文或图片。来源定位与研究状态需按条目说明复核。"
+    },
+    {
+      "id": "zhwl-strange-bronze-art-2024",
+      "url": "https://zhwl.cbpt.cnki.net/portal/journal/portal/client/paper/eb9c005b33662e13f9bd84c7b7a78071",
+      "kind": "scholarly_article",
+      "title": "三星堆青铜艺术中的“怪异”元素与相关宗教观念探析",
+      "rights_note": "仅使用可核查的书目信息和经审慎转述的研究观点；不复制全文或图片。来源定位与研究状态需按条目说明复核。"
+    },
+    {
+      "id": "scol-bronze-figure-held-object-debate-2021",
+      "url": "https://cbgc.scol.com.cn/news/1020648",
+      "kind": "expert_interview_article",
+      "title": "青铜立人像手握之物④｜“姿势说”——身处古蜀国重大仪式立人像手中并无物",
+      "rights_note": "仅使用可核查的书目信息和经审慎转述的研究观点；不复制全文或图片。来源定位与研究状态需按条目说明复核。"
+    },
+    {
+      "id": "zhwl-burial-pits-developments-2022",
+      "url": "https://zhwl.cbpt.cnki.net/portal/journal/portal/client/paper/c90bbd94259a69c293675f9c7353aaf7",
+      "kind": "scholarly_article",
+      "title": "三星堆埋藏坑的新发现与新认识",
+      "rights_note": "仅使用可核查的书目信息和经审慎转述的研究观点；不复制全文或图片。来源定位与研究状态需按条目说明复核。"
+    },
+    {
+      "id": "cssn-burial-pits-2022",
+      "url": "https://www.cssn.cn/kgxc/kgxc_kgxl/202209/t20220930_5545307.shtml",
+      "kind": "scholar_commentary",
+      "title": "〖考古现场〗三星堆埋藏坑：新发现与新认识",
+      "rights_note": "仅使用可核查的书目信息和经审慎转述的研究观点；不复制全文或图片。来源定位与研究状态需按条目说明复核。"
+    },
+    {
+      "id": "china-news-yuanjiayuan-fire-hypothesis-2026",
+      "url": "https://www.chinanews.com/cul/2026/07-24/10665967.shtml",
+      "kind": "research_news_report",
+      "title": "三星堆遗址袁家院祭祀区被废弃或因祭祀场所偶然失火被毁",
+      "rights_note": "仅使用可核查的书目信息和经审慎转述的研究观点；不复制全文或图片。来源定位与研究状态需按条目说明复核。"
+    },
+    {
+      "id": "sckg-sanxingdui-sacrificial-area-2022",
+      "url": "https://www.sckg.com/uploads/soft/20230509/2-230509155R4T3.pdf",
+      "kind": "excavation_report",
+      "title": "四川广汉市三星堆遗址祭祀区",
+      "rights_note": "仅使用可核查的书目信息和经审慎转述的研究观点；不复制全文或图片。来源定位与研究状态需按条目说明复核。"
+    },
+    {
+      "id": "xinhuanet-bronze-composite-2026",
+      "url": "https://www.xinhuanet.com/politics/20260710/9169f9a4b92045e5a84844b216ce7cf8/c.html",
+      "kind": "research_news_report",
+      "title": "三星堆青铜器最新研究揭示复合器物制作与组合过程",
+      "rights_note": "仅使用可核查的书目信息和经审慎转述的研究观点；不复制全文或图片。来源定位与研究状态需按条目说明复核。"
+    }
+  ]
+}

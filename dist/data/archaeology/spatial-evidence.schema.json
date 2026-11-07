@@ -1,0 +1,138 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sanxingdui.example/schemas/spatial-evidence.schema.json",
+  "title": "Sanxingdui spatial evidence collection",
+  "description": "Provenance-first claims for site and pit location, published maps, relative positions, coordinate quality, and reuse permissions.",
+  "type": "object",
+  "required": [
+    "id",
+    "record_type",
+    "site_id",
+    "record_status",
+    "coordinate_policy",
+    "sources"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "record_type": {
+      "const": "spatial_evidence_collection"
+    },
+    "site_id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "record_status": {
+      "enum": [
+        "draft",
+        "needs_review",
+        "verified",
+        "published",
+        "withdrawn"
+      ]
+    },
+    "updated_at": {
+      "type": "string"
+    },
+    "coordinate_policy": {
+      "type": "object"
+    },
+    "site_coordinate_claims": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "pit_coordinate_claims": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "relative_position_claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "claim_id": {
+            "type": "string"
+          },
+          "target_context_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "description": {
+            "type": "string"
+          },
+          "source_id": {
+            "type": "string"
+          },
+          "locator": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "draft",
+              "needs_review",
+              "verified",
+              "published",
+              "withdrawn"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "map_resources": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "next_data_needed": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "source_id",
+          "url",
+          "supports"
+        ],
+        "properties": {
+          "source_id": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "title": {
+            "type": "string"
+          },
+          "locator": {
+            "type": "string"
+          },
+          "supports": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

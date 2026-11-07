@@ -1,0 +1,39 @@
+{
+  "as_of": "2026-10-18",
+  "scope_note": "Coverage describes this project's rights register, not all media available online.",
+  "registered_assets": {
+    "total": 105,
+    "images": 105,
+    "video_stills": 2,
+    "independent_videos": 0,
+    "audio": 0,
+    "3d_models": 0,
+    "museum_authorized_high_resolution_masters": 0
+  },
+  "rights_review": {
+    "open_license_claimed": 80,
+    "permission_documented": 0,
+    "permission_pending": 25,
+    "unknown_or_restricted": 0,
+    "note": "部分图片按用户要求加入展示数据；rights_status仍保留来源页可核验的权利信息。"
+  },
+  "identity_review": {
+    "unmatched": 1,
+    "class_level": 72,
+    "exact": 26,
+    "probable": 4,
+    "needs_review": 2
+  },
+  "artifact_photo_coverage": {
+    "artifact_records": 100,
+    "class_illustration_ready": 78,
+    "exact_photo_ready": 22,
+    "coverage_file": "artifact-photo-coverage.jsonl",
+    "note": "同件照片、同类图、用户要求展示的来源图和无图片线索分开统计；现场图不会标成器物单件照。"
+  },
+  "next_collection_targets": [
+    "优先为无公开照片记录的器物寻找开放许可的单件照片或馆方授权照片。",
+    "向三星堆博物馆和四川省文物考古研究院申请正式影像目录及网站展示授权。",
+    "核对可能匹配的图片与馆藏号；保留器物身份匹配和图片使用许可两种独立状态。"
+  ]
+}

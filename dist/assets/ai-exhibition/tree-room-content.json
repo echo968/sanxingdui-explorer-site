@@ -1,0 +1,84 @@
+{
+  "roomId": "tree",
+  "recordStatus": "needs_review",
+  "evidenceArtifactId": "book-2009-033",
+  "model": {
+    "url": "/assets/ai-exhibition/tree-model/bronze-tree-m379.fbx",
+    "resourcePath": "/assets/ai-exhibition/tree-model/tex/",
+    "sourceLabel": "M379 青铜树神树 / FBX 格式模型包",
+    "identityNote": "文件夹与模型包名称表明其为青铜树主题数字模型素材；它是否对应具体馆藏器物、是否基于实物扫描及其授权状态均待核实。"
+  },
+  "sources": [
+    {
+      "id": "book-2009-146-033",
+      "title": "四川省文物考古研究院等编《三星堆出土文物全记录》（天地出版社，2009）",
+      "url": "https://www.sckg.com/",
+      "locator": "青铜器卷，图录编号146，书内第212页（扫描 PDF 第213页）",
+      "recordStatus": "needs_review",
+      "supports": ["名称", "出土编号", "类别", "材质", "尺寸片段", "出土信息", "形制描述"]
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "upper-branches",
+      "label": "上部枝条",
+      "position": {"u": 0.54, "v": 0.76},
+      "description": "当前数字模型上可以观察到树身上部向外伸展的枝条。这是对模型画面的观察，不代表模型细节已与馆藏实物逐项核验。"
+    },
+    {
+      "id": "trunk",
+      "label": "树身",
+      "position": {"u": 0.50, "v": 0.55},
+      "description": "模型中央可见纵向树身。这里的“树身”是便于观察的界面称呼，模型尺寸、结构和具体器物的对应关系待核实。"
+    },
+    {
+      "id": "tree-base",
+      "label": "下部树座",
+      "position": {"u": 0.50, "v": 0.13},
+      "description": "模型下方可见展开的树座结构。此处仅帮助观众定位当前模型上的可见形态，不作比例或复原准确性声明。"
+    }
+  ],
+  "questions": [
+    {
+      "id": "observe-branches",
+      "type": "choice",
+      "label": "观察选择",
+      "prompt": "观察模型上半部：树身周围可以看到什么形态？",
+      "options": [
+        {"id": "outward-branches", "label": "向外伸展的枝条"},
+        {"id": "flat-leaves", "label": "连续铺展的叶片"},
+        {"id": "roof-tiles", "label": "层层叠放的瓦片"}
+      ],
+      "answer": "outward-branches",
+      "targetHotspotId": "upper-branches",
+      "hint": "把视线移到树身上半部，留意从主干向两侧伸出的线条。",
+      "explanation": "可以直接从当前模型观察到向外伸展的枝条。这个判断只针对屏幕中的数字模型，不把模型材质或细节当作实物测量结果。",
+      "sourceIds": []
+    },
+    {
+      "id": "find-base",
+      "type": "hotspot",
+      "label": "模型寻物",
+      "prompt": "在 3D 模型上找到树身下方展开的树座结构。",
+      "targetHotspotId": "tree-base",
+      "hint": "从树身中央向下观察，寻找接近画面底部、承托树身的结构。",
+      "explanation": "你找到的是当前数字模型下部可见的树座形态。素材来源没有说明其是否按具体馆藏器物的尺寸或结构精确复原。",
+      "sourceIds": []
+    },
+    {
+      "id": "fact-or-interpretation",
+      "type": "choice",
+      "label": "事实辨析",
+      "prompt": "哪种说法更清楚地区分了资料记载与学术解释？",
+      "options": [
+        {"id": "catalog-description", "label": "项目图录有出处且标记“待复核”，应作为待核实的来源描述。"},
+        {"id": "certain-jianmu", "label": "这株神树一定就是古籍中的建木，并被用于通天。"}
+      ],
+      "answer": "catalog-description",
+      "targetHotspotId": "upper-branches",
+      "hint": "注意区分可追溯的形制描述与对器物含义的解释。",
+      "explanation": "图录条目有明确出处，但对应数据在本项目中仍标为“待复核”。把神树与“建木”联系起来属于一种解释，不能改写成已经证实的用途或身份。",
+      "sourceIds": ["book-2009-146-033"]
+    }
+  ]
+}

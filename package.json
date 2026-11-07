@@ -1,0 +1,17 @@
+{
+  "name": "sanxingdui-explorer-site",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Sanxingdui explorer site and PDF-grounded RAG backend",
+  "scripts": {
+    "start": "node server.js",
+    "ingest:pdf": "node scripts/ingest_pdf_corpus.js",
+    "ocr:pdf": "node scripts/run_pdf_ocr.js",
+    "index:pdf": "node scripts/build_pdf_vector_index.mjs",
+    "embedding:serve": "python scripts/local_bge_embedding_server.py"
+  },
+  "dependencies": {
+    "@langchain/core": "^1.0.0",
+    "@langchain/openai": "^1.0.0"
+  }
+}

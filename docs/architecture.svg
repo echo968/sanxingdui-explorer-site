@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="660" viewBox="0 0 1200 660" role="img" aria-labelledby="title desc">
+  <title id="title">三星堆数字探索平台技术架构</title>
+  <desc id="desc">浏览器加载静态前端和数据，并通过同源 API 访问 Node.js 服务。服务连接 SQLite、本地 PDF 检索和外部 AI 服务。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7f8f4"/>
+      <stop offset="1" stop-color="#edf1eb"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#63816f"/>
+    </marker>
+    <style>
+      text { font-family: "Microsoft YaHei", "Noto Sans SC", sans-serif; fill: #23342c; }
+      .title { font-size: 28px; font-weight: 700; }
+      .subtitle { font-size: 14px; fill: #64736a; }
+      .head { font-size: 19px; font-weight: 700; }
+      .body { font-size: 15px; }
+      .small { font-size: 13px; fill: #65746b; }
+      .card { fill: #fff; stroke: #d6ded5; stroke-width: 1.5; }
+      .panel { fill: #e7eee7; stroke: #c6d4c8; stroke-width: 1.5; }
+      .server { fill: #20382d; stroke: #20382d; }
+      .serverText { fill: #f7f6ef; }
+      .serverMuted { fill: #c7d4c9; }
+      .line { fill: none; stroke: #63816f; stroke-width: 2.5; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1200" height="660" rx="24" fill="url(#bg)"/>
+  <text x="54" y="58" class="title">系统技术架构</text>
+  <text x="54" y="84" class="subtitle">静态前端负责页面展示，Node.js 提供账号、检索和 AI 服务代理</text>
+
+  <!-- Browser and static site -->
+  <rect x="54" y="125" width="330" height="410" rx="18" class="panel"/>
+  <circle cx="82" cy="160" r="8" fill="#b88945"/>
+  <text x="104" y="167" class="head">访问者浏览器</text>
+  <rect x="78" y="194" width="282" height="128" rx="12" class="card"/>
+  <text x="98" y="228" class="head">前端页面</text>
+  <text x="98" y="257" class="body">dist/ · HTML / CSS / JavaScript</text>
+  <text x="98" y="286" class="small">首页、文物百科、研学、专题与展厅</text>
+  <rect x="78" y="344" width="282" height="128" rx="12" class="card"/>
+  <text x="98" y="378" class="head">静态数据</text>
+  <text x="98" y="407" class="body">dist/data/ · JSON / JSONL</text>
+  <text x="98" y="436" class="small">manifest.json 提供数据文件清单</text>
+  <text x="78" y="506" class="small">浏览器通过同源地址读取页面、资料和 API</text>
+
+  <!-- Service -->
+  <rect x="449" y="190" width="310" height="280" rx="18" class="server"/>
+  <text x="479" y="233" class="head serverText">Node.js 服务</text>
+  <text x="479" y="264" class="body serverMuted">server.js · 同源 HTTP API</text>
+  <path d="M479 285 H729" stroke="#526b5c" stroke-width="1"/>
+  <text x="479" y="320" class="body serverText">账号、会话与个人数据</text>
+  <text x="479" y="356" class="body serverText">AI 服务代理与流式响应</text>
+  <text x="479" y="392" class="body serverText">PDF 检索问答接口</text>
+  <text x="479" y="438" class="small serverMuted">凭证仅由服务端环境变量读取</text>
+
+  <!-- Browser/service connectors -->
+  <path d="M384 253 C410 253 421 275 449 275" class="line"/>
+  <text x="389" y="236" class="small">页面请求</text>
+  <path d="M384 408 C410 408 421 385 449 385" class="line"/>
+  <text x="389" y="431" class="small">API 请求</text>
+
+  <!-- Services and storage -->
+  <rect x="824" y="118" width="322" height="130" rx="16" class="card"/>
+  <rect x="824" y="278" width="322" height="150" rx="16" class="card"/>
+  <rect x="824" y="458" width="322" height="130" rx="16" class="card"/>
+  <text x="852" y="156" class="head">SQLite 本地数据库</text>
+  <text x="852" y="187" class="body">账号、会话和用户数据</text>
+  <text x="852" y="216" class="small">storage/ · 不提交到 Git</text>
+  <text x="852" y="316" class="head">本地 PDF 检索</text>
+  <text x="852" y="347" class="body">BM25 + 可选 BGE-M3 向量检索</text>
+  <text x="852" y="378" class="small">PDF、OCR 和索引需本机准备</text>
+  <text x="852" y="405" class="small">PDF 与向量索引不提交到 Git</text>
+  <text x="852" y="496" class="head">外部 AI 服务</text>
+  <text x="852" y="526" class="body">DeepSeek · 智谱 · Jev · Coze</text>
+  <text x="852" y="555" class="small">按需启用；各自凭证由运行者配置</text>
+
+  <path d="M759 250 C790 250 791 183 824 183" class="line"/>
+  <path d="M759 330 C790 330 791 352 824 352" class="line"/>
+  <path d="M759 408 C790 408 791 523 824 523" class="line"/>
+
+  <text x="54" y="625" class="small">说明：GitHub Pages 可托管静态页面；账号、PDF 问答和 AI 接口需要运行 Node.js 服务。</text>
+</svg>

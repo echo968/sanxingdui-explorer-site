@@ -8,10 +8,36 @@
   <title>三星堆 · 古蜀文明数字探索平台</title>
   <link rel="icon" type="image/svg+xml" href="./favicon.svg">
   <link rel="preconnect" href="https://upload.wikimedia.org">
-  <link rel="stylesheet" href="./styles.css">
-  <script src="./app.js" defer></script>
+  <link rel="stylesheet" href="./styles.css?v=20261025-home-rag">
+  <link rel="stylesheet" href="./qa-stream.css?v=20261025-professional-answer">
+  <link rel="stylesheet" href="./learning-origins.css">
+  <link rel="stylesheet" href="./learning-origins-assistant.css?v=20261103-assistant-v3">
+  <link rel="stylesheet" href="./learning-framework.css">
+  <link rel="stylesheet" href="./learning-pits.css">
+  <link rel="stylesheet" href="./learning-connections.css">
+  <link rel="stylesheet" href="./learning-progress.css">
+  <link rel="stylesheet" href="./tree-room.css">
+  <link rel="stylesheet" href="./echo-room.css">
+  <link rel="stylesheet" href="./finale-room.css">
+  <link rel="stylesheet" href="./login.css?v=20261103-account-records-window-v1">
+  <script type="importmap">{"imports":{"three":"/assets/vendor/three/three.module.js","three/addons/":"/assets/vendor/three/examples/jsm/"}}</script>
+  <script src="./account-data.js" defer></script>
+  <script src="./learning-progress.js" defer></script>
+  <script src="./coze-workflow.js" defer></script>
+  <script src="./graph.js" defer></script>
+  <script src="./echo-room.js" defer></script>
+  <script src="./finale-room.js" defer></script>
+  <script src="./learning-origins.js" defer></script>
+  <script src="./learning-origins-assistant.js?v=20261103-assistant-v5" defer></script>
+  <script src="./learning-framework.js?v=20261103-assistant-v2" defer></script>
+  <script src="./learning-pits.js?v=20261103-assistant-v2" defer></script>
+  <script src="./learning-connections.js?v=20261103-assistant-v2" defer></script>
+  <script src="./app.js?v=20261106-artifact-labels-v7" defer></script>
+  <script type="module" src="./eye-room.js?v=20261103-coze-image-proxy-v1"></script>
+  <script type="module" src="./tree-room.js"></script>
+  <script src="./review-labels.js?v=20261106-artifact-labels-v3" defer></script>
 </head>
-<body>
+<body class="login-page-mode">
   <a class="skip-link" href="#main">跳转到主要内容</a>
   <header class="site-header" id="top">
     <a class="brand" href="#top" aria-label="三星堆数字探索平台首页">
@@ -19,25 +45,25 @@
       <span class="brand-name">三星堆<small>古蜀文明数字探索平台</small></span>
     </a>
     <nav class="primary-nav" aria-label="主导航">
-      <a href="#discover">探索文明</a><a href="#collection">文物档案</a><a href="#exhibition">数字展厅</a><a href="#knowledge">知识图谱</a><a href="#fieldwork">互动考古</a><a href="#learning">研学中心</a><button class="login-menu-link" type="button" data-login>登录（尚未开放）</button>
+      <a href="#discover">探索文明</a><a href="/?page=artifacts" data-artifacts-nav data-artifact-list-link>文物百科</a><a href="/?page=stories" data-stories-nav data-stories-link>专题展览</a><a href="/?page=timeline" data-timeline-nav data-timeline-link>考古时间线</a><a href="#exhibition">数字展厅</a><a href="/?page=graph" data-graph-nav data-graph-link>坑位空间探索</a><a href="/?page=fieldwork" data-fieldwork-link data-fieldwork-nav>互动考古</a><a href="#learning" data-learning-nav>研学中心</a><a href="/?page=qa" data-qa-link data-qa-nav>AI 问答</a><button class="login-menu-link" type="button" data-login>登录</button>
     </nav>
     <div class="header-actions">
       <button class="icon-button" data-open-search aria-label="打开站内搜索" title="站内搜索"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg></button>
-      <button class="button button-ai" data-open-guide><span class="spark" aria-hidden="true">✳</span> AI 导览 <span class="status-dot" aria-label="尚未连接"></span></button>
-      <button class="login-link" type="button" data-login aria-label="登录功能尚未开放">登录</button>
+      <button class="button button-ai" data-open-guide><span class="spark" aria-hidden="true">✳</span> AI 导览 <span class="status-dot" aria-label="可用"></span></button>
+      <button class="login-link" type="button" data-login aria-label="打开登录页面">登录</button>
       <button class="menu-toggle icon-button" aria-label="打开导航菜单" aria-expanded="false"><span></span><span></span></button>
     </div>
   </header>
 
   <main id="main">
-    <div id="home-view">
+    <div id="home-view" hidden>
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-grid"></div><div class="hero-orbit orbit-a"></div><div class="hero-orbit orbit-b"></div>
       <div class="hero-copy">
         <p class="eyebrow"><span class="eyebrow-line"></span> ANCIENT SHU · DIGITAL ARCHAEOLOGY</p>
         <h1 id="hero-title">沉睡千年的文明，<br><em>等待再次被发现</em></h1>
         <p class="hero-lede">从真实器物出发，走近古蜀文明。<br>沿着考古记录与资料出处，探索已知与待解。</p>
-        <div class="hero-actions"><a class="button button-gold" href="#civilization-entries">开始探索 <span aria-hidden="true">↗</span></a><button class="text-button" data-open-guide data-initial-prompt="青铜神树有哪些已知信息？">问 AI 讲解员 <span aria-hidden="true">↗</span></button></div>
+        <div class="hero-actions"><a class="button button-gold" href="#civilization-entries">开始探索 <span aria-hidden="true">↗</span></a><button class="text-button" data-open-guide data-initial-prompt="带我去看青铜神树">问 AI 导览 <span aria-hidden="true">↗</span></button></div>
         <div class="hero-footnote"><span class="mini-seal" aria-hidden="true">堆</span><span>四川 · 广汉<br><b>31°00′N　104°13′E</b></span></div>
       </div>
       <figure class="hero-artifact">
@@ -55,7 +81,7 @@
         <button class="entry-tile" type="button" data-entry-filter="bronze"><span class="entry-index">01 / BRONZE</span><b>青铜器</b><small>凝视造像与器形</small><span class="entry-arrow" aria-hidden="true">↗</span></button>
         <button class="entry-tile" type="button" data-entry-filter="gold"><span class="entry-index">02 / GOLD</span><b>金器</b><small>了解金器与图像记录</small><span class="entry-arrow" aria-hidden="true">↗</span></button>
         <button class="entry-tile" type="button" data-entry-filter="jade"><span class="entry-index">03 / JADE</span><b>玉石器</b><small>从材质与形制开始</small><span class="entry-arrow" aria-hidden="true">↗</span></button>
-        <button class="entry-tile entry-tile-pending" type="button" data-entry-filter="pottery"><span class="entry-index">04 / POTTERY</span><b>陶器</b><small>当前目录暂无条目</small><span class="entry-arrow" aria-hidden="true">↗</span></button>
+        <button class="entry-tile" type="button" data-entry-filter="pottery"><span class="entry-index">04 / POTTERY</span><b>陶器</b><small>浏览图录档案与器型资料</small><span class="entry-arrow" aria-hidden="true">↗</span></button>
       </div>
     </section>
 
@@ -63,97 +89,76 @@
       <div class="section-kicker"><span>02</span><span>一场持续中的发现</span><span class="rule"></span><span>DISCOVER</span></div>
       <div class="intro-layout">
         <h2>沉睡于大地，<br><em>苏醒于证据。</em></h2>
-        <div class="intro-text"><p>三星堆遗址位于四川省广汉市。1929 年，燕道诚在当地发现玉石器；此后数十年间，考古工作不断推进。1986 年一、二号祭祀坑的发现，让一批造型独特的青铜、金器与玉器进入公众视野。</p><p>新的发现仍在继续。这里不提供神秘传说的定论，而是邀请你从器物、出土背景与研究线索出发，分辨哪些已知，哪些仍待讨论。</p><a class="underlined-link" href="#timeline">沿时间线查看发现 <span>→</span></a></div>
+        <div class="intro-text"><p>三星堆遗址位于四川省广汉市。1929 年，燕道诚在当地发现玉石器；此后数十年间，考古工作不断推进。1986 年一、二号祭祀坑的发现，让一批造型独特的青铜、金器与玉器进入公众视野。</p><p>新的发现仍在继续。这里不提供神秘传说的定论，而是邀请你从器物、出土背景与研究线索出发，分辨哪些已知，哪些仍待讨论。</p><a class="underlined-link" href="/?page=timeline" data-timeline-link>沿时间线查看发现 <span>→</span></a></div>
       </div>
     </section>
 
     <section class="collection section-wrap" id="collection">
       <div class="section-kicker"><span>03</span><span>文物档案</span><span class="rule"></span><span>OBJECT INDEX</span></div>
-      <div class="section-heading"><div><h2>从一件器物，<em>读懂一条线索</em></h2><p>以馆藏名称与考古信息为索引；图像授权与解释状态一并呈现。</p></div><a class="underlined-link" href="#collection-grid">浏览全部档案 <span>→</span></a></div>
-      <div class="collection-tools"><label class="search-field"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg><input type="search" id="artifact-search" placeholder="搜索器物名称或关键词" aria-label="搜索器物名称或关键词"><kbd>⌕</kbd></label><div class="filter-tabs" role="group" aria-label="按材质筛选"><button class="filter active" data-filter="all" aria-pressed="true">全部 <span>05</span></button><button class="filter" data-filter="bronze" aria-pressed="false">青铜</button><button class="filter" data-filter="gold" aria-pressed="false">黄金</button><button class="filter" data-filter="jade" aria-pressed="false">玉石</button><button class="filter" data-filter="pottery" aria-pressed="false">陶器</button></div></div>
-      <div class="artifact-grid" id="collection-grid">
-        <button class="artifact-card artifact-card-feature" data-artifact="figure" data-category="bronze" data-search="青铜大立人像 二号祭祀坑 1986 商代晚期 人像" aria-label="查看青铜大立人像档案">
-          <span class="artifact-photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/%E4%B8%89%E6%98%9F%E5%A0%86%E5%87%BA%E5%9C%9F%E9%9D%92%E9%93%9C%E5%A4%A7%E7%AB%8B%E4%BA%BA%E5%83%8F%2C_2017-09-17.jpg?width=1000" alt="青铜大立人像全身照片"><span class="photo-credit">Siyuwj · CC BY-SA 4.0</span><span class="card-open">↗</span></span><span class="artifact-meta"><span class="object-no">BRONZE FIGURE <i>·</i> 01</span><b>青铜大立人像</b><small>商代晚期　/　二号祭祀坑　/　青铜</small></span>
-        </button>
-        <button class="artifact-card" data-artifact="tree" data-category="bronze" data-search="青铜神树 一号神树 二号祭祀坑 商代晚期 神鸟 建木 解释" aria-label="查看青铜神树档案">
-          <span class="artifact-photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Bronze_Sacred_Tree.jpg?width=1000" alt="三星堆一号大型青铜神树展陈照片"><span class="photo-credit">momo · CC BY 2.0</span><span class="card-open">↗</span></span><span class="artifact-meta"><span class="object-no">BRONZE TREE <i>·</i> 02</span><b>青铜神树</b><small>商代晚期　/　树形青铜器　/　青铜</small></span>
-        </button>
-        <button class="artifact-card" data-artifact="mask" data-category="bronze" data-search="青铜纵目面具 面具 二号祭祀坑 商代晚期 青铜眼睛" aria-label="查看青铜纵目面具档案">
-          <span class="artifact-photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sanxingdui_Bronsmask.jpg?width=1000" alt="三星堆青铜面具正面展陈照片"><span class="photo-credit">Bairuilong · CC BY-SA 4.0</span><span class="card-open">↗</span></span><span class="artifact-meta"><span class="object-no">BRONZE MASK <i>·</i> 03</span><b>青铜面具</b><small>三星堆文化　/　青铜　/　器形与用途待研究</small></span>
-        </button>
-        <button class="artifact-card artifact-text-card" data-artifact="gold" data-category="gold" data-search="黄金面具 金面具 2021 一号坑 黄金 面罩" aria-label="查看黄金面具档案">
-          <span class="text-card-visual gold-visual" aria-hidden="true"><span class="mask-eye eye-left"></span><span class="mask-eye eye-right"></span><span class="mask-mouth"></span><span class="visual-label">图像占位<br>授权待核</span></span><span class="artifact-meta"><span class="object-no">GOLD MASK <i>·</i> 04</span><b>黄金面具</b><small>金器　/　2021 年新发现相关资料</small></span>
-        </button>
-        <button class="artifact-card artifact-text-card" data-artifact="jade" data-category="jade" data-search="玉璋 玉石 礼器 祭祀坑 玉器" aria-label="查看玉璋档案">
-          <span class="text-card-visual jade-visual" aria-hidden="true"><span class="jade-form"></span><span class="visual-label">器形示意<br>非文物照片</span></span><span class="artifact-meta"><span class="object-no">JADE ZHANG <i>·</i> 05</span><b>玉璋</b><small>玉石　/　器形与使用情境需结合出土背景研究</small></span>
-        </button>
-        <div class="empty-state" id="empty-state" hidden><span>⌕</span><b id="empty-title">没有找到匹配的器物</b><p id="empty-copy">试试更短的关键词，或切换材质筛选。</p><button class="text-button" data-reset-search>清除筛选</button></div>
-      </div>
+      <div class="section-heading"><div><h2>从一件器物，<em>读懂一条线索</em></h2><p>从图录条目与已登记考古信息入手；记录状态和影像说明一并呈现。</p></div><a class="underlined-link" href="/?page=artifacts" data-artifact-list-link>浏览全部档案 <span>→</span></a></div>
+      <div class="collection-tools"><label class="search-field"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg><input type="search" id="artifact-search" placeholder="搜索器物名称或关键词" aria-label="搜索器物名称或关键词"><kbd>⌕</kbd></label><div class="filter-tabs" id="home-artifact-filters" role="group" aria-label="按器物类别筛选"><button class="filter active" data-filter="all" aria-pressed="true">全部 <span>读取中</span></button></div></div>
+      <p class="home-artifact-results" id="home-artifact-results" aria-live="polite">正在读取器物档案…</p>
+      <div class="artifact-grid" id="collection-grid" aria-live="polite" aria-busy="true"></div>
+      <div class="empty-state" id="empty-state" hidden><span>⌕</span><b id="empty-title">没有找到匹配的器物</b><p id="empty-copy">试试更短的关键词，或切换类别筛选。</p><button class="text-button" data-reset-search>清除筛选</button></div>
+      <div class="home-artifact-more"><button class="button button-outline" id="home-artifact-load-more" type="button" hidden>继续浏览</button><a class="underlined-link" href="/?page=artifacts" data-artifact-list-link>打开完整文物百科 <span>→</span></a></div>
+      <p class="home-artifact-data-status" id="home-artifact-data-status" role="status" hidden></p>
       <p class="collection-note"><span class="note-mark">i</span> 青铜神树的名称已为学界共识，其具体文化内涵仍存在不同解释。此处将已知信息与推测分开呈现。 <a href="https://www.sxd.cn/relics/" target="_blank" rel="noreferrer">参考：三星堆博物馆文物介绍 ↗</a></p>
     </section>
 
     <section class="home-guide section-wrap" aria-labelledby="home-guide-title">
-      <div class="section-kicker"><span>04</span><span>AI 问答入口</span><span class="rule"></span><span>ASK WITH CONTEXT</span></div>
-      <div class="home-guide-layout"><div><p class="eyebrow">A QUESTION IS A WAY IN</p><h2 id="home-guide-title">你想了解<br><em>三星堆的什么？</em></h2><p>选择示例或输入问题。当前导览服务未连接，问题不会发送或保存。</p></div>
-        <div class="home-guide-form"><label for="home-question">你的问题</label><textarea id="home-question" rows="2" placeholder="例如：青铜神树的用途有哪些不同解释？"></textarea><div class="home-guide-examples"><button type="button" data-home-example="青铜神树有哪些已知信息？">青铜神树有哪些已知信息？</button><button type="button" data-home-example="大立人像的身份有哪些不同解释？">大立人像有哪些解释？</button></div><div class="home-guide-actions"><span class="home-guide-status"><i aria-hidden="true"></i> 尚未连接知识服务</span><button class="button button-gold" type="button" data-home-ask>带着问题进入导览 <span>↗</span></button></div></div>
+      <div class="section-kicker"><span>04</span><span>AI 问答</span><span class="rule"></span><span>RETRIEVAL · EVIDENCE · ANSWER</span></div>
+      <div class="home-guide-layout"><div><p class="eyebrow">A QUESTION IS A WAY IN</p><h2 id="home-guide-title">你想了解<br><em>三星堆的什么？</em></h2><p>直接向三星堆资料库提问。回答根据检索到的档案生成，并附上来源与页码；资料不足时会明确说明。</p></div>
+        <div class="home-guide-form" id="home-guide-form">
+          <label for="home-question">你的问题 <small>最多 500 字 · Ctrl/⌘ + Enter 提交</small></label>
+          <textarea id="home-question" rows="2" maxlength="500" placeholder="例如：青铜神树有哪些已知信息？"></textarea>
+          <div class="home-guide-examples"><button type="button" data-home-example="青铜神树有哪些已知信息？">青铜神树有哪些已知信息？</button><button type="button" data-home-example="大立人像的身份有哪些不同解释？">大立人像有哪些解释？</button></div>
+          <div class="home-guide-actions"><span class="home-guide-status" id="home-guide-service-status" role="status"><i aria-hidden="true"></i> 正在检查知识库…</span><button class="button button-gold" type="button" data-home-ask>检索并回答 <span aria-hidden="true">↗</span></button></div>
+        </div>
       </div>
-    </section>
-
-    <section class="timeline-section section-wrap" id="timeline" aria-labelledby="timeline-title">
-      <div class="section-kicker"><span>05</span><span>古蜀文明时间线</span><span class="rule"></span><span>ARCHAEOLOGICAL TIMELINE</span></div>
-      <div class="section-heading"><div><h2 id="timeline-title">让发现回到<br><em>它发生的时间</em></h2><p>按考古发现与研究进展浏览；器物年代与现代发现时间分别标明。</p></div><span class="timeline-note">发现史 · 公开资料索引</span></div>
-      <div class="timeline" aria-label="三星堆考古发现时间线">
-        <article class="timeline-stop"><span class="timeline-year">1929</span><span class="timeline-dot"></span><h3>玉石器初现</h3><p>燕道诚在广汉燕家院子发现玉石器，三星堆遗址由此进入考古视野。</p><a href="https://www.scspc.gov.cn/lfdt/202106/157515.html" target="_blank" rel="noreferrer">四川人大网 · 史料 ↗</a></article>
-        <article class="timeline-stop"><span class="timeline-year">1934</span><span class="timeline-dot"></span><h3>首次科学发掘</h3><p>华西协合大学博物馆葛维汉、林名均等开展月亮湾发掘。</p><a href="https://archives.scu.edu.cn/info/1015/3023.htm" target="_blank" rel="noreferrer">四川大学档案馆 · 史料 ↗</a></article>
-        <article class="timeline-stop"><span class="timeline-year">1986</span><span class="timeline-dot"></span><h3>一、二号祭祀坑</h3><p>青铜大立人像、青铜神树等重要器物出土，相关研究持续展开。</p><a href="https://www.scspc.gov.cn/lfdt/202106/157515.html" target="_blank" rel="noreferrer">四川人大网 · 史料 ↗</a></article>
-        <article class="timeline-stop"><span class="timeline-year">2021 →</span><span class="timeline-dot"></span><h3>考古工作持续</h3><p>公布新发现六座祭祀坑及阶段性成果，发掘、保护与研究并行。</p><a href="https://www.scspc.gov.cn/lfdt/202106/157515.html" target="_blank" rel="noreferrer">四川人大网 · 史料 ↗</a></article>
-      </div>
-      <p class="timeline-source-note">时间线展示的是现代考古发现与发掘事件，不等同于器物制作年代。</p>
     </section>
 
     <section class="exhibition" id="exhibition">
       <div class="exhibition-inner section-wrap">
-        <div class="section-kicker"><span>06</span><span>数字展厅</span><span class="rule"></span><span>GALLERY</span></div>
-        <div class="exhibition-layout"><div class="exhibition-copy"><p class="eyebrow">THE BRONZE ROOM · 01</p><h2>当目光越过<br><em>青铜的边界</em></h2><p>以图像、尺度與器形观察青铜造像。展厅体验在此为交互原型；馆藏照片均注明来源，展陈空间为数字化界面示意。</p><div class="gallery-controls"><button class="gallery-arrow" data-gallery-step="-1" aria-label="上一件文物">←</button><span class="gallery-count"><b id="gallery-current">01</b> / 03</span><button class="gallery-arrow" data-gallery-step="1" aria-label="下一件文物">→</button><span class="gallery-instruction">使用方向键切换</span></div></div>
-          <div class="gallery-stage" aria-live="polite"><div class="gallery-number" id="gallery-number">01</div><img id="gallery-image" src="https://commons.wikimedia.org/wiki/Special:FilePath/%E4%B8%89%E6%98%9F%E5%A0%86%E5%87%BA%E5%9C%9F%E9%9D%92%E9%93%9C%E5%A4%A7%E7%AB%8B%E4%BA%BA%E5%83%8F%2C_2017-09-17.jpg?width=1200" alt="青铜大立人像，图像来源 Wikimedia Commons"><div class="gallery-caption"><span id="gallery-title">青铜大立人像</span><small id="gallery-subtitle">商代晚期 · 二号祭祀坑</small></div><div class="gallery-info"><span id="gallery-credit">Siyuwj · CC BY-SA 4.0</span><a id="gallery-source" href="https://commons.wikimedia.org/wiki/File:%E4%B8%89%E6%98%9F%E5%A0%86%E5%87%BA%E5%9C%9F%E9%9D%92%E9%93%9C%E5%A4%A7%E7%AB%8B%E4%BA%BA%E5%83%8F,_2017-09-17.jpg" target="_blank" rel="noreferrer">查看影像授权 ↗</a></div></div></div>
+        <div class="section-kicker"><span>06</span><span>AI 数字艺术展</span><span class="rule"></span><span>AI DIGITAL EXHIBITION</span></div>
+        <div class="exhibition-layout"><div class="exhibition-copy"><p class="eyebrow">FIVE SPACES · DIGITAL ART EXPERIENCE</p><h2>从凝望开始<br><em>走入文明回声</em></h2><p>以五个沉浸空间展开一场当代数字艺术体验。部分影像为 AI 艺术想象，不代表古蜀历史场景复原。</p><a class="button button-gold ai-exhibition-entry" href="/?page=ai-exhibition&amp;room=foyer" data-ai-exhibition-link>进入 AI 数字艺术展 <span aria-hidden="true">↗</span></a><nav class="ai-exhibition-spaces" aria-label="AI 数字艺术展空间"><a href="/?page=ai-exhibition&amp;room=foyer"><small>01</small><span>序厅</span></a><a href="/?page=ai-exhibition&amp;room=eye"><small>02</small><span>以目观天</span></a><a href="/?page=ai-exhibition&amp;room=tree"><small>03</small><span>神树探索厅</span></a><a href="/?page=ai-exhibition&amp;room=echo"><small>04</small><span>人神之间</span></a><a href="/?page=ai-exhibition&amp;room=finale"><small>05</small><span>文明回声</span></a></nav><div class="exhibition-archive-label"><span>DOCUMENTED OBJECTS</span><b>文物影像展签</b><small>查看影像与来源档案</small></div><div class="gallery-controls"><button class="gallery-arrow" data-gallery-step="-1" aria-label="上一件文物">←</button><span class="gallery-count"><b id="gallery-current">01</b> / 03</span><button class="gallery-arrow" data-gallery-step="1" aria-label="下一件文物">→</button><span class="gallery-instruction">方向键或左右滑动切换</span></div><div class="gallery-index" role="group" aria-label="选择展品"><button class="gallery-index-item active" type="button" data-gallery-index="0" aria-pressed="true"><span>01</span><b>青铜大立人像</b><small>青铜造像</small></button><button class="gallery-index-item" type="button" data-gallery-index="1" aria-pressed="false"><span>02</span><b>青铜神树</b><small>树形青铜器</small></button><button class="gallery-index-item" type="button" data-gallery-index="2" aria-pressed="false"><span>03</span><b>青铜面具</b><small>展陈影像</small></button></div></div>
+          <div class="gallery-stage" aria-live="polite"><div class="gallery-visual"><div class="gallery-number" id="gallery-number">01 <i> / 03</i></div><div class="gallery-image-viewport"><img id="gallery-image" src="https://commons.wikimedia.org/wiki/Special:FilePath/%E4%B8%89%E6%98%9F%E5%A0%86%E5%87%BA%E5%9C%9F%E9%9D%92%E9%93%9C%E5%A4%A7%E7%AB%8B%E4%BA%BA%E5%83%8F%2C_2017-09-17.jpg?width=1200" alt="青铜大立人像，图像来源 Wikimedia Commons"></div><div class="gallery-visual-controls"><span>影像展签 · 非三维模型</span><button type="button" data-gallery-zoom aria-pressed="false" aria-label="放大文物影像">＋ 放大影像</button></div></div><aside class="gallery-label"><p class="gallery-label-kicker"><span></span>展品档案 / OBJECT LABEL</p><h3 id="gallery-title">青铜大立人像</h3><p class="gallery-subtitle" id="gallery-subtitle">商代晚期 · 二号祭祀坑</p><p class="gallery-description" id="gallery-description">青铜大立人像出土于三星堆二号祭祀坑，是三星堆青铜造像中具有代表性的器物。器物身份与手势含义仍属于研究议题。</p><div class="gallery-facts"><span>图像署名</span><b id="gallery-credit">Siyuwj · CC BY-SA 4.0</b></div><div class="gallery-label-actions"><a id="gallery-source" href="https://commons.wikimedia.org/wiki/File:%E4%B8%89%E6%98%9F%E5%A0%86%E5%87%BA%E5%9C%9F%E9%9D%92%E9%93%9C%E5%A4%A7%E7%AB%8B%E4%BA%BA%E5%83%8F,_2017-09-17.jpg" target="_blank" rel="noreferrer">查看影像来源与许可 ↗</a><button type="button" data-gallery-record>打开文物档案　↗</button></div><p class="gallery-caveat" id="gallery-caveat">身份与手势含义仍属于研究议题。</p></aside></div></div>
         <div class="gallery-foot"><span>展陈界面 · 数字原型</span><span>图像由各作者提供　/　授权状态见单件来源页</span><span>左右滑动或点击箭头浏览</span></div>
       </div>
     </section>
 
     <section class="thematic-exhibitions section-wrap" id="thematic-exhibitions" aria-labelledby="thematic-title">
       <div class="section-kicker"><span>07</span><span>专题展览</span><span class="rule"></span><span>CURATED STORIES</span></div>
-      <div class="section-heading"><div><h2 id="thematic-title">从一件器物，<em>展开一个问题</em></h2><p>专题入口连接已有的器物、时间线与考古内容；专题详情页将在后续页面迭代中展开。</p></div><span class="exhibition-note">叙事专题 · 内容原型</span></div>
-      <div class="theme-grid">
-        <a class="theme-card theme-bronze" href="#collection" data-theme-link="bronze"><span class="theme-no">STORY 01</span><b>青铜造像</b><small>从大立人像与面具出发，观察形态和资料记录。</small><span class="theme-link">查看相关器物　↗</span></a>
-        <a class="theme-card theme-ritual" href="#knowledge"><span class="theme-no">STORY 02</span><b>器物与祭祀坑</b><small>把器物放回出土背景，区分地点信息与解释推测。</small><span class="theme-link">查看关系线索　↗</span></a>
-        <a class="theme-card theme-discovery" href="#timeline"><span class="theme-no">STORY 03</span><b>考古发现历程</b><small>沿公开资料记录，回看三星堆考古的重要节点。</small><span class="theme-link">浏览发现时间线　↗</span></a>
-      </div>
+      <div class="section-heading"><div><h2 id="thematic-title">从一件器物，<em>展开一个问题</em></h2><p>专题叙事连接精选图录、考古事件和坑位档案；实体展览记录在专题目录中另行呈现。</p></div><span class="exhibition-note">专题叙事 · 来源可查</span></div>
+      <div class="theme-grid" id="theme-teasers" aria-live="polite"><p class="stories-inline-status" role="status">正在读取专题目录…</p></div>
+      <a class="button button-outline story-index-link" href="/?page=stories" data-stories-link>浏览全部专题与实体展览记录 <span>↗</span></a>
     </section>
 
     <section class="knowledge section-wrap" id="knowledge">
-      <div class="section-kicker"><span>08</span><span>文明知识图谱</span><span class="rule"></span><span>KNOWLEDGE GRAPH</span></div>
-      <div class="section-heading"><div><h2>把器物放回<br><em>它的关系之中</em></h2><p>点击节点查看关联说明。当前关系图为基于公开资料整理的界面原型，不代表完整学术数据库。</p></div><span class="graph-legend"><i></i> 有来源的事实关联　 <i class="legend-dashed"></i> 尚待研究的解释</span></div>
-      <div class="graph-board"><svg class="graph-lines" viewBox="0 0 900 420" preserveAspectRatio="none" aria-hidden="true"><line x1="450" y1="205" x2="225" y2="105"/><line x1="450" y1="205" x2="690" y2="96"/><line x1="450" y1="205" x2="235" y2="315"/><line class="interpretive-line" x1="450" y1="205" x2="690" y2="318"/></svg>
-        <button class="graph-node central" data-node="青铜大立人像" data-detail="青铜大立人像出土于三星堆二号祭祀坑，现藏三星堆博物馆。其身份与手势的具体含义仍是研究议题。"><span class="node-symbol">人</span><b>青铜大立人像</b><small>器物 · 青铜</small></button>
-        <button class="graph-node node-north" data-node="二号祭祀坑" data-detail="1986 年发掘的一、二号祭祀坑出土了多类青铜、金器与玉器。单件文物与坑内组合关系，需以考古资料为准。"><span class="node-symbol">02</span><b>二号祭祀坑</b><small>出土背景</small></button>
-        <button class="graph-node node-east" data-node="商代晚期" data-detail="三星堆遗址祭祀区出土遗物的年代判断来自考古地层、器物类型与测年等多类证据；具体器物的年代表述以馆方及研究资料为准。"><span class="node-symbol">商</span><b>商代晚期</b><small>年代语境</small></button>
-        <button class="graph-node node-west" data-node="三星堆遗址" data-detail="遗址位于四川省广汉市。遗址、祭祀区与博物馆收藏是不同空间概念，页面中的关系仅表示器物出土地点关联。"><span class="node-symbol">地</span><b>三星堆遗址</b><small>四川 · 广汉</small></button>
-        <button class="graph-node node-south" data-node="身份与仪式解释" data-detail="将大立人像解释为祭司、王者或仪式参与者均属于研究讨论，不能仅凭造型作为已确认结论。"><span class="node-symbol">?</span><b>身份与仪式解释</b><small>学术讨论 · 未定论</small></button>
-        <div class="graph-inspector" aria-live="polite"><span class="inspector-label">节点说明</span><b id="graph-title">选择一个节点</b><p id="graph-detail">知识关系会标明事实来源与解释边界。此示意图没有连接在线知识库。</p><a id="graph-source" href="https://www.scspc.gov.cn/lfdt/202106/157515.html" target="_blank" rel="noreferrer">查看参考资料 ↗</a></div>
-        <span class="graph-caption">RELATION MAP · EXPLORATION PROTOTYPE</span></div>
+      <div class="section-kicker"><span>08</span><span>考古坑位探索</span><span class="rule"></span><span>ARCHAEOLOGICAL CONTEXTS · SOURCE FIRST</span></div>
+      <div class="section-heading"><div><h2>从祭祀坑位<br><em>进入考古档案</em></h2><p>按已登记的坑位浏览精选图录中的明确关联记录，并查看坑位档案、考古事件与来源。</p></div><a class="button button-outline" href="/?page=graph" data-graph-link>浏览祭祀坑位 <span>↗</span></a></div>
+      <p class="graph-home-note">从遗址地理背景、官方发表的坑位分布资料和坑位档案进入考古内容。坑位坐标仍待测绘校准，不按估算位置落点。</p>
     </section>
 
-    <section class="fieldwork" id="fieldwork"><div class="section-wrap fieldwork-inner">
-      <div class="section-kicker"><span>09</span><span>互动考古</span><span class="rule"></span><span>FIELD NOTES</span></div>
-      <div class="fieldwork-layout"><div><p class="eyebrow">A CAREFUL LOOK BELOW THE SURFACE</p><h2>考古不是寻宝，<br><em>而是读懂情境。</em></h2><p class="fieldwork-lede">试着在示意探方中观察不同层位，记录你发现的线索。这里的网格与遗物标记均为交互示意，没有对应真实遗址坐标或发掘数据。</p><div class="layer-controls" role="group" aria-label="选择示意层位"><button class="layer-button active" data-layer="1" aria-pressed="true">表层 <small>01</small></button><button class="layer-button" data-layer="2" aria-pressed="false">扰土层 <small>02</small></button><button class="layer-button" data-layer="3" aria-pressed="false">堆积层 <small>03</small></button></div><div class="field-state" aria-live="polite"><span class="state-icon">⌖</span><span><b id="field-state-title">选择一个格点开始观察</b><small id="field-state-copy">模拟练习 · 所有位置均为虚构示意</small></span></div></div>
-        <div class="excavation-wrap"><div class="excavation-top"><span>探方示意 · 非真实坐标</span><span id="layer-label">层位 01 / 03</span></div><div class="excavation-grid" id="excavation-grid" role="group" aria-label="示意探方网格"></div><div class="excavation-bottom"><span><i class="legend-square found"></i>示意线索</span><span><i class="legend-square unmarked"></i>待观察</span><span>标尺与定位未按真实发掘比例</span></div></div></div>
-      <div class="ethics-note"><span>考古伦理</span><p>真实考古资料需要出土层位、编号、测绘与记录共同支持；此原型不模拟未公开的发掘信息，也不把游戏结果作为考古结论。</p></div>
-    </div></section>
+    <section class="fieldwork-teaser section-wrap" id="fieldwork-teaser" aria-labelledby="fieldwork-teaser-title">
+      <div class="section-kicker"><span>09</span><span>互动考古</span><span class="rule"></span><span>INTERACTIVE ARCHAEOLOGY</span></div>
+      <div class="fieldwork-teaser-layout"><div><p class="eyebrow">A CAREFUL LOOK BELOW THE SURFACE</p><h2 id="fieldwork-teaser-title">逐层发掘，<br><em>观察土层与器物。</em></h2><p>进入连续三维土层体验，通过刷拭与小铲逐步揭开不同层位。器物位置仅为体验示意。</p></div><a class="button button-gold" href="/?page=fieldwork" data-fieldwork-link>开始考古 <span aria-hidden="true">↗</span></a></div>
+    </section>
 
     <section class="learning section-wrap" id="learning">
       <div class="section-kicker"><span>学习路径</span><span class="rule"></span><span>LEARNING PATHS</span></div>
       <div class="section-heading"><div><h2>从好奇开始，<em>循证而学</em></h2><p>短路径连接观察、提问与可靠资料，适用于个人探索与课堂讨论。</p></div><span class="learning-note">学习路径 · 内容原型</span></div>
-      <div class="learning-paths"><article class="learning-path"><span class="path-no">PATH 01　/　20 MIN</span><span class="path-icon icon-eye" aria-hidden="true">◎</span><h3>学会观察一件文物</h3><p>从材质、形状、细节和尺度提出观察问题，再回到出土信息核对。</p><button data-learning="观察记录单">打开观察记录单 <span>↗</span></button></article><article class="learning-path"><span class="path-no">PATH 02　/　30 MIN</span><span class="path-icon icon-link" aria-hidden="true">⌘</span><h3>读一张证据关系图</h3><p>识别出土地点、器物、年代与解释之间的不同关系，标出不确定性。</p><button data-learning="关系图练习">进入关系图练习 <span>↗</span></button></article><article class="learning-path"><span class="path-no">PATH 03　/　45 MIN</span><span class="path-icon icon-note" aria-hidden="true">▤</span><h3>写一张小型展签</h3><p>用准确的事实、谨慎的描述和清楚的出处，介绍一件你感兴趣的器物。</p><button data-learning="展签写作工作纸">获取写作工作纸 <span>↗</span></button></article></div>
+      <div class="learning-progress-overview" id="learning-progress-overview" aria-live="polite">
+        <div><span class="learning-progress-kicker">MY LEARNING · 我的研学</span><h3>学习进度</h3><p id="learning-progress-note">正在读取本机或账号中的学习记录…</p></div>
+        <div class="learning-progress-overview-actions"><button class="button button-outline" type="button" id="learning-records-open">查看研学记录</button><button class="button button-outline" type="button" id="learning-records-export">导出 JSON</button></div>
+      </div>
+      <div class="learning-paths">
+        <article class="learning-path learning-path-feature" data-learning-course="origins"><span class="path-no">PATH 01　/　15 MIN</span><span class="path-icon icon-eye" aria-hidden="true">◎</span><h3>发现与命名</h3><p>从早期玉石器发现、首次试掘与地名使用，追踪考古认识如何逐步形成。</p><div class="learning-course-progress" data-course-progress aria-live="polite">进度读取中…</div><a href="/?page=learning&amp;path=origins" class="learning-path-link" data-learning-link data-course-action>进入主题学习 <span aria-hidden="true">↗</span></a></article>
+        <article class="learning-path" data-learning-course="framework"><span class="path-no">PATH 02　/　30 MIN</span><span class="path-icon icon-link" aria-hidden="true">⌘</span><h3>年代、文化与古城</h3><p>从年代范围、遗址与考古学文化的区别，到城墙如何逐步被确认与推定。</p><div class="learning-course-progress" data-course-progress aria-live="polite">进度读取中…</div><a href="/?page=learning&amp;path=framework" class="learning-path-link" data-learning-framework-link data-course-action>建立历史框架 <span aria-hidden="true">↗</span></a></article>
+        <article class="learning-path" data-learning-course="pits"><span class="path-no">PATH 03　/　30 MIN</span><span class="path-icon icon-note" aria-hidden="true">◈</span><h3>器物坑与雕像</h3><p>比较年代、坑的性质、雕像身份和器物来源解释，练习区分材料与推论。</p><div class="learning-course-progress" data-course-progress aria-live="polite">进度读取中…</div><a href="/?page=learning&amp;path=pits" class="learning-path-link" data-learning-pits-link data-course-action>进入调查档案 <span aria-hidden="true">↗</span></a></article>
+        <article class="learning-path" data-learning-course="connections"><span class="path-no">PATH 04　/　30 MIN</span><span class="path-icon icon-link" aria-hidden="true">⌁</span><h3>工艺、金沙与“蜀”</h3><p>观察铸造比较、并置三星堆与金沙材料，再对读考古分类与文献称谓。</p><div class="learning-course-progress" data-course-progress aria-live="polite">进度读取中…</div><a href="/?page=learning&amp;path=connections" class="learning-path-link" data-learning-connections-link data-course-action>进入证据调查 <span aria-hidden="true">↗</span></a></article>
+      </div>
+      <dialog class="learning-records-dialog" id="learning-records-dialog" aria-labelledby="learning-records-title"><div class="learning-records-dialog-head"><div><span class="learning-progress-kicker">MY LEARNING RECORDS</span><h3 id="learning-records-title">个人研学记录</h3></div><button type="button" class="learning-records-close" id="learning-records-close" aria-label="关闭研学记录">×</button></div><p id="learning-records-status" role="status" aria-live="polite">读取记录中…</p><div id="learning-records-content"></div><div class="learning-records-dialog-actions"><button class="button button-gold" type="button" id="learning-records-print">打印 / 保存为 PDF</button><button class="button button-outline" type="button" id="learning-records-export-dialog">导出 JSON</button><button class="button button-outline" type="button" id="learning-records-done">完成</button></div></dialog>
+      <section class="learning-records-print" id="learning-records-print" aria-label="个人研学记录打印版" hidden></section>
     </section>
 
     <section class="daily-knowledge section-wrap" id="daily-knowledge" aria-labelledby="daily-title">
@@ -163,28 +168,635 @@
       </div>
     </section>
 
-    <section class="evidence-strip"><div class="evidence-mark">证</div><div><span class="eyebrow">TRUSTED KNOWLEDGE · SOURCE FIRST</span><h2>每个结论，都能找到它的来处。</h2><p>我们把事实来源、推测解释与待验证问题分开标注。引用可回到原始页面；图片授权按单件图像说明。</p></div><a href="#sources" class="button button-outline">查看资料与授权 <span>↗</span></a></section>
     </div>
+
+    <section class="qa-page" id="qa-view" aria-labelledby="qa-title" hidden>
+      <div class="qa-shell">
+        <nav class="detail-breadcrumb" aria-label="面包屑"><a href="/" data-home-link>首页</a><span aria-hidden="true">/</span><span>资料问答</span></nav>
+        <header class="qa-heading"><div><p class="eyebrow"><span class="eyebrow-line"></span> RETRIEVAL · EVIDENCE · ANSWER</p><h1 id="qa-title">三星堆资料问答</h1><p>回答依据已检索的文物与考古资料，并在下方列出来源。资料不足时会明确说明。</p></div><span class="qa-mode-badge"><i aria-hidden="true"></i> RAG 知识问答</span></header>
+        <section class="qa-sessions" aria-label="问答会话管理"><div class="qa-session-toolbar"><span>会话列表</span><button type="button" id="qa-new-session">＋ 新建会话</button></div><div class="qa-session-list" id="qa-session-list" role="tablist" aria-label="已保存的问答会话"></div></section>
+        <div class="qa-workspace">
+          <div class="qa-transcript" id="qa-transcript" aria-live="polite" aria-relevant="additions text"></div>
+          <div class="qa-welcome" id="qa-welcome"><span class="qa-welcome-mark" aria-hidden="true">问</span><b>从一个具体问题开始</b><p>试试器物名称、祭祀坑位、考古发现或年代线索。</p><div class="qa-suggestions"><button type="button" data-qa-suggestion="青铜神树有哪些已知信息？">青铜神树有哪些已知信息？</button><button type="button" data-qa-suggestion="大立人像的身份有哪些不同解释？">大立人像的身份有哪些不同解释？</button><button type="button" data-qa-suggestion="三号祭祀坑是什么时候发现和发掘的？">三号祭祀坑是什么时候发现和发掘的？</button></div></div>
+          <form class="qa-form" id="qa-form"><label for="qa-question">继续提问 <small>最多 500 字 · Ctrl/⌘ + Enter 提交</small></label><div class="qa-input-wrap"><textarea id="qa-question" rows="2" maxlength="500" placeholder="输入你想了解的问题…"></textarea><button class="button button-gold" type="submit" aria-label="检索并回答">↑</button></div></form>
+          <div class="qa-status" id="qa-status" role="status" aria-live="polite"></div>
+          <div class="qa-footer-actions"><span id="qa-storage-note">会话保存在此浏览器；不同会话使用独立上下文。</span><button type="button" id="qa-clear" hidden>清空当前对话</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="fieldwork-view" id="fieldwork-view" aria-label="互动考古独立页面" hidden>
+      <p class="fieldwork-page-loading" id="fieldwork-page-loading" role="status">正在打开互动考古页面…</p>
+      <div id="fieldwork-page-content"></div>
+    </section>
+
+    <section class="timeline-page" id="timeline-view" aria-label="三星堆考古发现时间线" hidden>
+      <div class="timeline-page-wrap">
+        <nav class="detail-breadcrumb" aria-label="面包屑"><a href="/" data-home-link>首页</a><span aria-hidden="true">/</span><span>考古发现时间线</span></nav>
+        <section class="timeline-section section-wrap" id="timeline-content" aria-labelledby="timeline-title">
+          <div class="section-kicker"><span>AR</span><span>现代考古发现与研究进展</span><span class="rule"></span><span>ARCHAEOLOGICAL HISTORY</span></div>
+          <div class="section-heading"><div><h1 id="timeline-title">让发现回到<br><em>它发生的时间</em></h1><p>按现代考古发现、发掘、研究与保护展示事件浏览。这里记录的是考古工作时间，不是器物制作年代。</p></div><span class="timeline-note">资料来源 · 逐条可查</span></div>
+          <div class="timeline-toolbar">
+            <div class="timeline-filter-tabs" id="timeline-filters" role="group" aria-label="按考古事件类别筛选"><button class="timeline-filter active" type="button" data-event-filter="all" aria-pressed="true">全部事件</button></div>
+            <button class="text-button" id="timeline-clear" type="button" hidden>清除筛选</button>
+          </div>
+          <p class="timeline-results" id="timeline-results" aria-live="polite">正在读取考古事件…</p>
+          <div class="timeline-state" id="timeline-loading" role="status">正在读取考古事件与坑位资料…</div>
+          <div class="timeline-state timeline-error" id="timeline-error" role="alert" hidden><b>考古时间线暂时无法读取</b><p id="timeline-error-message">请检查本地数据目录后重试。</p><button class="text-button" id="timeline-retry" type="button">重试</button></div>
+          <div class="timeline-state" id="timeline-empty" hidden>数据目录中没有可展示的考古事件。</div>
+          <div class="timeline" id="timeline-events" aria-label="三星堆现代考古发现与研究进展" aria-busy="true"></div>
+          <p class="timeline-source-note">日期精度按来源记录展示。坑位关联文物仅来自精选图录，按图录中的出土单位匹配；这不代表逐件出土清单，也不表示文物与某一事件同日发生。</p>
+        </section>
+      </div>
+    </section>
+
+    <section class="learning-origins-page" id="learning-origins-view" aria-labelledby="learning-origins-title" hidden>
+      <div class="learning-origins-wrap">
+        <nav class="detail-breadcrumb" aria-label="面包屑"><a href="/" data-home-link>首页</a><span aria-hidden="true">/</span><a href="/?page=learning&amp;path=origins" data-learning-link>研学中心</a><span aria-hidden="true">/</span><span>发现与命名</span></nav>
+        <header class="learning-origins-hero">
+          <div class="learning-origins-hero-copy"><p class="learning-origins-eyebrow">LEARNING PATH 01 · DISCOVERY &amp; NAMING</p><h1 id="learning-origins-title">发现与命名</h1><p class="learning-origins-question">“三星堆”这个名字，是怎样成为一处遗址的名字？</p><p class="learning-origins-intro">从早期玉石器发现、首次试掘和地名使用，追踪考古认识如何逐步形成。</p></div>
+          <div class="learning-origins-meta"><span class="learning-time">约 15 分钟</span><span class="learning-progress-label" id="learning-progress-label" aria-live="polite">学习进度 · 1 / 3</span><div class="learning-progress-track" id="learning-progress-track" role="progressbar" aria-label="学习任务进度" aria-valuemin="1" aria-valuemax="3" aria-valuenow="1"><i class="is-current"></i><i></i><i></i></div></div>
+        </header>
+        <div class="learning-origins-layout">
+          <aside class="learning-origins-rail" aria-label="主题步骤"><p class="learning-rail-title">本次研学</p><a href="#learning-task-1" data-learning-step="1" class="is-current" aria-current="step"><span>01</span>排序发现史料</a><a href="#learning-task-2" data-learning-step="2"><span>02</span>辨认地名</a><a href="#learning-task-3" data-learning-step="3"><span>03</span>比较遗址范围</a><a href="#learning-record"><span>04</span>完成记录</a><p class="learning-rail-note">先看材料如何形成，再讨论它能支持什么判断。</p></aside>
+          <div class="learning-origins-content">
+            <section class="learning-task" id="learning-task-1" aria-labelledby="learning-task-1-title">
+              <div class="learning-task-heading"><p class="learning-task-number">任务一　/　SOURCE CHRONOLOGY</p><h2 id="learning-task-1-title">发现史料互动</h2><p>依次阅读原始资料、整理证据，再根据刚才读到的材料形成自己的判断。</p></div>
+              <ol class="learning-phase-progress" id="learning-phase-progress" aria-label="发现史互动进度"><li data-phase="1" aria-current="step">阅读资料 <span>1/3</span></li><li data-phase="2">整理证据 <span>2/3</span></li><li data-phase="3">形成判断 <span>3/3</span></li></ol>
+              <section class="learning-reading-stage" id="learning-reading-stage" aria-labelledby="learning-reading-title">
+                <div class="learning-reading-top"><span class="learning-status-tag">原始资料</span><span id="learning-reading-progress" aria-live="polite">阅读 1 / 4</span></div>
+                <h3 class="learning-reading-prompt">先读史料，再判断</h3>
+                <h3 id="learning-reading-title"></h3>
+                <div class="learning-reading-passages" id="learning-reading-passages"></div>
+                <aside class="learning-reading-tip"><b>阅读提示 · 页面编辑说明</b><p id="learning-reading-tip"></p></aside>
+                <div class="learning-reading-controls"><button class="button button-outline" id="learning-reading-prev" type="button">上一段</button><button class="button button-gold" id="learning-reading-next" type="button">我已读完本节，继续</button></div>
+              </section>
+              <section class="learning-sort-stage" id="learning-sort-stage" aria-labelledby="learning-sort-question" hidden>
+                <div class="learning-sort-stage-heading"><div><p class="learning-task-number">证据室　/　EVIDENCE ROOM</p><h3 id="learning-sort-question">这些材料分别能证明什么？</h3><p>阅读每张材料卡，再依据它与事件的关系选择一个证据档位。提交后才会显示分类反馈。</p></div><button class="text-button" id="learning-sort-return-reading" type="button">返回阅读资料</button></div>
+                <div class="learning-sort-progress-row"><span id="learning-sort-status" role="status" aria-live="polite">已整理 0 / 6</span><span id="learning-sort-score-live">提交后查看分类依据</span></div>
+                <div class="learning-year-lanes learning-evidence-lanes" id="learning-year-lanes" role="group" aria-label="证据档位"></div>
+                <div class="learning-sort-controls"><button class="button button-gold" id="learning-sort-start" type="button">打开下一张证据卡</button><button class="button button-outline" id="learning-sort-reset" type="button" hidden>重新整理证据</button><span class="learning-sort-hint">收入档位的卡片会背面朝上叠放；档位只显示你放入的卡片数量。</span></div>
+                <div class="learning-sort-complete" id="learning-sort-complete" hidden aria-live="polite"></div>
+              </section>
+              <section class="learning-judgment-stage" id="learning-judgment-stage" aria-labelledby="learning-judgment-title" hidden>
+                <div class="learning-sort-stage-heading"><div><p class="learning-task-number">形成判断　/　MAKE A JUDGMENT</p><h3 id="learning-judgment-title">依据材料，形成你的判断</h3><p>两题分别提交。提交前不会显示标准答案或对错提示。</p></div><button class="text-button" id="learning-judgment-return-evidence" type="button">返回证据室</button></div>
+                <div id="learning-judgment-questions"></div>
+                <div class="learning-sort-complete" id="learning-judgment-complete" hidden aria-live="polite"></div>
+              </section>
+              <div class="learning-sort-overlay" id="learning-sort-overlay" hidden>
+                <button class="learning-sort-scrim" type="button" data-sort-close aria-label="关闭资料卡"></button>
+                <section class="learning-sort-dialog" id="learning-sort-dialog" role="dialog" aria-modal="true" aria-labelledby="learning-sort-dialog-title" tabindex="-1">
+                  <button class="learning-sort-close" type="button" data-sort-close aria-label="关闭资料卡">×</button>
+                  <div id="learning-sort-dialog-content"></div>
+                </section>
+              </div>
+            </section>
+            <section class="learning-task" id="learning-task-2" aria-labelledby="learning-task-2-title">
+              <div class="learning-task-heading"><p class="learning-task-number">任务二　/　PLACE NAMES</p><h2 id="learning-task-2-title">辨认地名</h2><p>先读名称出现的上下文，再判断它在这条资料中指向什么。名称可能随时间和记录语境改变；证据不足时可以保留不确定。</p></div>
+              <ol class="learning-place-phase-progress" id="learning-place-phase-progress" aria-label="地名互动进度"><li data-place-stage="1" aria-current="step">阅读资料 <span>1 / 3</span></li><li data-place-stage="2">辨认名称 <span>2 / 3</span></li><li data-place-stage="3">查看解析 <span>3 / 3</span></li></ol>
+              <section class="learning-place-stage" id="learning-place-reading" aria-labelledby="learning-place-reading-title">
+                <div class="learning-place-reading-header"><div><p class="learning-task-number">READ THE SOURCES</p><h3 id="learning-place-reading-title">先读资料</h3></div><span id="learning-place-reading-progress" role="status" aria-live="polite"></span></div>
+                <div id="learning-place-reading-content" class="learning-place-reading-content"></div>
+                <aside class="learning-reading-tip"><b>阅读提示 · 页面编辑说明</b><p id="learning-place-reading-tip"></p></aside>
+                <div class="learning-reading-controls"><button class="button button-outline" id="learning-place-reading-prev" type="button">上一段</button><button class="button button-gold" id="learning-place-reading-next" type="button">继续阅读</button></div>
+              </section>
+              <section class="learning-place-stage" id="learning-place-sorting" aria-labelledby="learning-place-sort-title" hidden>
+                <div class="learning-sort-stage-heading"><div><p class="learning-task-number">NAME DESK　/　分类台</p><h3 id="learning-place-sort-title">这些名称在资料中指向什么？</h3><p>每次查看一张名称卡，选择最符合这条资料语境的档位。提交后才会看到反馈和出处。</p></div><button class="text-button" id="learning-place-return-reading" type="button">返回阅读资料</button></div>
+                <div class="learning-sort-progress-row"><span id="learning-place-sort-status" role="status" aria-live="polite">已辨认 0 / 0</span><span id="learning-place-sort-help"></span></div>
+                <p class="learning-place-card-notice" id="learning-place-card-notice"></p>
+                <div class="learning-place-bins" id="learning-place-bins" role="group" aria-label="地名分类档位"></div>
+                <div class="learning-task-actions"><button class="button button-gold" id="learning-place-open-card" type="button">开始辨认名称</button><button class="button button-outline" id="learning-place-review-open" type="button" data-place-review hidden>查看已完成卡片</button><button class="button button-gold" id="learning-place-finish" type="button" hidden>完成辨认，查看解析</button></div>
+              </section>
+              <section class="learning-place-stage" id="learning-place-complete" aria-labelledby="learning-place-complete-title" hidden>
+                <div id="learning-place-complete-content" aria-live="polite"></div>
+              </section>
+              <div class="learning-sort-overlay" id="learning-place-overlay" hidden>
+                <button class="learning-sort-scrim" type="button" data-place-dialog-close aria-label="关闭地名资料卡"></button>
+                <section class="learning-sort-dialog learning-place-dialog" id="learning-place-dialog" role="dialog" aria-modal="true" aria-labelledby="learning-place-dialog-heading" tabindex="-1">
+                  <button class="learning-sort-close" type="button" data-place-dialog-close aria-label="关闭地名资料卡">×</button>
+                  <div id="learning-place-dialog-content"></div>
+                </section>
+              </div>
+              <details class="learning-sources-disclosure"><summary>查看地名资料来源与定位</summary><div id="learning-place-sources"></div></details>
+            </section>
+            <section class="learning-task" id="learning-task-3" aria-labelledby="learning-task-3-title">
+              <div class="learning-task-heading"><p class="learning-task-number">任务三　/　SCOPE & MAPS</p><h2 id="learning-task-3-title">遗址范围有多大？在同一张地图上比较</h2><p>先看正式发表的遗址平面图，再叠加不同来源的范围说法。地图底图保持不动，叠层只表达面积尺度与资料不确定性。</p></div>
+              <section class="learning-scope-map-feature learning-scope-map-workbench" aria-labelledby="learning-scope-map-title">
+                <div class="learning-scope-map-heading"><div><p class="learning-task-number">遗址空间　/　MAP & CLAIMS</p><h3 id="learning-scope-map-title">三星堆遗址与城址范围</h3><p>以机构公开遗址平面图为地理参照；范围光晕按统一面积尺度绘制，未经地理配准。方向和比例仅遵循原图，本页不另造比例尺。</p></div><span class="learning-status-tag">范围示意 · 非精确边界</span></div>
+                <div class="learning-scope-map-layout">
+                  <figure class="learning-scope-map-figure learning-scope-map-canvas">
+                    <a id="learning-scope-map-link" target="_blank" rel="noopener noreferrer"><img id="learning-scope-map-image" alt="" loading="lazy" decoding="async"><span id="learning-scope-map-fallback" hidden>地图图件未能加载。可打开来源页面查看。</span></a>
+                    <svg id="learning-scope-map-overlay" class="learning-scope-map-overlay" viewBox="0 0 640 440" role="img" aria-label="按面积值绘制的范围光晕示意，不表示实际边界或地理落点"></svg>
+                    <div class="learning-scope-map-overlay-label">范围光晕｜面积比例示意，不表示实际落点</div>
+                    <div class="learning-scope-map-warning" id="learning-scope-map-warning"></div>
+                    <figcaption id="learning-scope-map-caption"></figcaption>
+                  </figure>
+                  <aside class="learning-scope-map-reading" aria-label="范围图层与资料">
+                    <div class="learning-scope-layer-heading"><div><span class="learning-source-pill">可切换范围图层</span><p>初始同时显示古城与遗址分布范围</p></div><button class="text-button" type="button" data-scope-reset-layers>恢复全部图层</button></div>
+                    <div class="learning-scope-layer-list" id="learning-scope-layer-list" aria-label="范围图层列表"></div>
+                    <div class="learning-scope-map-selected" id="learning-scope-map-selected" aria-live="polite"></div>
+                    <a id="learning-scope-map-source" target="_blank" rel="noopener noreferrer">打开地图来源 ↗</a>
+                    <small id="learning-scope-map-rights"></small>
+                  </aside>
+                </div>
+                <p class="learning-scope-map-fixed-note" id="learning-scope-map-fixed-note"></p>
+              </section>
+              <section class="learning-scope-area-section" aria-labelledby="learning-scope-area-title"><div class="learning-scope-subheading"><p class="learning-task-number">概念辨析　/　READ THE MAP</p><h3 id="learning-scope-area-title">三种“范围”，不能画成同一条线</h3></div><div class="learning-scope-concept-notes"><article><span>01</span><h4>古城 / 城址</h4><p>城墙围合的城市范围。机构概述约 3.5–3.6 平方公里。</p></article><article><span>02</span><h4>遗址分布范围</h4><p>考古调查认识的遗址分布区，现有机构概述约 12 平方公里。</p></article><article><span>03</span><h4>保护与建设控制区</h4><p>服务于文物保护和建设管理的区划，边界与用途不同，不等同于考古遗址分布边界。</p></article></div><p class="learning-scope-management-note" id="learning-scope-management-note"></p><p class="learning-scope-arithmetic" id="learning-scope-arithmetic"></p><p class="learning-scope-caution" id="learning-scope-caution"></p></section>
+              <section class="learning-scope-text-section" aria-labelledby="learning-scope-text-title"><div class="learning-scope-subheading"><p class="learning-task-number">文字四至　/　TEXTUAL EXTENT</p><h3 id="learning-scope-text-title">文献如何描述方向与地点？</h3></div><div id="learning-scope-text-content"></div></section>
+              <div class="learning-scope-reflection" id="learning-scope-reflection"></div>
+              <div class="learning-reflection-prompts"><p>发现地点和遗址范围有什么区别？</p><p>资料没有说明边界依据时，应怎样表达？</p></div><details class="learning-sources-disclosure"><summary>查看范围说法的出处与比较方法</summary><div id="learning-scope-sources"></div></details>
+            </section>
+            <section class="learning-task learning-record-task" id="learning-record" aria-labelledby="learning-record-title">
+              <div class="learning-task-heading"><p class="learning-task-number">学习记录　/　PERSONAL NOTES</p><h2 id="learning-record-title">留下你的判断</h2><p id="learning-record-description">填写后会保存在此浏览器本机；登录后可以导入到账号。</p></div>
+              <form class="learning-record-form" id="learning-record-form">
+                <label for="learning-record-discovery">我认为玉石器发现时间是……<textarea id="learning-record-discovery" name="discovery" rows="2" maxlength="500"></textarea></label><label for="learning-record-evidence">我的判断依据是……<textarea id="learning-record-evidence" name="evidence" rows="2" maxlength="700"></textarea></label><button class="learning-assistant-review-reason" type="button" data-assistant-check-reason="learning-record-evidence">请助手看看我的理由</button><label for="learning-record-name">“三星堆”名称范围的变化说明……<textarea id="learning-record-name" name="nameChange" rows="2" maxlength="700"></textarea></label><button class="learning-assistant-review-reason" type="button" data-assistant-check-reason="learning-record-name">请助手看看我的理由</button><label for="learning-record-question">我还想继续查证的问题是……<textarea id="learning-record-question" name="question" rows="2" maxlength="500"></textarea></label>
+                <p class="learning-local-status" id="learning-local-status" role="status" aria-live="polite">填写内容只保存在本机浏览器。</p><div class="learning-record-actions"><button class="button button-gold" type="submit">保存记录卡</button><button class="button button-outline" id="learning-print" type="button">打印研学记录卡</button><button class="text-button" id="learning-record-clear" type="button">清空本机记录</button></div>
+              </form><div class="learning-book-citation" id="learning-book-source"></div>
+            </section>
+          </div>
+        </div>
+      </div>
+      <section class="learning-print-sheet" id="learning-print-sheet" aria-label="可打印研学记录卡" hidden><p>三星堆 · 研学记录卡</p><h1>发现与命名</h1><p>主题问题：“三星堆”这个名字，是怎样成为一处遗址的名字？</p><dl><dt>我认为玉石器发现时间是</dt><dd data-print-field="discovery"></dd><dt>我的判断依据是</dt><dd data-print-field="evidence"></dd><dt>“三星堆”名称范围的变化说明</dt><dd data-print-field="nameChange"></dd><dt>我还想继续查证的问题是</dt><dd data-print-field="question"></dd></dl><div id="learning-discovery-print-summary"></div><div class="learning-print-citation" id="learning-print-citation"></div></section>
+    </section>
+
+    <div class="learning-assistant" id="learning-assistant" hidden>
+      <button class="learning-assistant-launcher" id="learning-assistant-launcher" type="button" aria-label="打开 AI 学习助手" aria-controls="learning-assistant-panel" aria-expanded="false">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M12 14h24l-2 22H14zM16 14l2-6h12l2 6M16 21h16M18 27c2-3 4-3 6 0s4 3 6 0M20 36v5m8-5v5M18 41h12"/><circle cx="24" cy="15" r="2"/></svg><span>学习助手</span>
+      </button>
+      <aside class="learning-assistant-panel" id="learning-assistant-panel" aria-labelledby="learning-assistant-title" hidden>
+        <header class="learning-assistant-header"><div><p>AI LEARNING ASSISTANT</p><h2 id="learning-assistant-title">AI 学习助手</h2><span id="learning-assistant-context">当前任务：发现史料互动</span></div><button id="learning-assistant-close" type="button" aria-label="关闭学习助手">×</button></header>
+        <div class="learning-assistant-context-note" id="learning-assistant-stage-note"></div>
+        <div class="learning-assistant-messages" id="learning-assistant-messages" role="log" aria-live="polite" aria-relevant="additions text" aria-label="学习助手对话"></div>
+        <div class="learning-assistant-actions" id="learning-assistant-actions"></div>
+        <form class="learning-assistant-composer" id="learning-assistant-form"><label class="visually-hidden" for="learning-assistant-input">向学习助手提问</label><textarea id="learning-assistant-input" maxlength="500" rows="2" placeholder="围绕当前材料提问…"></textarea><div><span>回答依据当前课程材料</span><button class="button button-gold" id="learning-assistant-send" type="submit">发送</button><button class="button button-outline" id="learning-assistant-stop" type="button" hidden>停止</button></div></form>
+        <p class="learning-assistant-status" id="learning-assistant-status" role="status" aria-live="polite"></p>
+      </aside>
+    </div>
+
+    <section class="learning-framework-page" id="learning-framework-view" aria-labelledby="lf-page-title" hidden>
+      <div class="lf-page-wrap">
+        <nav class="detail-breadcrumb" aria-label="面包屑"><a href="/" data-home-link>首页</a><span aria-hidden="true">/</span><a href="/?page=learning&amp;path=origins" data-learning-link>研学中心</a><span aria-hidden="true">/</span><span>年代、文化与古城</span></nav>
+        <header class="lf-hero"><div><p class="lf-eyebrow">LEARNING PATH 02 · CHAPTERS 03—06</p><h1 id="lf-page-title">年代、文化与古城</h1><p class="lf-question">我们如何根据年代数据、遗物特征和城墙遗迹，逐步建立三星堆的历史框架？</p><p class="lf-intro">先读书中材料，再用不同方式检查证据如何支持判断，以及结论仍有哪些边界。</p></div><div class="lf-hero-meta"><span>约 30 分钟</span><span id="lf-overall-progress" aria-live="polite">第 1 / 4 站</span><div class="lf-overall-track" role="progressbar" aria-label="研学站点进度" aria-valuemin="0" aria-valuemax="4" aria-valuenow="0"><i></i></div></div></header>
+        <div id="lf-loading" class="lf-state" role="status">正在读取研学资料…</div>
+        <div id="lf-error" class="lf-state lf-error" role="alert" hidden><b>研学资料暂时无法读取</b><p id="lf-error-message">请检查 data/manifest.json 中的研学资料。</p><button class="button button-outline" id="lf-retry" type="button">重试</button></div>
+        <div id="lf-app" hidden></div>
+      </div>
+      <section class="lf-print-sheet" id="lf-print-sheet" aria-label="我的历史框架研学记录" hidden></section>
+    </section>
+
+    <section class="learning-pits-page" id="learning-pits-view" aria-labelledby="lp-page-title" hidden>
+      <div class="lp-page-wrap">
+        <nav class="detail-breadcrumb" aria-label="面包屑"><a href="/" data-home-link>首页</a><span aria-hidden="true">/</span><a href="/?page=learning&amp;path=origins" data-learning-link>研学中心</a><span aria-hidden="true">/</span><span>器物坑与雕像</span></nav>
+        <header class="lp-hero"><div><p class="lp-eyebrow">LEARNING PATH 03 · CHAPTER 07</p><h1 id="lp-page-title">器物坑与雕像</h1><p class="lp-question">证据能支持哪些解释？</p><p class="lp-intro">围绕年代、坑的性质、雕像身份与器物来源，区分发掘材料、研究解释和仍待验证的假设。</p></div><div class="lp-hero-meta"><span>约 30 分钟</span><span id="lp-overall-progress" aria-live="polite">第 1 / 4 份档案</span><div class="lp-overall-track" role="progressbar" aria-label="调查档案进度" aria-valuemin="0" aria-valuemax="4" aria-valuenow="0"><i></i></div></div></header>
+        <figure class="lp-hero-exhibit"><img src="/assets/archaeology/maps/sanxingdui-site-plan-dark.png" alt="项目内三星堆遗址区域参照图，地图来源与授权待核；非地理配准图件" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('lp-hero-image-unavailable')"><figcaption><span>区域参照 · 项目内素材</span><span>原始制图来源与授权待核；非地理配准图，不用于确认坑位或遗址边界</span></figcaption><aside><p class="lp-eyebrow">FIELD NOTES · CHAPTER 07</p><strong>从器物坑出发，检查解释的边界</strong><div><span>04<small>份调查档案</small></span><span>04<small>种证据视角</small></span><span><small>不设唯一结论</small></span></div></aside></figure>
+        <div id="lp-loading" class="lp-state" role="status">正在读取第七章研学资料…</div>
+        <div id="lp-error" class="lp-state lp-error" role="alert" hidden><b>研学资料暂时无法读取</b><p id="lp-error-message">请检查 /data/manifest.json 中的 learning/pits.json。</p><button class="button button-outline" id="lp-retry" type="button">重试</button></div>
+        <div id="lp-app" hidden></div>
+      </div>
+      <section class="lp-print-sheet" id="lp-print-sheet" aria-label="我的器物坑调查记录" hidden></section>
+    </section>
+
+    <section class="learning-connections-page" id="learning-connections-view" aria-labelledby="lc-page-title" hidden>
+      <div class="lc-page-wrap">
+        <nav class="detail-breadcrumb" aria-label="面包屑"><a href="/" data-home-link>首页</a><span aria-hidden="true">/</span><a href="/?page=learning&amp;path=origins" data-learning-link>研学中心</a><span aria-hidden="true">/</span><span>工艺、金沙与“蜀”</span></nav>
+        <header class="lc-hero"><div><p class="lc-eyebrow">LEARNING PATH 04 · CHAPTERS 08—10</p><h1 id="lc-page-title">工艺、金沙与“蜀”</h1><p class="lc-question">器物和工艺的相似性能说明什么？哪些联系有证据支持，哪些仍是推测？</p><p class="lc-intro">通过观察、并列比较与时间线连线，练习把“可见材料”“研究解释”和“尚待验证的联系”分开。</p></div><aside class="lc-progress-panel"><span>约 30 分钟</span><b id="lc-progress-label" aria-live="polite">第 1 / 3 站 · 先读资料</b><div class="lc-progress-track" role="progressbar" aria-label="研学进度" aria-valuemin="0" aria-valuemax="3" aria-valuenow="0"><i></i></div></aside></header>
+        <figure class="lc-hero-visual"><img src="/data/artifacts/images/book-2009-005.jpg" alt="《三星堆出土文物全记录》中的铜神树图录页，含器物图版与线描" loading="eager" decoding="async"><figcaption><span>器物图录图版 · 青铜神树</span><span>《三星堆出土文物全记录》青铜器卷，书内第220页、扫描 PDF 第221页。不是独立馆藏摄影；图像授权待核。</span></figcaption><div><p>FIELD INVESTIGATION　/　08—10</p><strong>从“看见相似”到“说明联系”<br>中间还需要哪些证据？</strong><small>三种视觉方法 · 三个不同问题 · 不设唯一文化结论</small></div></figure>
+        <div class="lc-loading" id="lc-loading" role="status">正在读取第八至十章研学资料…</div>
+        <div class="lc-error" id="lc-error" role="alert" hidden><b>研学资料暂时无法读取</b><p id="lc-error-message">请检查 /data/manifest.json 中的 learning/connections.json。</p><button class="button button-outline" id="lc-retry" type="button">重试读取</button></div>
+        <div class="lc-app" id="lc-app" hidden></div>
+        <p class="lc-method-note">AI/编辑说明：本页互动图形用于解释比较方法，不是考古实测图、工艺流程复原或已证实的文化传播路线。所有判断以旁注来源和页码为边界。</p>
+      </div>
+      <section class="lc-print-sheet" id="lc-print-sheet" aria-label="我的证据调查记录" hidden></section>
+    </section>
+
+    <section class="knowledge-graph-page pit-map-page" id="graph-view" aria-labelledby="graph-page-title" hidden>
+      <div class="graph-page-wrap">
+        <nav class="detail-breadcrumb" aria-label="面包屑"><a href="/" data-home-link>首页</a><span aria-hidden="true">/</span><span>坑位空间探索</span></nav>
+        <header class="kg-heading"><div><p class="eyebrow"><span class="eyebrow-line"></span> ARCHAEOLOGICAL PLACE · SOURCE FIRST</p><h1 id="graph-page-title">祭祀坑位探索</h1><p>按坑位分布示意选择 K1—K8，查看已登记的代表文物、坑位档案与考古事件。图形仅用于浏览，不表示测绘坐标或坑口实际边界。</p></div><div class="kg-status"><span class="kg-status-dot"></span>坑位坐标待校准</div></header>
+        <div class="kg-stats pit-spatial-stats" aria-label="空间数据统计"><div><strong id="pit-stat-sites">—</strong><span>遗址档案</span></div><div><strong id="pit-stat-contexts">—</strong><span>登记坑位</span></div><div><strong id="pit-stat-mappable">—</strong><span>可用于定位的坑位坐标</span></div><div><strong id="pit-stat-review">—</strong><span>待复核空间主张</span></div></div>
+        <p class="kg-data-notice" id="pit-data-notice" role="status" hidden></p>
+        <div class="kg-state" id="pit-loading" role="status">正在读取遗址、坑位和精选图录档案…</div>
+        <div class="kg-state kg-error" id="pit-error" role="alert" hidden><b>坑位档案暂时无法读取</b><p id="pit-error-message">请检查 /data/manifest.json 与相关 JSONL 档案。</p><button class="button button-outline" id="pit-retry" type="button">重试读取</button></div>
+        <div class="pit-layout" id="pit-layout" hidden>
+          <details class="kg-drawer pit-filter-panel" id="pit-filter-drawer" open><summary>搜索与筛选</summary><div class="kg-panel-content pit-filter-content">
+            <label class="kg-search">搜索坑位或文物<input id="pit-search" type="search" placeholder="坑位名称、文物名、图录编号" autocomplete="off"></label>
+            <label>文物类别<select id="pit-category-filter" aria-label="按文物类别筛选"><option value="">全部类别</option></select></label>
+            <label>记录状态<select id="pit-status-filter" aria-label="按记录状态筛选"><option value="">全部状态</option></select></label>
+            <button class="text-button" id="pit-clear" type="button">清除搜索与筛选</button>
+            <button class="pit-unassigned-button" id="pit-unassigned" type="button"><span>坑位未明确</span><small id="pit-unassigned-count">—</small></button>
+            <p class="kg-independent-note">只有图录出土单位或显式坑位关系能与坑位档案明确匹配时，文物才会出现在坑位名下。未匹配不代表没有出土地点。</p>
+            <div class="pit-context-index-heading"><b>祭祀坑档案</b><span id="pit-context-count">—</span></div>
+            <div class="pit-map" id="pit-map" role="group" aria-label="选择一个祭祀坑档案" aria-busy="true"></div>
+          </div></details>
+          <section class="pit-map-column" aria-label="祭祀坑平面示意图与档案详情">
+            <div class="pit-map-toolbar"><div><b id="pit-site-title">正在读取遗址档案</b><span>按图面相对排布 · 示意图非测绘底图</span></div><button id="pit-map-reset" type="button" class="text-button">清除选择</button></div>
+            <div class="pit-spatial-panel" id="pit-spatial-panel" role="region" aria-label="可交互祭祀坑分布示意图" aria-live="polite"></div>
+          </section>
+          <details class="kg-drawer pit-detail-drawer" id="pit-detail-drawer" open><summary>坑位与文物详情</summary><aside class="kg-panel-content" id="pit-details" aria-live="polite"><div class="kg-detail-placeholder"><span aria-hidden="true">档</span><b>选择一个坑位档案</b><p>坑位来源、关联事件、精选图录与简报专项档案将在此展示。</p></div></aside></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="stories-page" id="stories-view" aria-labelledby="stories-page-title" hidden>
+      <div class="stories-wrap">
+        <nav class="detail-breadcrumb" aria-label="面包屑"><a href="/" data-home-link>首页</a><span aria-hidden="true">/</span><a href="/?page=stories" data-stories-link>专题展览</a><span id="story-breadcrumb-tail" hidden aria-hidden="true">/</span><span id="story-breadcrumb-title" hidden></span></nav>
+        <div class="stories-state" id="stories-loading" role="status">正在读取专题与关联资料…</div>
+        <div class="stories-state stories-error" id="stories-error" role="alert" hidden><b>专题资料暂时无法读取</b><p id="stories-error-message">请检查静态数据目录后重试。</p><button class="button button-outline" type="button" id="stories-retry">重试</button></div>
+        <div class="stories-empty stories-state" id="stories-empty" hidden>当前没有可展示的专题叙事。</div>
+        <div id="stories-content" aria-busy="true" hidden>
+          <div id="stories-directory">
+            <header class="stories-heading"><div><p class="eyebrow"><span class="eyebrow-line"></span> CURATED STORIES · SOURCE FIRST</p><h1 id="stories-page-title">专题展览</h1><p>围绕问题组织器物、考古事件与来源线索。专题故事是编辑性阅读路径，和博物馆实体展览记录分开展示。</p></div><span class="stories-heading-note">编辑叙事<br>≠ 考古结论</span></header>
+            <section aria-labelledby="story-list-title"><div class="stories-section-heading"><div><span class="stories-overline">01 / EDITORIAL NARRATIVES</span><h2 id="story-list-title">专题叙事</h2><p>从一个问题进入，逐章查看关联记录、坑位背景和资料出处。</p></div><span id="stories-count" class="stories-count">—</span></div><div class="story-directory-grid" id="story-directory-grid"></div></section>
+            <section class="actual-exhibitions-section" aria-labelledby="actual-exhibitions-title"><div class="stories-section-heading"><div><span class="stories-overline">02 / INSTITUTIONAL EXHIBITIONS</span><h2 id="actual-exhibitions-title">实体展览记录</h2><p>来自图谱中的机构展览资料；展品关联只按显式关系记录匹配精选图录 ID/slug。</p></div><span class="stories-record-type">机构记录</span></div><div class="actual-exhibitions-list" id="actual-exhibitions-list" aria-live="polite"></div><p class="exhibition-data-status" id="exhibition-data-status" role="status" hidden></p></section>
+          </div>
+          <article class="story-detail" id="story-detail" hidden aria-labelledby="story-detail-title"></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="artifact-index-page" id="artifact-index-view" aria-labelledby="artifact-index-title" hidden>
+      <div class="artifact-index-wrap">
+        <nav class="detail-breadcrumb" aria-label="面包屑"><a href="/">首页</a><span aria-hidden="true">/</span><span>文物百科</span></nav>
+        <header class="artifact-index-heading"><div><p class="eyebrow"><span class="eyebrow-line"></span> ARTIFACT INDEX · SOURCE FIRST</p><h1 id="artifact-index-title">文物百科</h1><p>精选自2009年《三星堆出土文物全记录》的300条图录档案。名称、尺寸和图注仍需对照原页复核，未知信息会保留待核状态。</p></div><div class="artifact-index-total"><strong id="artifact-index-total">—</strong><span>条图录档案</span></div></header>
+        <div class="artifact-index-toolbar">
+          <label class="artifact-index-search"><span class="sr-only">搜索器物名称、别名或关键词</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg><input id="artifact-index-search" type="search" placeholder="搜索名称、别名、类别或关键词" autocomplete="off"><kbd>⌕</kbd></label>
+          <button type="button" class="text-button artifact-index-clear" id="artifact-index-clear">清除搜索与筛选</button>
+        </div>
+        <div class="artifact-index-filters" aria-label="文物筛选条件">
+          <label>类别<select id="artifact-filter-category" aria-label="按类别筛选"><option value="">全部类别</option></select></label>
+          <label>年代<select id="artifact-filter-period" aria-label="按年代筛选"><option value="">全部年代</option></select></label>
+          <label>材质<select id="artifact-filter-material" aria-label="按材质筛选"><option value="">全部材质</option></select></label>
+          <label>地点 / 祭祀坑<select id="artifact-filter-context" aria-label="按出土地点或祭祀坑筛选"><option value="">全部地点</option></select></label>
+          <label>排序<select id="artifact-sort"><option value="name">名称</option><option value="period">年代</option><option value="category">类别</option></select></label>
+          <div class="artifact-view-toggle" role="group" aria-label="切换展示布局"><button type="button" data-artifact-view="grid" aria-pressed="true">网格</button><button type="button" data-artifact-view="list" aria-pressed="false">列表</button></div>
+        </div>
+        <div class="artifact-index-status" id="artifact-index-data-status" role="status" aria-live="polite"></div>
+        <div class="artifact-index-resultbar"><p id="artifact-index-results" aria-live="polite">正在读取本地器物数据…</p><span>数据目录：/data/manifest.json</span></div>
+        <div class="artifact-index-grid" id="artifact-index-grid" aria-label="器物记录列表"></div>
+        <div class="artifact-index-load-more-wrap"><button type="button" class="button button-outline" id="artifact-index-load-more" hidden>继续浏览</button></div>
+        <div class="artifact-index-empty" id="artifact-index-empty" hidden><span aria-hidden="true">—</span><h2>没有找到匹配的记录</h2><p>试试更短的关键词，或清除部分筛选条件。</p><button type="button" class="button button-outline" data-artifact-clear-empty>清除筛选</button></div>
+        <div class="artifact-index-error" id="artifact-index-error" hidden><h2>部分器物数据暂时无法读取</h2><p>请检查静态站点的 /data/ 数据目录后重试。已读取的记录和首页精选档案仍可浏览。</p><button type="button" class="button button-outline" id="artifact-index-retry">重试读取</button></div>
+      </div>
+    </section>
 
     <section class="artifact-detail-page" id="artifact-detail-view" aria-labelledby="detail-title" hidden>
       <div class="section-wrap">
-        <nav class="detail-breadcrumb" aria-label="面包屑"><a href="#collection" data-home-anchor="collection">文物档案</a><span aria-hidden="true">/</span><span id="detail-breadcrumb-name">器物详情</span></nav>
+        <nav class="detail-breadcrumb" aria-label="面包屑"><a href="/?page=artifacts" data-artifact-list-link>文物百科</a><span aria-hidden="true">/</span><span id="detail-breadcrumb-name">器物详情</span></nav>
         <div class="detail-layout" id="detail-layout">
           <figure class="detail-figure"><div class="detail-visual" id="detail-visual"></div><figcaption><span id="detail-image-caption"></span><a id="detail-image-source" href="#" target="_blank" rel="noreferrer" hidden>查看原始影像与授权 ↗</a></figcaption></figure>
-          <article class="detail-copy"><p class="eyebrow" id="detail-kicker">OBJECT RECORD</p><h1 id="detail-title">器物档案</h1><p class="detail-status" id="detail-status"></p><p class="detail-intro" id="detail-intro"></p><dl class="detail-meta" id="detail-meta"></dl><section class="detail-interpretation"><h2>内容状态与解释边界</h2><p id="detail-interpretation"></p></section><section class="detail-sources"><h2>资料来源</h2><ol id="detail-references"></ol></section><div class="detail-actions"><a class="button button-outline" href="#collection" data-home-anchor="collection">← 返回文物列表</a><button class="button button-gold" type="button" data-copy-url>复制详情链接</button></div><p class="detail-share-status" id="detail-share-status" role="status" aria-live="polite"></p></article>
+          <article class="detail-copy"><p class="eyebrow" id="detail-kicker">OBJECT RECORD</p><h1 id="detail-title">器物档案</h1><p class="detail-status" id="detail-status" hidden></p><p class="detail-intro" id="detail-intro"></p><dl class="detail-meta" id="detail-meta"></dl><section class="detail-interpretation"><h2>补充说明</h2><p id="detail-interpretation"></p></section><section class="detail-sources"><h2>资料来源</h2><ol id="detail-references"></ol></section><div class="detail-actions"><a class="button button-outline" href="/?page=artifacts" data-artifact-list-link>← 返回文物列表</a><button class="button button-gold" type="button" data-copy-url>复制详情链接</button></div><p class="detail-share-status" id="detail-share-status" role="status" aria-live="polite"></p></article>
         </div>
-        <div class="detail-not-found" id="detail-not-found" hidden><span class="not-found-mark" aria-hidden="true">?</span><p class="eyebrow">RECORD NOT FOUND</p><h1>暂未找到这件文物</h1><p>链接中的文物编号不存在，或对应资料尚未接入。</p><a class="button button-gold" href="#collection" data-home-anchor="collection">返回文物列表 <span>↗</span></a></div>
+        <div class="detail-not-found" id="detail-not-found" hidden><span class="not-found-mark" aria-hidden="true">?</span><p class="eyebrow">RECORD NOT FOUND</p><h1>暂未找到这件文物</h1><p>链接中的文物编号不存在，或对应资料尚未接入。</p><a class="button button-gold" href="/?page=artifacts" data-artifact-list-link>返回文物列表 <span>↗</span></a></div>
+      </div>
+    </section>
+
+    <section class="ai-exhibition-foyer" id="ai-exhibition-view" aria-labelledby="ai-foyer-title" hidden>
+      <video class="ai-foyer-video" id="ai-foyer-video" muted loop playsinline preload="none" poster="/assets/ai-exhibition/foyer-poster.png" aria-label="AI 艺术想象展序厅循环影像，青铜眼形装置与枝状结构">
+        <source data-src="/assets/ai-exhibition/foyer-loop.mp4" type="video/mp4">
+      </video>
+      <div class="ai-foyer-shade" aria-hidden="true"></div>
+      <a class="ai-foyer-back" href="/" data-ai-exhibition-back><span aria-hidden="true">←</span> 返回探索平台</a>
+      <div class="ai-foyer-content">
+        <p class="ai-foyer-brand"><span aria-hidden="true"></span> 三星堆 AI 艺术想象展 <i>·</i> 序厅</p>
+        <p class="ai-foyer-overline">AN IMAGINED THRESHOLD · 01 / 05</p>
+        <h1 id="ai-foyer-title">文明<br><em>将醒</em></h1>
+        <p class="ai-foyer-intro">穿过尘埃与微光，<br>开启一场关于古蜀文明的想象之旅。</p>
+        <button class="ai-foyer-enter" id="ai-foyer-enter" type="button"><span>进入以目观天</span><i aria-hidden="true">↗</i></button>
+        <p class="ai-foyer-caveat">AI 艺术想象 · 不代表古蜀历史场景复原</p>
+        <p class="ai-foyer-live-status" id="ai-foyer-live-status" role="status" aria-live="polite"></p>
+      </div>
+      <div class="ai-foyer-footer">
+        <div class="ai-foyer-progress"><span>01</span><i></i><span>05</span><small>展览进度</small></div>
+        <nav class="ai-foyer-rooms" aria-label="展览空间">
+          <span class="ai-foyer-room is-current" aria-current="step"><b>01</b><span>序厅</span></span>
+          <a class="ai-foyer-room" href="/?page=ai-exhibition&amp;room=eye" data-ai-room-link="eye" aria-label="进入第二空间：以目观天"><b>02</b><span>以目观天</span></a>
+          <a class="ai-foyer-room" href="/?page=ai-exhibition&amp;room=tree" data-ai-room-link="tree" aria-label="进入第三空间：神树探索厅"><b>03</b><span>神树探索厅</span></a>
+          <a class="ai-foyer-room" href="/?page=ai-exhibition&amp;room=echo" data-ai-room-link="echo" aria-label="进入第四空间：人神之间"><b>04</b><span>人神之间</span></a>
+          <a class="ai-foyer-room" href="/?page=ai-exhibition&amp;room=finale" data-ai-room-link="finale" aria-label="进入第五空间：文明回声"><b>05</b><span>文明回声</span></a>
+        </nav>
+        <div class="ai-foyer-controls" role="group" aria-label="序厅影像控制">
+          <button id="ai-foyer-play" type="button" aria-label="播放序厅影像" title="播放 / 暂停">播放</button>
+          <button id="ai-foyer-mute" type="button" aria-label="开启序厅影像声音" aria-pressed="true" title="静音 / 开声">静音</button>
+          <button id="ai-foyer-fullscreen" type="button" aria-label="全屏显示序厅" title="全屏">全屏</button>
+        </div>
+      </div>
+      <p class="ai-foyer-video-error" id="ai-foyer-video-error" role="status" hidden>序厅影像暂时无法播放，当前显示静态封面。</p>
+    </section>
+
+    <section class="ai-eye-room" id="ai-eye-room" aria-labelledby="ai-eye-title" hidden>
+      <video class="ai-eye-video" id="ai-eye-video" autoplay muted loop playsinline preload="metadata" poster="/assets/ai-exhibition/eye-room-16x9.png" aria-label="以目观天空间循环背景影像">
+        <source data-src="/assets/ai-exhibition/eye-room-loop.mp4" type="video/mp4">
+      </video>
+      <div class="ai-eye-shade" aria-hidden="true"></div>
+      <div class="ai-eye-stars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <header class="ai-eye-topbar">
+        <a class="ai-eye-back" href="/?page=ai-exhibition&amp;room=foyer" data-ai-room-link="foyer"><span aria-hidden="true">←</span> 返回序厅</a>
+        <p class="ai-eye-brand">三星堆 AI 艺术想象展 <i>·</i> 02 / 05</p>
+      </header>
+      <div class="ai-eye-content">
+        <section class="ai-eye-intro">
+          <p class="ai-eye-overline">AN IMAGINED SKY · SECOND SPACE</p>
+          <h1 id="ai-eye-title">以目观天</h1>
+          <p class="ai-eye-lede">以天象为主题，生成一张三层堆叠的二维装饰纹样。</p>
+          <p class="ai-eye-disclaimer">AI 艺术想象 · 不代表古蜀历史复原</p>
+          <button class="ai-eye-create button button-gold" id="ai-eye-create-open" type="button">设计我的天象纹样 <span aria-hidden="true">↗</span></button>
+          <a class="ai-eye-next-room" href="/?page=ai-exhibition&amp;room=tree" data-ai-room-link="tree" aria-label="继续前往第三空间：神树探索厅">继续前往神树探索厅 <span aria-hidden="true">→</span></a>
+          <p class="ai-eye-api-state" id="ai-eye-api-state" role="status" aria-live="polite">正在检查图像生成服务…</p>
+        </section>
+        <section class="ai-eye-stage" id="ai-eye-stage" aria-label="纵目面具数字模型展示区">
+          <div class="ai-eye-model-frame" id="ai-eye-model-frame">
+            <div class="ai-eye-model-fallback" id="ai-eye-model-fallback">
+              <img src="/assets/ai-exhibition/eye-room-16x9.png" alt="以目观天展厅封面；此图为氛围背景，不是纵目面具模型图" loading="lazy">
+              <div><b>纵目面具数字模型素材</b><p id="ai-eye-model-error" role="status">模型正在载入。</p></div>
+            </div>
+            <canvas id="ai-eye-model-canvas" aria-label="可拖动旋转、缩放观察的纵目面具数字模型" hidden></canvas>
+            <div class="ai-eye-hotspots" id="ai-eye-hotspots" role="group" aria-label="模型眼部资料标记" hidden></div>
+            <div class="ai-eye-model-caption"><span>纵目面具数字模型素材</span><small>模型本体独立展示 · 来源与身份未核实</small></div>
+            <div class="ai-eye-model-controls" role="group" aria-label="模型观察控制">
+              <button id="ai-eye-model-mode" type="button" aria-pressed="false" aria-label="打开模型观察模式">观察模式</button>
+              <button id="ai-eye-model-reset" type="button" aria-label="重置模型视角">复位视角</button>
+            </div>
+            <p class="ai-eye-model-hint" id="ai-eye-model-hint">拖动旋转 · 滚轮或双指缩放</p>
+          </div>
+          <details class="ai-eye-model-source"><summary>模型与材质说明</summary><p>素材路径：sanxingdui-mask-model/source/Sanxingdui Mask Model.zip。本空间使用包内 OBJ 的几何与顶点颜色；配套 MTL 引用的 TIFF 文件未包含在素材包或指定贴图目录内，当前使用中性展陈材质。模型扫描来源、采集方式及其与特定馆藏器物的对应关系待核实。</p></details>
+        </section>
+      </div>
+      <footer class="ai-eye-footer">
+        <a class="ai-eye-return" href="/?page=ai-exhibition&amp;room=foyer" data-ai-room-link="foyer">← 返回序厅</a>
+        <nav class="ai-eye-rooms" aria-label="展览空间进度">
+          <a href="/?page=ai-exhibition&amp;room=foyer" data-ai-room-link="foyer"><b>01</b><span>序厅</span></a>
+          <span aria-current="step"><b>02</b><span>以目观天</span></span>
+          <a href="/?page=ai-exhibition&amp;room=tree" data-ai-room-link="tree" aria-label="进入第三空间：神树探索厅"><b>03</b><span>神树探索厅</span></a>
+          <a href="/?page=ai-exhibition&amp;room=echo" data-ai-room-link="echo" aria-label="进入第四空间：人神之间"><b>04</b><span>人神之间</span></a><a href="/?page=ai-exhibition&amp;room=finale" data-ai-room-link="finale" aria-label="进入第五空间：文明回声"><b>05</b><span>文明回声</span></a>
+        </nav>
+      </footer>
+      <p class="ai-eye-video-error" id="ai-eye-video-error" role="status" hidden>背景影像暂时无法播放，当前使用静态封面。</p>
+    </section>
+
+    <section class="ai-tree-room" id="ai-tree-room" aria-labelledby="ai-tree-title" hidden>
+      <img class="ai-tree-background" src="/assets/ai-exhibition/tree-scene-specific-v4.png" alt="AI 想象场景：暮色中的青铜树形装置与山影；不代表古蜀历史场景复原" fetchpriority="high">
+      <div class="ai-tree-shade" aria-hidden="true"></div>
+      <header class="ai-tree-topbar">
+        <a class="ai-tree-back" href="/?page=ai-exhibition&amp;room=eye" data-ai-room-link="eye"><span aria-hidden="true">←</span> 返回以目观天</a>
+        <p class="ai-tree-brand">三星堆 AI 艺术想象展 <i>·</i> 03 / 05</p>
+        <p class="ai-tree-top-note">模型观察 · 资料待复核</p>
+      </header>
+      <div class="ai-tree-content">
+        <section class="ai-tree-intro" aria-label="神树探索厅与互动答题">
+          <p class="ai-tree-overline">BRONZE TREE · THIRD SPACE</p>
+          <h1 id="ai-tree-title">神树探索厅</h1>
+          <p class="ai-tree-lede">沿着枝脉，观察一件青铜神树</p>
+          <p class="ai-tree-disclaimer">3D 模型展示与数字交互用于展览体验；解释性内容以所列资料为准。</p>
+          <a class="ai-tree-continue" href="/?page=ai-exhibition&amp;room=echo" data-ai-room-link="echo" aria-label="从神树探索厅继续前往第四空间：人神之间">继续前往人神之间 <span aria-hidden="true">→</span><small>第四空间 · 器物回响</small></a>
+          <div class="ai-tree-quiz-launch-wrap">
+            <button class="ai-tree-quiz-launch" id="ai-tree-quiz-open" type="button" disabled>正在准备答题… <span aria-hidden="true">↗</span></button>
+            <small>单选闯关 · 共五题 · 答后查看解析</small>
+          </div>
+        </section>
+        <section class="ai-tree-stage" id="ai-tree-stage" aria-label="青铜树数字模型展示区">
+          <div class="ai-tree-model-frame" id="ai-tree-model-frame">
+            <div class="ai-tree-model-fallback" id="ai-tree-model-fallback">
+              <div class="ai-tree-fallback-mark" aria-hidden="true">枝</div>
+              <div class="ai-tree-fallback-copy"><b>青铜树数字模型</b><p id="ai-tree-model-status" role="status" aria-live="polite">模型正在载入。场景图为 AI 艺术想象，不是文物照片。</p><button class="ai-tree-retry" id="ai-tree-model-retry" type="button" hidden>重试加载模型</button></div>
+            </div>
+            <canvas id="ai-tree-model-canvas" aria-label="可拖动旋转、缩放观察的青铜树数字模型" hidden tabindex="0"></canvas>
+            <div class="ai-tree-hotspots" id="ai-tree-hotspots" role="group" aria-label="模型可交互部位" hidden></div>
+            <div class="ai-tree-model-controls" role="group" aria-label="神树模型观察控制">
+              <button id="ai-tree-model-reset" type="button" aria-label="回到模型初始视角">回到初始视角</button>
+            </div>
+            <aside class="ai-tree-hotspot-card" id="ai-tree-hotspot-card" aria-live="polite" hidden>
+              <button type="button" id="ai-tree-hotspot-close" class="ai-tree-card-close" aria-label="关闭部位资料">×</button>
+              <small id="ai-tree-hotspot-kicker">模型观察</small><h2 id="ai-tree-hotspot-title"></h2><p id="ai-tree-hotspot-description"></p><button type="button" id="ai-tree-hotspot-target" class="ai-tree-card-action" hidden></button>
+            </aside>
+            <p class="ai-tree-model-caption"><span>青铜树数字模型素材</span><small>本地 M379 模型包 · 模型身份与扫描来源待核实</small></p>
+            <p class="ai-tree-model-hint" id="ai-tree-model-hint">拖动旋转 · 滚轮或双指缩放</p>
+          </div>
+          <details class="ai-tree-model-source"><summary>模型与场景说明</summary><p>模型文件取自本地素材包「M379 青铜树神树 / FBX格式.zip」，包含一个 3D FBX 与配套材质贴图。此名称和预览用于说明素材来源，不代表它是经核验的馆藏扫描模型；授权及扫描来源待核实。背景使用 AI 艺术想象场景图，不是考古现场或文物照片。</p></details>
+          <p class="ai-tree-load-error" id="ai-tree-load-error" role="status" aria-live="polite" hidden></p>
+        </section>
+      </div>
+      <dialog class="ai-tree-quiz-dialog" id="ai-tree-quiz-dialog" aria-labelledby="ai-tree-quiz-dialog-title">
+        <header class="ai-tree-quiz-dialog-header">
+          <div><p>BRONZE TREE · QUIZ</p><h2 id="ai-tree-quiz-dialog-title">神树知识闯关</h2></div>
+          <div class="ai-tree-quiz-dialog-tools">
+            <button class="ai-tree-quiz-next" id="ai-tree-next-question" type="button" hidden>下一题 <span aria-hidden="true">→</span></button>
+            <button class="ai-tree-quiz-close" id="ai-tree-quiz-close" type="button" aria-label="关闭答题窗口">×</button>
+          </div>
+        </header>
+        <div class="ai-tree-quiz-loading" id="ai-tree-quiz-loading" role="status">正在准备题目…</div>
+        <div class="ai-tree-quiz-body" id="ai-tree-quiz-body" hidden></div>
+      </dialog>
+      <button class="ai-tree-guide-fab" id="ai-tree-guide-fab" type="button" aria-label="打开 AI 讲解员">问 <span>AI 讲解员</span></button>
+      <footer class="ai-tree-footer">
+        <a href="/?page=ai-exhibition&amp;room=eye" data-ai-room-link="eye">← 返回以目观天</a>
+        <nav aria-label="展览空间进度"><a href="/?page=ai-exhibition&amp;room=foyer" data-ai-room-link="foyer"><b>01</b><span>序厅</span></a><a href="/?page=ai-exhibition&amp;room=eye" data-ai-room-link="eye"><b>02</b><span>以目观天</span></a><span aria-current="step"><b>03</b><span>神树探索厅</span></span><a href="/?page=ai-exhibition&amp;room=echo" data-ai-room-link="echo"><b>04</b><span>人神之间</span></a><a href="/?page=ai-exhibition&amp;room=finale" data-ai-room-link="finale"><b>05</b><span>文明回声</span></a></nav>
+        <p>AI 艺术想象 · 不代表古蜀历史复原</p>
+      </footer>
+      <dialog class="ai-tree-guide-dialog" id="ai-tree-guide-dialog" aria-labelledby="ai-tree-guide-title">
+        <button class="ai-tree-dialog-close" id="ai-tree-guide-close" type="button" aria-label="关闭 AI 讲解员">×</button>
+        <div class="ai-tree-dialog-scroll"><p class="ai-tree-overline">CULTURAL GUIDE · SOURCE AWARE</p><h2 id="ai-tree-guide-title">神树探索厅 · AI 讲解员</h2><p class="ai-tree-guide-status" id="ai-tree-guide-status" role="status" aria-live="polite">正在检查智谱讲解服务…</p>
+          <section class="ai-tree-guide-context"><h3>当前探索</h3><p id="ai-tree-guide-context"></p></section>
+          <div class="ai-tree-guide-questions" id="ai-tree-guide-questions" aria-label="建议追问"><button type="button">这道题的线索在哪里？</button><button type="button">这段证据具体说明了什么？</button><button type="button">哪些是器物事实，哪些属于研究解释？</button></div>
+          <form class="ai-tree-guide-form" id="ai-tree-guide-form"><label for="ai-tree-guide-input">继续追问 <small>不超过 300 字</small></label><textarea id="ai-tree-guide-input" maxlength="300" rows="3" placeholder="例如：请结合题目证据解释正确答案"></textarea><button class="button button-outline" type="submit">提交问题</button><small>回答经本地 PDF 检索提供依据；智谱 API Key 只在服务端使用。</small></form>
+          <section class="ai-tree-guide-answer" id="ai-tree-guide-answer" aria-live="polite" hidden></section>
+          <p class="ai-tree-guide-unavailable" id="ai-tree-guide-unavailable" hidden></p>
+          <section><h3>本空间资料</h3><div class="ai-tree-guide-sources" id="ai-tree-guide-sources"></div></section>
+        </div>
+      </dialog>
+    </section>
+
+    <section class="ai-echo-room" id="ai-echo-room" aria-labelledby="ai-echo-title" hidden>
+      <img class="ai-echo-poster" src="/assets/ai-exhibition/echo-room-poster.jpg" alt="三星堆青铜面具博物馆展陈照片，仅作空间背景，不代表当前选择的器物" fetchpriority="high">
+      <video class="ai-echo-video" id="ai-echo-video" autoplay muted loop playsinline preload="metadata" poster="/assets/ai-exhibition/echo-room-poster.jpg" aria-label="人神之间空间氛围影像；面具仅为背景画面">
+        <source data-src="/assets/ai-exhibition/echo-room-loop.mp4" type="video/mp4">
+      </video>
+      <div class="ai-echo-shade" aria-hidden="true"></div>
+      <header class="ai-echo-topbar">
+        <a class="ai-echo-back" href="/?page=ai-exhibition&amp;room=tree" data-ai-room-link="tree">← 返回神树探索厅</a>
+        <p class="ai-echo-brand">三星堆 AI 艺术想象展 <span>· 04 / 05</span></p>
+        <p class="ai-echo-video-note">AI 氛围影像 · 不代表历史场景复原</p>
+      </header>
+      <div class="ai-echo-main">
+        <div class="ai-echo-intro">
+          <p class="ai-echo-kicker">AN OBJECT, A CONTEMPORARY ECHO</p>
+          <h1 id="ai-echo-title">人神之间</h1>
+          <p class="ai-echo-subtitle">器物回响</p>
+          <p class="ai-echo-lede">静下心来，选择一件器物。让可观察的形态、尚待讨论的解释，与此刻的你相遇。</p>
+          <p class="ai-echo-disclaimer">这里的“神启”是当代互动文案，不是古代原文、真实神谕或预测。</p>
+          <a class="ai-echo-button ai-echo-button-gold ai-echo-next-final" href="/?page=ai-exhibition&amp;room=finale" data-ai-room-link="finale" aria-label="结束参观并前往第五空间：文明回声">继续前往文明回声 <span aria-hidden="true">→</span></a>
+          <p class="ai-echo-background-note">背景面具仅作空间氛围；静态照片：Gary Todd / Wikimedia Commons · CC0 1.0。<a href="https://commons.wikimedia.org/wiki/File:Ancient_Bronze_Mask_from_Sanxingdui_(9951438235).jpg" target="_blank" rel="noopener noreferrer">查看图片来源 ↗</a></p>
+        </div>
+        <section class="ai-echo-choice-stage" aria-labelledby="ai-echo-question-title">
+          <div class="ai-echo-loading" id="ai-echo-loading" role="status" aria-live="polite">正在读取精选器物档案…</div>
+          <div class="ai-echo-error" id="ai-echo-error" role="alert" hidden><p>器物档案暂时无法读取。</p><button class="ai-echo-button ai-echo-button-quiet" id="ai-echo-retry" type="button">重新读取</button></div>
+          <div class="ai-echo-choice-content" id="ai-echo-choice-content" hidden>
+            <div class="ai-echo-question-block">
+              <div><p class="ai-echo-section-label">带着一个问题</p><h2 id="ai-echo-question-title">此刻，你想从哪里开始？</h2></div>
+              <button class="ai-echo-skip" id="ai-echo-skip" type="button" aria-pressed="true">暂不选择</button>
+            </div>
+            <div class="ai-echo-themes" id="ai-echo-themes" role="group" aria-label="选择探索主题">
+              <button type="button" data-theme="seeking" aria-pressed="true">我正在寻找什么</button>
+              <button type="button" data-theme="uncertainty" aria-pressed="false">面对未知时如何选择</button>
+              <button type="button" data-theme="world" aria-pressed="false">如何理解人与世界的关系</button>
+            </div>
+            <div class="ai-echo-object-heading"><div><p class="ai-echo-section-label">从档案中选一件</p></div><button class="ai-echo-button ai-echo-button-quiet" id="ai-echo-random" type="button">替我选择 <span aria-hidden="true">↗</span></button></div>
+            <div class="ai-echo-artifacts" id="ai-echo-artifacts" aria-label="选择一件三星堆器物"></div>
+            <p class="ai-echo-data-status" id="ai-echo-data-status" role="status" aria-live="polite"></p>
+          </div>
+          <section class="ai-echo-reveal" id="ai-echo-reveal" aria-live="polite" aria-labelledby="ai-echo-reveal-title" hidden>
+            <p class="ai-echo-section-label">一段当代器物回响 · 非预测</p>
+            <p class="ai-echo-selected-name" id="ai-echo-selected-name"></p>
+            <h2 id="ai-echo-reveal-title" class="ai-echo-reveal-line"></h2>
+            <p class="ai-echo-reveal-note">AI 工作流生成的当代文案，不代表古代原文或学术定论。</p>
+            <details class="ai-echo-why" id="ai-echo-why"><summary>为何得到这句话</summary><div class="ai-echo-why-content" id="ai-echo-why-content"></div></details>
+            <div class="ai-echo-reveal-actions"><button class="ai-echo-button ai-echo-button-gold" id="ai-echo-again" type="button">再问一次</button><button class="ai-echo-button" id="ai-echo-change" type="button">换一件器物</button><button class="ai-echo-text-button" id="ai-echo-return" type="button">返回选择</button></div>
+          </section>
+        </section>
+      </div>
+      <footer class="ai-echo-footer">
+        <a href="/?page=ai-exhibition&amp;room=tree" data-ai-room-link="tree">← 返回神树探索厅</a>
+        <nav aria-label="展览空间进度"><a href="/?page=ai-exhibition&amp;room=foyer" data-ai-room-link="foyer"><b>01</b><span>序厅</span></a><a href="/?page=ai-exhibition&amp;room=eye" data-ai-room-link="eye"><b>02</b><span>以目观天</span></a><a href="/?page=ai-exhibition&amp;room=tree" data-ai-room-link="tree"><b>03</b><span>神树探索厅</span></a><span aria-current="step"><b>04</b><span>人神之间</span></span><a href="/?page=ai-exhibition&amp;room=finale" data-ai-room-link="finale"><b>05</b><span>文明回声</span></a></nav>
+        <p>考古事实、学者推论与当代艺术表达分层呈现</p>
+      </footer>
+      <p class="ai-echo-video-error" id="ai-echo-video-error" role="status" hidden>背景影像未能播放，当前显示静态展厅画面。</p>
+    </section>
+
+    <section class="ai-finale-room" id="ai-finale-room" aria-labelledby="ai-finale-title" hidden>
+      <img class="ai-finale-poster" id="ai-finale-poster" src="/assets/ai-exhibition/civilization-echoes-ending.png" alt="AI 艺术想象的尾厅夜景与地面倒影，不代表古蜀历史场景复原" fetchpriority="high">
+      <video class="ai-finale-video" id="ai-finale-video" muted autoplay loop playsinline preload="none" poster="/assets/ai-exhibition/civilization-echoes-ending.png" aria-label="文明回声尾厅的循环氛围影像">
+        <source data-src="/assets/ai-exhibition/civilization-echoes-ending-loop.mp4" type="video/mp4">
+      </video>
+      <div class="ai-finale-shade" aria-hidden="true"></div>
+      <header class="ai-finale-topbar">
+        <a href="/?page=ai-exhibition&amp;room=echo" data-ai-room-link="echo">← 返回人神之间</a>
+        <p>三星堆 AI 艺术想象展 <i>·</i> 05 / 05</p>
+        <span>展览完成</span>
+      </header>
+      <div class="ai-finale-content">
+        <p class="ai-finale-overline">A QUIET MOMENT AFTER THE VISIT</p>
+        <h1 id="ai-finale-title">文明回声</h1>
+        <p class="ai-finale-line ai-finale-line-primary">我们所见，仍是古蜀文明的一角。</p>
+        <p class="ai-finale-line ai-finale-line-secondary">未解之问，留待新的发现，也留给继续凝望的人。</p>
+        <p class="ai-finale-disclaimer">本展部分影像为 AI 艺术想象，不代表历史场景复原；器物解读以考古资料与研究观点为依据。</p>
+        <div class="ai-finale-actions" aria-label="尾厅操作">
+          <a class="ai-finale-button ai-finale-button-primary" href="/?page=ai-exhibition&amp;room=foyer" data-ai-room-link="foyer">回望展览</a>
+          <button class="ai-finale-button" id="ai-finale-restart" type="button">重新开始</button>
+          <button class="ai-finale-text-button" id="ai-finale-open-echo" type="button">留下你的回声</button>
+        </div>
+      </div>
+      <footer class="ai-finale-footer">
+        <a href="/?page=ai-exhibition&amp;room=echo" data-ai-room-link="echo">← 返回人神之间</a>
+        <nav aria-label="展览空间进度">
+          <a href="/?page=ai-exhibition&amp;room=foyer" data-ai-room-link="foyer"><b>01</b><span>序厅</span></a>
+          <a href="/?page=ai-exhibition&amp;room=eye" data-ai-room-link="eye"><b>02</b><span>以目观天</span></a>
+          <a href="/?page=ai-exhibition&amp;room=tree" data-ai-room-link="tree"><b>03</b><span>神树探索厅</span></a>
+          <a href="/?page=ai-exhibition&amp;room=echo" data-ai-room-link="echo"><b>04</b><span>人神之间</span></a>
+          <span aria-current="step"><b>05</b><span>文明回声</span></span>
+        </nav>
+        <p>展览完成 · 仍可继续探索</p>
+      </footer>
+      <p class="ai-finale-video-status" id="ai-finale-video-status" role="status" aria-live="polite" hidden>尾厅影像暂时无法播放，当前显示静态画面。</p>
+      <dialog class="ai-finale-dialog" id="ai-finale-dialog" aria-labelledby="ai-finale-dialog-title">
+        <button class="ai-finale-dialog-close" id="ai-finale-close" type="button" aria-label="关闭回声留言">×</button>
+        <form class="ai-finale-dialog-content" id="ai-finale-form">
+          <p class="ai-finale-overline">LEAVE A QUIET NOTE</p>
+          <h2 id="ai-finale-dialog-title">留下你的回声</h2>
+          <p>写下一句此刻的感受，或留一个仍想追问的问题。</p>
+          <label for="ai-finale-note">你的回声 <small>选填 · 最多 500 字</small></label>
+          <textarea id="ai-finale-note" name="note" maxlength="500" rows="5" placeholder="此刻，你想留下什么？"></textarea>
+          <p class="ai-finale-local-note">内容保存在本机浏览器。</p>
+          <div class="ai-finale-dialog-actions"><button class="ai-finale-button ai-finale-button-primary" type="submit">保存留言</button><button class="ai-finale-button" id="ai-finale-cancel" type="button">稍后再说</button></div>
+          <p class="ai-finale-save-status" id="ai-finale-save-status" role="status" aria-live="polite"></p>
+        </form>
+      </dialog>
+    </section>
+
+    <dialog class="ai-eye-create-dialog" id="ai-eye-create-dialog" aria-labelledby="ai-eye-create-title">
+      <button class="ai-eye-dialog-close" id="ai-eye-create-close" type="button" aria-label="关闭观天艺术创作面板">×</button>
+      <div class="ai-eye-dialog-scroll">
+        <p class="ai-eye-overline">CELESTIAL PATTERN DESIGN</p><h2 id="ai-eye-create-title">设计我的天象纹样</h2>
+        <p class="ai-eye-dialog-note">本面板将天象主题、构图方式和补充要求分别传入 Coze 工作流。工作流会结合已配置的参考图生成二维装饰纹样；参考图只借鉴线描与分层装饰语言，不复刻文物或人物。作品是当代设计，不代表已证实的古蜀天文知识。</p>
+        <form id="ai-eye-create-form">
+          <fieldset><legend>天象主题 <small>对应 celestial_subject，可多选最多 3 项，也可自定义</small></legend><div class="ai-eye-choice-row ai-eye-choice-multi"><label><input type="checkbox" name="celestial" value="日轮"><span>日轮</span></label><label><input type="checkbox" name="celestial" value="星点"><span>星点</span></label><label><input type="checkbox" name="celestial" value="同心轨迹"><span>同心轨迹</span></label><label><input type="checkbox" name="celestial" value="流动光带"><span>流动光带</span></label></div></fieldset>
+          <label class="ai-eye-extra-label" for="ai-eye-custom-subject">自定义天象 <small>选填；可输入彗星、日食、银河、流星雨等</small></label><input class="ai-eye-text-input" id="ai-eye-custom-subject" maxlength="60" type="text" placeholder="输入你想表现的天象；也可以只勾选上方主题">
+          <fieldset><legend>构图方式 <small>对应 composition · 均保持三层纹样结构</small></legend><div class="ai-eye-choice-row ai-eye-composition-options"><label><input type="radio" name="composition" value="三层堆叠，天象符号居中，上下装饰纹带平衡呼应" checked><span>主体居中<br><small>上下纹带呼应</small></span></label><label><input type="radio" name="composition" value="三层堆叠，天象主体位于上层，山形与云气纹带置于下方"><span>天象在上<br><small>下方山形云气</small></span></label><label><input type="radio" name="composition" value="三层堆叠，以中轴对称组织天象主体、装饰纹带与连续几何边框"><span>中轴对称<br><small>边框连续简洁</small></span></label></div></fieldset>
+          <fieldset><legend>纹样细节 <small>对应 detail，可多选最多 3 项</small></legend><div class="ai-eye-choice-row ai-eye-choice-multi"><label><input type="checkbox" name="detail_feature" value="星点清晰可辨"><span>星点清晰</span></label><label><input type="checkbox" name="detail_feature" value="云气以回旋线条表现"><span>回旋云气</span></label><label><input type="checkbox" name="detail_feature" value="下方加入简化山形纹样"><span>山形纹样</span></label><label><input type="checkbox" name="detail_feature" value="几何边框简洁连续"><span>简洁边框</span></label></div></fieldset>
+          <label class="ai-eye-extra-label" for="ai-eye-extra">补充要求 <small>对应 detail · 选填，不超过 120 字</small></label><textarea id="ai-eye-extra" maxlength="120" rows="2" placeholder="例如：让星点更清晰，云气线条更舒展"></textarea><label class="ai-eye-extra-label" for="ai-eye-art-title">作品名称 <small>保存到账号时使用 · 选填</small></label><input class="ai-eye-text-input" id="ai-eye-art-title" maxlength="100" type="text" placeholder="例如：星点与云气">
+          <div class="ai-eye-prompt-block"><div><b>本次工作流参数预览</b><button id="ai-eye-copy-prompt" type="button" class="ai-eye-text-button">复制参数描述</button></div><pre id="ai-eye-prompt-preview" aria-live="polite"></pre></div>
+          <p class="ai-eye-generation-status" id="ai-eye-generation-status" role="status" aria-live="polite"></p>
+          <div class="ai-eye-result" id="ai-eye-result" hidden><img id="ai-eye-result-image" alt="本次会话生成的二维天象纹样预览"><p id="ai-eye-result-label"></p><p class="ai-eye-expiry">生成结果仅在本次会话预览。点击“保存到我的作品”后，图片会复制到账号私有存储；未保存的作品不会上传。</p><div><a class="button button-outline" id="ai-eye-download" href="#" target="_blank" rel="noopener noreferrer">打开或保存作品</a><button class="button button-outline" id="ai-eye-save" type="button">保存到我的作品</button><button class="button button-outline" id="ai-eye-echo" type="button">带着作品进入人神之间</button></div><p class="ai-eye-generation-status" id="ai-eye-save-status" role="status" aria-live="polite"></p></div>
+          <div class="ai-eye-dialog-actions"><button class="button button-gold" id="ai-eye-generate" type="submit" disabled>检查中…</button><button class="button button-outline" id="ai-eye-cancel" type="button" hidden>取消本次请求</button></div>
+        </form>
+      </div>
+    </dialog>
+
+    <dialog class="ai-eye-feature-dialog" id="ai-eye-feature-dialog" aria-label="纵目面具眼部资料" aria-modal="false">
+      <button class="ai-eye-dialog-close" id="ai-eye-feature-close" type="button" aria-label="关闭眼部资料卡">×</button>
+      <div class="ai-eye-feature-scroll" id="ai-eye-feature-content"></div>
+    </dialog>
+    <section id="login-view" class="login-page" aria-labelledby="login-title">
+      <div class="login-shell">
+        <div class="login-story" aria-hidden="true">
+          <p class="login-story-kicker">SANXINGDUI · DIGITAL ARCHIVE</p><p class="login-story-title">循着器物，<br><em>回到发现现场。</em></p><p class="login-story-caption">文物档案 · 考古线索 · 古蜀文明</p>
+          <span class="login-coordinate">31°00′N　104°13′E</span>
+        </div>
+        <div class="login-panel">
+          <div class="login-brand"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>三星堆<small>古蜀文明数字探索平台</small></span></div>
+          <p class="login-eyebrow">MEMBER ACCESS <span>·</span> 01 / 01</p>
+          <h1 id="login-title">欢迎回来</h1><p class="login-intro">登录后继续你的文明探索之旅。</p>
+          <form class="login-form" id="login-form">
+            <label for="login-username">用户名</label>
+            <input id="login-username" name="username" type="text" autocomplete="username" inputmode="text" minlength="3" maxlength="32" placeholder="请输入用户名" required>
+            <div class="login-password-label"><label for="login-password">密码</label><button type="button" class="login-text-button" id="login-forgot">忘记密码？</button></div>
+            <div class="login-password-wrap"><input id="login-password" name="password" type="password" autocomplete="current-password" placeholder="请输入密码" minlength="10" maxlength="256" required><button type="button" id="login-password-toggle" aria-label="显示密码" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 12s3.4-6 9.5-6 9.5 6 9.5 6-3.4 6-9.5 6-9.5-6-9.5-6Z"/><circle cx="12" cy="12" r="2.5"/></svg></button></div>
+            <div class="login-options"><label><input type="checkbox" id="login-remember"><span>保持登录 30 天</span></label><span>安全登录</span></div>
+            <button class="login-submit" type="submit">登录 <span aria-hidden="true">↗</span></button>
+          </form>
+          <form class="login-form login-register-form" id="login-register-form" hidden>
+            <label for="register-username">用户名</label><input id="register-username" name="username" type="text" autocomplete="username" inputmode="text" minlength="3" maxlength="32" placeholder="3 至 32 位字母、数字或 . _ -" required>
+            <label for="register-password">设置密码</label><input id="register-password" name="password" type="password" autocomplete="new-password" minlength="10" maxlength="256" placeholder="至少 10 个字符" required>
+            <label for="register-confirm">确认密码</label><input id="register-confirm" name="confirm" type="password" autocomplete="new-password" minlength="10" maxlength="256" placeholder="再次输入密码" required>
+            <button class="login-submit" type="submit">创建账号 <span aria-hidden="true">↗</span></button>
+          </form>
+          <p class="login-status" id="login-status" role="status" aria-live="polite"></p>
+          <div class="login-register-entry" id="login-register-entry" hidden><span id="login-mode-prompt">还没有账号？</span><button type="button" class="login-text-button" id="login-mode-toggle">创建账号</button></div>
+          <div class="login-authenticated" id="login-authenticated" hidden><p>当前已登录账号</p><strong id="login-current-username"></strong><button type="button" class="login-submit" id="login-page-logout">退出登录</button></div>
+          <div class="login-service-note"><span class="login-status-dot"></span><span><b id="login-service-title">账号数据库已接入</b><br><small id="login-service-copy">首个账号通过服务端环境变量初始化</small></span></div>
+          <p class="login-legal">继续即表示你已阅读并同意 <a href="#login-terms" id="login-terms-link">服务条款</a> 与 <a href="#login-privacy" id="login-privacy-link">隐私说明</a></p>
+          <p class="login-copyright">© 2026 三星堆 · 古蜀文明数字探索平台</p>
+        </div>
+      </div>
+    </section>
+    <section id="account-view" class="account-page" aria-labelledby="account-title" hidden>
+      <div class="account-wrap">
+        <div class="account-heading"><div><p class="eyebrow">PERSONAL ACCOUNT · SETTINGS</p><h1 id="account-title">个人账号</h1><p>管理账号安全，了解个人数据的保存方式。</p></div><div class="account-heading-actions"><button class="button button-outline account-logout" type="button" id="account-logout">退出登录</button><a class="button button-outline" href="/" data-home-link>返回主页 <span aria-hidden="true">↗</span></a></div></div>
+        <div class="account-layout">
+          <aside class="account-profile-card"><div class="account-avatar" aria-hidden="true">堆</div><p class="account-overline">当前账号</p><h2 id="account-username">—</h2><span class="account-role" id="account-role">—</span><dl><div><dt>加入时间</dt><dd id="account-created">—</dd></div><div><dt>账号标识</dt><dd id="account-id">—</dd></div></dl></aside>
+          <div class="account-sections">
+            <section class="account-card"><div class="account-card-heading"><div><p class="eyebrow">PROFILE</p><h2>账号资料</h2></div><span class="account-chip">个人信息</span></div><dl class="account-details"><div><dt>用户名</dt><dd id="account-profile-username">—</dd></div><div><dt>账号类型</dt><dd id="account-profile-role">—</dd></div></dl><p class="account-muted">用户名暂不支持修改；登录密码可以在下方更新。</p></section>
+            <form class="account-card account-password-form" id="account-password-form"><div class="account-card-heading"><div><p class="eyebrow">SECURITY</p><h2>修改密码</h2></div><span class="account-chip">安全设置</span></div><label for="account-current-password">当前密码</label><input id="account-current-password" type="password" autocomplete="current-password" minlength="10" maxlength="256" required><label for="account-new-password">新密码 <small>至少 10 个字符</small></label><input id="account-new-password" type="password" autocomplete="new-password" minlength="10" maxlength="256" required><label for="account-confirm-password">确认新密码</label><input id="account-confirm-password" type="password" autocomplete="new-password" minlength="10" maxlength="256" required><div class="account-form-actions"><button class="button button-gold" type="submit">更新密码 <span aria-hidden="true">↗</span></button><p id="account-password-status" role="status" aria-live="polite"></p></div></form>
+            <form class="account-card account-delete-form" id="account-delete-form"><div class="account-card-heading"><div><p class="eyebrow">PERMANENT ACTION</p><h2>注销账号</h2></div><span class="account-chip">不可恢复</span></div><p class="account-delete-warning">注销后将删除此账号、学习记录、问答历史、留言和已保存作品，且无法恢复。其他账号的数据不受影响。</p><label for="account-delete-password">当前密码</label><input id="account-delete-password" type="password" autocomplete="current-password" minlength="10" maxlength="256" required><label for="account-delete-confirmation">再次输入用户名 <small id="account-delete-username-hint"></small></label><input id="account-delete-confirmation" type="text" autocomplete="off" required><div class="account-form-actions"><button class="button account-delete-button" type="submit">永久注销账号</button><p id="account-delete-status" role="status" aria-live="polite"></p></div></form>
+            <section class="account-card account-records-card"><div class="account-card-heading"><div><p class="eyebrow">MY DATA</p><h2>我的记录</h2></div><span class="account-chip">账号专属</span></div><p class="account-muted">学习进度、问答历史、留言和已保存作品按账号隔离。点击下方入口，在新标签页查看与管理记录。</p><a class="button button-outline account-records-open" href="/?page=account-records" target="_blank" rel="noopener">打开我的记录 <span aria-hidden="true">↗</span></a></section>
+            <section class="account-card account-storage-card"><div class="account-card-heading"><div><p class="eyebrow">PERSONAL STORAGE</p><h2>个人资源存储</h2></div><span class="account-chip" id="account-storage-mode">读取中</span></div><div class="account-storage-stats"><div><span>已保存的数据项</span><strong id="account-data-count">—</strong></div><div><span>数据体积</span><strong id="account-data-bytes">—</strong></div><div><span>作品文件</span><strong id="account-file-count">—</strong></div><div><span>文件体积</span><strong id="account-file-bytes">—</strong></div></div><div class="account-storage-row"><span class="account-storage-indicator"></span><div><b>个人记录</b><p>学习进度、问答历史和回声留言按账号隔离保存在 SQLite。</p></div></div><div class="account-storage-row"><span class="account-storage-indicator"></span><div><b>已保存的天象纹样</b><p id="account-files-status">作品图片保存在站点公开目录之外，仅当前账号可以查看。</p></div></div></section>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="account-records-view" class="account-page account-records-page" aria-labelledby="account-records-title" hidden>
+      <div class="account-wrap">
+        <div class="account-heading"><div><p class="eyebrow">PERSONAL ACCOUNT · MY DATA</p><h1 id="account-records-title">我的记录</h1><p>学习进度、问答历史、留言和已保存作品仅属于当前登录账号。</p></div><div class="account-heading-actions"><a class="button button-outline" href="/?page=account">返回个人账号 <span aria-hidden="true">↗</span></a></div></div>
+        <section class="account-card account-records-card"><div class="account-card-heading"><div><p class="eyebrow">ACCOUNT RECORDS</p><h2>记录列表</h2></div><span class="account-chip" id="account-record-count">读取中</span></div><div class="account-import-row"><button class="button button-outline" type="button" id="account-import-local">导入此浏览器的旧记录</button><p id="account-import-status" role="status" aria-live="polite">导入前会检查账号中是否已有同一条记录，不会覆盖账号数据。</p></div><div id="account-record-groups" class="account-record-groups" aria-live="polite"><p class="account-record-empty">正在读取账号记录…</p></div></section>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer" id="sources"><div class="footer-main"><div class="footer-brand"><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span class="brand-name">三星堆<small>古蜀文明数字探索平台</small></span></a><p>让文物说话，让证据有迹可循。</p></div><div class="footer-column"><b>探索</b><a href="#discover">文明与发现</a><a href="#collection">文物档案</a><a href="#exhibition">数字展厅</a><a href="#knowledge">知识图谱</a></div><div class="footer-column"><b>参与</b><a href="#fieldwork">互动考古</a><a href="#learning">研学中心</a><button class="footer-link" data-open-guide>AI 文化导览</button></div><div class="footer-column footer-sources"><b>资料与图像来源</b><a href="https://www.sxd.cn/relics/" target="_blank" rel="noreferrer">三星堆博物馆 · 文物介绍 ↗</a><a href="https://archives.scu.edu.cn/info/1015/3023.htm" target="_blank" rel="noreferrer">四川大学档案馆 · 早期考古史料 ↗</a><a href="https://www.scspc.gov.cn/lfdt/202106/157515.html" target="_blank" rel="noreferrer">四川人大网 · 三星堆史料 ↗</a><a href="https://commons.wikimedia.org/wiki/File:%E4%B8%89%E6%98%9F%E5%A0%86%E5%87%BA%E5%9C%9F%E9%9D%92%E9%93%9C%E5%A4%A7%E7%AB%8B%E4%BA%BA%E5%83%8F,_2017-09-17.jpg" target="_blank" rel="noreferrer">Wikimedia · Siyuwj · CC BY-SA 4.0 ↗</a><a href="https://commons.wikimedia.org/wiki/File:Bronze_Sacred_Tree.jpg" target="_blank" rel="noreferrer">Wikimedia · momo · CC BY 2.0 ↗</a><a href="https://commons.wikimedia.org/wiki/File:Sanxingdui_Bronsmask.jpg" target="_blank" rel="noreferrer">Wikimedia · Bairuilong · CC BY-SA 4.0 ↗</a></div></div><div class="footer-bottom"><span>© 2026 三星堆 · 古蜀文明数字探索平台　/　概念原型</span><span>图片按作者及授权协议标注；示意图不代表真实器物或考古记录。</span><a href="#top">回到顶部 ↑</a></div></footer>
+  <footer class="site-footer" id="sources"><div class="footer-main"><div class="footer-brand"><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span class="brand-name">三星堆<small>古蜀文明数字探索平台</small></span></a><p>让文物说话，让证据有迹可循。</p></div><div class="footer-column"><b>探索</b><a href="#discover">文明与发现</a><a href="#collection">文物档案</a><a href="#exhibition">数字展厅</a><a href="/?page=graph" data-graph-link>坑位空间探索</a></div><div class="footer-column"><b>参与</b><a href="/?page=fieldwork" data-fieldwork-link data-fieldwork-nav>互动考古</a><a href="#learning">研学中心</a><button class="footer-link" data-open-guide>AI 文化导览</button></div><div class="footer-column footer-sources"><b>资料与图像来源</b><a href="https://www.sxd.cn/relics/" target="_blank" rel="noreferrer">三星堆博物馆 · 文物介绍 ↗</a><a href="https://archives.scu.edu.cn/info/1015/3023.htm" target="_blank" rel="noreferrer">四川大学档案馆 · 早期考古史料 ↗</a><a href="https://www.scspc.gov.cn/lfdt/202106/157515.html" target="_blank" rel="noreferrer">四川人大网 · 三星堆史料 ↗</a><a href="https://commons.wikimedia.org/wiki/File:%E4%B8%89%E6%98%9F%E5%A0%86%E5%87%BA%E5%9C%9F%E9%9D%92%E9%93%9C%E5%A4%A7%E7%AB%8B%E4%BA%BA%E5%83%8F,_2017-09-17.jpg" target="_blank" rel="noreferrer">Wikimedia · Siyuwj · CC BY-SA 4.0 ↗</a><a href="https://commons.wikimedia.org/wiki/File:Bronze_Sacred_Tree.jpg" target="_blank" rel="noreferrer">Wikimedia · momo · CC BY 2.0 ↗</a><a href="https://commons.wikimedia.org/wiki/File:Sanxingdui_Bronsmask.jpg" target="_blank" rel="noreferrer">Wikimedia · Bairuilong · CC BY-SA 4.0 ↗</a></div></div><div class="footer-bottom"><span>© 2026 三星堆 · 古蜀文明数字探索平台　/　概念原型</span><span>图片按作者及授权协议标注；示意图不代表真实器物或考古记录。</span><a href="#top">回到顶部 ↑</a></div></footer>
 
-  <dialog class="modal artifact-modal" id="artifact-modal" aria-labelledby="artifact-title"><button class="modal-close" data-close-modal aria-label="关闭文物档案">×</button><div class="modal-content"><div class="modal-image" id="modal-image"></div><div class="modal-copy"><p class="eyebrow" id="modal-kicker">OBJECT RECORD</p><h2 id="artifact-title">器物档案</h2><p class="modal-subtitle" id="modal-subtitle"></p><div class="record-table" id="record-table"></div><p class="record-interpretation" id="record-interpretation"></p><div class="modal-citation" id="modal-citation"></div><a class="button button-outline" id="modal-detail-link" data-modal-detail-link href="/?artifact=">查看完整文物详情 <span>↗</span></a><button class="button button-outline" data-modal-ask>向 AI 导览了解更多 <span>↗</span></button><p class="small-note">AI 服务尚未连接，此操作不会发送问题。</p></div></div></dialog>
+  <dialog class="modal artifact-modal" id="artifact-modal" aria-labelledby="artifact-title"><button class="modal-close" data-close-modal aria-label="关闭文物档案">×</button><div class="modal-content"><div class="modal-image" id="modal-image"></div><div class="modal-copy"><p class="eyebrow" id="modal-kicker">OBJECT RECORD</p><h2 id="artifact-title">器物档案</h2><p class="modal-subtitle" id="modal-subtitle"></p><div class="record-table" id="record-table"></div><p class="record-interpretation" id="record-interpretation"></p><div class="modal-citation" id="modal-citation"></div><a class="button button-outline" id="modal-detail-link" data-modal-detail-link href="/?artifact=">查看完整文物详情 <span>↗</span></a><button class="button button-outline" data-modal-ask>带我看相关页面 <span>↗</span></button><p class="small-note">AI 导览会推荐相关页面，由你选择跳转，不生成回答。</p></div></div></dialog>
 
   <dialog class="modal utility-modal" id="search-modal" aria-labelledby="search-title"><button class="modal-close" data-close-modal aria-label="关闭搜索">×</button><div class="utility-content"><p class="eyebrow">SEARCH THE ARCHIVE</p><h2 id="search-title">从问题开始探索</h2><label class="search-field search-field-large"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg><input type="search" id="global-search" placeholder="试试：青铜、二号祭祀坑、神树" aria-label="站内搜索"></label><p class="search-hint">搜索会筛选本页公开展示的器物条目，不连接外部服务。</p><div class="search-results" id="search-results"></div></div></dialog>
 
-  <aside class="guide-panel" id="guide-panel" aria-labelledby="guide-title" aria-hidden="true"><div class="guide-head"><div><span class="eyebrow">CULTURAL GUIDE</span><h2 id="guide-title">AI 文化导览</h2></div><button class="modal-close guide-close" data-close-guide aria-label="关闭 AI 导览">×</button></div><div class="guide-status"><span class="status-pill"><i></i> 尚未连接知识服务</span><p>这是导览界面原型。当前不会生成答案，也不会发送或保存你的问题。</p></div><div class="guide-welcome"><span class="guide-emblem">问</span><b>想从哪里开始？</b><p>你可以先选一个问题，作为未来可信问答服务的输入示例。</p><div class="prompt-chips"><button data-prompt="青铜神树有哪些已知信息？">青铜神树有哪些已知信息？ <span>↗</span></button><button data-prompt="哪些关于大立人身份的说法仍有争议？">大立人身份有哪些争议？ <span>↗</span></button><button data-prompt="2021 年三星堆有哪些新的考古发现？">2021 年有哪些新发现？ <span>↗</span></button></div></div><form class="guide-form" id="guide-form"><label for="guide-input">你的问题</label><textarea id="guide-input" rows="2" placeholder="选择上方问题，或输入一个问题…"></textarea><button class="button button-gold" type="submit">检查服务状态 <span>↗</span></button><span class="form-status" id="form-status" aria-live="polite"></span></form><div class="guide-foot"><span>未来接口预留：RAG 检索 · 引用溯源 · 服务状态</span><a href="#sources">查看引用规范</a></div></aside><button class="panel-scrim" data-close-guide aria-label="关闭导览面板"></button>
+  <aside class="guide-panel" id="guide-panel" aria-labelledby="guide-title" aria-hidden="true"><div class="guide-head"><div><span class="eyebrow">CULTURAL GUIDE</span><h2 id="guide-title">AI 文化导览</h2></div><button class="modal-close guide-close" data-close-guide aria-label="关闭 AI 导览">×</button></div><div class="guide-status"><span class="status-pill"><i></i> Jev 导览已接入</span><p>输入你想看的内容，Jev 会推荐相关页面，由你选择跳转；不生成问答。</p></div><div class="guide-welcome"><span class="guide-emblem">导</span><b>想去哪里看看？</b><p>可以直接说文物名称、考古主题或展厅空间。</p><div class="prompt-chips"><button data-prompt="带我去看青铜神树">带我去看青铜神树 <span>↗</span></button><button data-prompt="打开考古发现时间线">打开考古发现时间线 <span>↗</span></button><button data-prompt="进入神树探索厅">进入神树探索厅 <span>↗</span></button></div></div><form class="guide-form" id="guide-form"><label for="guide-input">你想看什么？</label><textarea id="guide-input" rows="2" maxlength="500" placeholder="例如：带我去看青铜神树"></textarea><button class="button button-gold" type="submit">查找相关页面 <span>↗</span></button><span class="form-status" id="form-status" aria-live="polite"></span><div class="guide-suggestions" id="guide-suggestions" aria-live="polite"></div></form><div class="guide-foot"><span>Jev 只判断站内页面目标</span><a href="#sources">查看资料来源</a></div></aside><button class="panel-scrim" data-close-guide aria-label="关闭导览面板"></button>
 
   <dialog class="modal story-modal" id="story-modal" aria-labelledby="story-title"><button class="modal-close" data-close-modal aria-label="关闭故事">×</button><div class="story-content"><p class="eyebrow">FIELD NOTE · 01</p><h2 id="story-title">一段考古故事</h2><p class="story-lead">一件器物，从坑中来到展柜，要经过怎样的记录与研究？</p><div class="story-steps"><div><span>01</span><b>发现</b><p>记录位置与出土环境，为器物建立最初的考古语境。</p></div><div><span>02</span><b>保护</b><p>根据材质与保存状态制定保护方案，让信息与器物一同留存。</p></div><div><span>03</span><b>研究</b><p>结合形制、工艺、同出器物与多学科证据提出可检验的问题。</p></div></div><button class="button button-gold" data-close-modal>继续探索 <span>→</span></button><small>以上为考古工作的一般性介绍，不对应某一件器物的具体修复记录。</small></div></dialog>
 

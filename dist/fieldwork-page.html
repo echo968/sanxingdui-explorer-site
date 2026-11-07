@@ -1,0 +1,69 @@
+<div class="fieldwork-page-wrap">
+  <nav class="detail-breadcrumb" aria-label="面包屑"><a href="/" data-home-link>首页</a><span aria-hidden="true">/</span><span>互动考古</span></nav>
+  <header class="fieldwork-page-heading">
+    <div><p class="eyebrow"><span class="eyebrow-line"></span> INTERACTIVE ARCHAEOLOGY · EXPERIENCE MODEL</p><h1>互动考古</h1><p>从金色夯土层逐层发掘，观察象牙、青铜金器与玉器体验模型；刷新或离开此页会重新开始。</p></div>
+    <div class="field-heading-actions"><span id="field-total-progress" aria-live="polite">整体进度 0 / 4 层</span><button class="field-reset" id="field-reset" type="button">重新开始</button></div>
+  </header>
+  <p class="fieldwork-disclaimer">这是考古体验示意。四层是根据三星堆祭祀坑考古资料设计的互动体验概括，不对应某一座坑的精确复原，也不代表真实深度、坐标或出土关系。器物名称、模型对应关系及体验层位均为暂用信息，待考证。</p>
+
+  <section class="fieldwork" id="fieldwork" aria-labelledby="fieldwork-title">
+    <h2 class="visually-hidden" id="fieldwork-title">逐层发掘体验</h2>
+    <div class="fieldwork-workbench" id="fieldwork-workbench">
+      <aside class="field-tools field-panel" aria-label="层位与操作工具">
+        <div class="field-panel-heading"><span>01 / 当前层位</span><b id="field-current-layer">金色夯土层</b></div>
+        <p class="field-layer-note" id="field-layer-note">用于体验的表层示意，不代表真实土壤记录。</p>
+        <ol class="field-layer-list" id="field-layer-list" aria-label="四层体验进度"></ol>
+        <div class="field-dig-actions"><button class="button button-gold" id="field-start-dig" type="button">开始挖掘</button></div>
+        <div class="field-tool-controls" role="group" aria-label="选择发掘工具">
+          <button type="button" data-field-tool="brush" aria-pressed="false">鬃刷</button>
+          <button type="button" data-field-tool="trowel" aria-pressed="true">小铲</button>
+          <button type="button" data-field-tool="observe" aria-pressed="false">观察</button>
+        </div>
+        <label class="field-brush-size" for="field-brush-size"><span>工具范围</span><output id="field-brush-value">1</output></label>
+        <input id="field-brush-size" type="range" min="1" max="3" value="1" aria-label="调整工具范围">
+        <p class="field-tool-hint" id="field-tool-hint">按“开始挖掘”后，用小铲在土体上拖动；土块会逐块移除。</p>
+      </aside>
+
+      <div class="field-scene-column">
+        <div class="field-scene-shell">
+          <div class="field-scene-toolbar"><span><i aria-hidden="true"></i><b id="field-scene-mode">等待开始</b></span><div><button id="field-reset-view" type="button" aria-label="复位三维场景视角">复位视角</button></div></div>
+          <div class="field-scene" id="field-scene">
+            <canvas id="field-scene-canvas" tabindex="0" role="application" aria-keyshortcuts="ArrowUp ArrowDown ArrowLeft ArrowRight Space" aria-label="连续三维土层。刷拭模式按住并拖动挖掘，观察模式可旋转场景。"></canvas>
+            <div class="field-layer-hotspots" id="field-layer-hotspots" aria-label="土层介绍标记" hidden></div>
+            <span class="field-keyboard-brush" id="field-keyboard-brush" aria-hidden="true"></span>
+            <div class="field-scene-loading" id="field-scene-loading" role="status" aria-live="polite"><span class="field-loader-mark" aria-hidden="true"></span><b>正在准备土层场景</b><small>完整文物模型仅在点击代理文物后读取</small></div>
+            <div class="field-scene-fallback" id="field-scene-fallback" hidden><b>三维场景暂不可用</b><span id="field-scene-error">请检查浏览器对 WebGL 的支持，或重新加载。</span><button type="button" id="field-scene-retry">重新加载场景</button></div>
+            <div class="field-scene-label field-north-label" aria-hidden="true">连续土层示意</div>
+            <div class="field-scene-label field-placement-label" aria-hidden="true">模型位置仅为演示摆放</div>
+          </div>
+          <div class="field-progress-row"><div><span>当前层位土块移除</span><b id="field-progress-text">0%</b></div><progress id="field-progress" max="100" value="0" aria-label="当前层位土块移除进度"></progress><p id="field-progress-hint" role="status" aria-live="polite">尚未开始；每层土块挖完后，还需点击并处理本层文物，下一层才会开放。</p><p class="field-depth-readout"><span>已移除土块</span><b id="field-removed-count">0 / 0</b><span>当前触及层位</span><b id="field-depth-text">金色夯土层</b></p></div>
+          <div class="field-scene-legend" id="field-scene-legend" aria-label="四层土层图例"></div>
+        </div>
+        <p class="field-scene-tip">小铲按拖动路径移除土块，鬃刷一次清理一小块；观察模式可旋转、缩放和复位。挖掘深度仅为体验示意。</p>
+      </div>
+
+      <aside class="field-findings field-panel" aria-label="本层发现的体验模型">
+        <div class="field-panel-heading"><span>02 / 本层发现</span><b><span id="field-found-count">0</span> 件</b></div>
+        <p class="field-findings-note" id="field-findings-note">文物模型埋在连续土体内部。挖开周围土块后逐步显露，达到可见条件后才能提取。</p>
+        <ul class="field-inventory" id="field-inventory" aria-label="已显露体验模型"></ul>
+        <p class="field-empty-inventory" id="field-empty-inventory">当前层位暂无已登记的体验模型。</p>
+        <p class="field-model-status" id="field-model-status" role="status" aria-live="polite">完整模型尚未加载。</p>
+        <p class="field-object-caveat">模型是项目提供的数字素材。材质贴图不是文物照片；具体器物身份、层位和素材来源均待核。</p>
+      </aside>
+    </div>
+    <div class="fieldwork-ethics"><span>层位说明</span><p>金色夯土层、象牙堆积层、青铜金器器物层、碎玉石与灰烬层为互动体验概括，不对应某一座坑的精确复原，也不是考古报告中的正式地层名称，不代表实测深度、坑位或出土位置。五个象牙位置复用同一獠牙数字网格；模型来源及其与出土文物的对应关系待核。</p></div>
+  </section>
+</div>
+
+<dialog class="field-viewer-dialog" id="field-viewer-dialog" aria-labelledby="field-viewer-title">
+  <div class="field-viewer-head"><div><small>体验模型 · 完整网格按需载入</small><h2 id="field-viewer-title">文物模型</h2></div><button id="field-viewer-close" type="button" aria-label="关闭文物资料卡">×</button></div>
+  <div class="field-viewer-content">
+    <div class="field-viewer-model"><div class="field-viewer-stage" id="field-viewer-stage"><canvas id="field-viewer-canvas" aria-label="独立查看文物模型，可拖动旋转、滚轮缩放"></canvas><p id="field-viewer-loading" role="status" aria-live="polite">正在载入模型…</p></div><div class="field-viewer-controls"><button id="field-viewer-reset" type="button">复位视角</button><span>拖动旋转 · 滚轮缩放</span></div></div>
+    <aside class="field-viewer-record"><p class="field-viewer-note" id="field-viewer-note"></p><div class="field-viewer-source" id="field-viewer-source"></div><button id="field-viewer-retry" class="field-model-retry" type="button" hidden>重试载入模型</button></aside>
+  </div>
+</dialog>
+
+<dialog class="field-layer-info-dialog" id="field-layer-info-dialog" aria-labelledby="field-layer-info-title">
+  <div class="field-layer-info-head"><div><small>互动体验 · 土层说明</small><h2 id="field-layer-info-title">土层介绍</h2></div><button id="field-layer-info-close" type="button" aria-label="关闭土层介绍">×</button></div>
+  <div class="field-layer-info-body"><p id="field-layer-info-intro"></p><section><b>考古资料提示</b><p id="field-layer-info-hint"></p></section><p class="field-layer-info-caveat">当前四层是根据三星堆祭祀坑考古资料设计的互动体验概括，不对应某一座坑的精确复原；“金色夯土”“青铜金器器物层”等为体验概括，不是考古报告中的正式地层名称。</p></div>
+</dialog>
