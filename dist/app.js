@@ -3501,39 +3501,6 @@ $('[data-quiz-reset]').addEventListener('click', () => {
   $('[data-quiz-reset]').hidden = true;
 });
 
-const searchModal = $('#search-modal');
-function openSearch() {
-  openDialog(searchModal);
-  $('#global-search').value = '';
-  renderSearch('');
-  setTimeout(() => $('#global-search').focus(), 50);
-}
-function renderSearch(query) {
-  const term = query.trim().toLocaleLowerCase();
-  const matches = Object.entries(records).filter(([, record]) => `${record.name} ${record.slug} ${record.category} ${record.period} ${record.material} ${record.excavation} ${record.discovery} ${record.intro} ${record.interpretation} ${record.references.map(source => source.label).join(' ')}`.toLocaleLowerCase().includes(term));
-  const results = $('#search-results');
-  if (!matches.length) {
-    results.innerHTML = '<p class="search-empty">暂未找到匹配档案。可以尝试更短关键词，或查看全部文物条目。</p>';
-    return;
-  }
-  results.replaceChildren(...matches.map(([key, record]) => {
-    const button = document.createElement('button');
-    button.type = 'button';
-    button.className = 'result-row';
-    const title = document.createElement('span');
-    title.textContent = record.name;
-    const label = document.createElement('small');
-    label.textContent = subtitleFor(record);
-    button.append(title, label);
-    button.addEventListener('click', () => {
-      closeDialog(searchModal);
-      openArtifact(key);
-    });
-    return button;
-  }));
-}
-$('[data-open-search]').addEventListener('click', openSearch);
-$('#global-search').addEventListener('input', event => renderSearch(event.target.value));
 
 $$('[data-open-story]').forEach(button => button.addEventListener('click', () => openDialog($('#story-modal'))));
 $$('[data-learning]').forEach(button => button.addEventListener('click', () => {
